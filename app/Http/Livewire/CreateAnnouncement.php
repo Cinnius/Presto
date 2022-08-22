@@ -35,7 +35,7 @@ class CreateAnnouncement extends Component
 
         $this->clear();
 
-        // return redirect()->to('/')->with('message','Il tuo annuncio è stato inserito correttamente');
+        return redirect()->to('/')->with('message','Il tuo annuncio è stato inserito correttamente');
     }
 
     public function updated($propertyName)
