@@ -1,5 +1,6 @@
 <div>
     <form wire:submit.prevent="store">
+        @csrf
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -12,7 +13,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Descrizione</label>
-                        <textarea class="form-control" cols="30" rows="10" wire:model="body" @error('body') is-invalid @enderror></textarea>
+                        <textarea class="form-control" cols="30" rows="10" wire:model="body"  @error('body') is-invalid @enderror></textarea>
                         @error('body')
                             <span class="error">{{$message}}</span>
                         @enderror
