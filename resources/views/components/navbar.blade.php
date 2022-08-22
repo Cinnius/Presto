@@ -23,6 +23,7 @@
                   <li><hr class="dropdown-divider"></li>
                   @else
                   <li><a class="dropdown-item" href="#">{{Auth::user()->name}}</a></li>
+                  <li><a class="dropdown-item" href="{{route('createAnnouncement')}}">Aggiungi annuncio</a></li>
                   <li class="nav-item">
                         <a class="nav-link text-danger" href="{{route('logout')}}" onclick="event.preventDefault() ; document.querySelector('#form-logout').submit();">Logout</a>
                         <form id="form-logout" action="{{ route('logout')}}" method="POST" class="d-none">
