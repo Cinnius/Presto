@@ -18,6 +18,7 @@
 <body>
     <x-navbar />
     {{ $slot }}
+    <x-footer />
     @livewireScripts
 </body>
 

@@ -55,23 +55,9 @@ p, ul, li{
     color: var(--dark);
 }
 
-/* MediaQuerry */
-@media screen and (min-width: 992px) {
-    .fixed-nav{
-        bottom: unset;
-        top: 0;
-    }
-}
-
 .link-costum{
     text-decoration: none;
     color: #000000;
-}
-
-.ul-custom{
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
 }
 
 .category-custom{
@@ -89,4 +75,10 @@ p, ul, li{
     box-shadow: 0px 0px 6px 0px #7F7F7F;
 }
 
-
+/* MediaQuerry */
+@media screen and (min-width: 992px) {
+    .fixed-nav{
+        bottom: unset;
+        top: 0;
+    }
+}
