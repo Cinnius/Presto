@@ -31,8 +31,8 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         <p class="card-text">{{$announcement->body}}</p>
-
-                        <a href="#" class="btn btn-primary">vai a {{$announcement->category->name}}</a>
+                        
+                        <a href="{{route('categoryShow', ['category'=>$announcement->category])}}" class="btn btn-primary">vai a {{$announcement->category->name}}</a>
                         <div class="card-footer">
                             <p>creato il: {{$announcement->created_at->format('d/m/Y')}}</p>
                             <p>ultima modifica: {{$announcement->updated_at->format('d/m/Y')}}</p>

@@ -23,5 +23,6 @@ Route::get('/announcement/detail/{announcement}',[AnnouncementController::class,
 
 Route::get('/category/{category}',[PublicController::class,'categoryShow'])->name('categoryShow');
 
+Route::get('/index',[PublicController::class,'index'])->name('index');
 
 
