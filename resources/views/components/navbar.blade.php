@@ -1,46 +1,67 @@
-<nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('index')}}">Annunci</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                        @guest
-                  <li><a class="dropdown-item" href="{{route('register')}}">register</a></li>
-                  <li><a class="dropdown-item" href="{{route('login')}}">login</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  @else
-                  <li><a class="dropdown-item" href="#">{{Auth::user()->name}}</a></li>
-                  <li><a class="dropdown-item" href="{{route('createAnnouncement')}}">Aggiungi annuncio</a></li>
-                  <li class="nav-item">
-                        <a class="nav-link text-danger" href="{{route('logout')}}" onclick="event.preventDefault() ; document.querySelector('#form-logout').submit();">Logout</a>
-                        <form id="form-logout" action="{{ route('logout')}}" method="POST" class="d-none">
-                          @csrf
-                        </form>
-                      </li>
-                  @endguest
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+<nav class="navbar navbar-expand main-bg fixed-nav" aria-label="Second navbar example">
+  <div class="container-fluid">
+    <ul class="navbar-nav me-auto d-flex justify-content-between w-100">
+      <li class="nav-item">
+        {{-- Home --}}
+        <a class="nav-link nav-btn" aria-current="page" href="{{route('welcome')}}"><i class="bi bi-house-fill fs-1"></i></a>
+      </li>
+      <li class="nav-item">
+        {{-- Index --}}
+        <a class="nav-link nav-btn" href="{{route('index')}}"><i class="bi bi-bag-fill fs-1"></i></a>
+      </li>
+      <li class="nav-item">
+        {{-- User --}}
+        <a class="nav-link nav-btn" href="#"><i class="bi bi-person-fill fs-1"></i></a>
+      </li>
+      <li class="nav-item">
+        {{-- Menù --}}
+        <a class="nav-link nav-btn" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button" aria-controls="NavbarOffcanvas">
+          <i class="bi bi-list fs-1"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{{-- Off Canvas --}}
+<div class="offcanvas offcanvas-end" tabindex="-1" id="NavbarOffcanvas" aria-labelledby="NavbarOffcanvasLabel">
+  <div class="offcanvas-header">
+    <div>
+      <a href=""><i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
+      <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h2 class="text-end">Presto.it</h2>
+    <h3>Categorie</h3>
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{{-- @guest
+            <li><a class="dropdown-item" href="{{route('register')}}">register</a></li>
+            <li><a class="dropdown-item" href="{{route('login')}}">login</a></li>
+            <li><hr class="dropdown-divider"></li>
+            @else
+            <li><a class="dropdown-item" href="#">{{Auth::user()->name}}</a></li>
+            <li><a class="dropdown-item" href="{{route('createAnnouncement')}}">Aggiungi annuncio</a></li>
+            <li class="nav-item">
+                  <a class="nav-link text-danger" href="{{route('logout')}}" onclick="event.preventDefault() ; document.querySelector('#form-logout').submit();">Logout</a>
+                  <form id="form-logout" action="{{ route('logout')}}" method="POST" class="d-none">
+                    @csrf
+                  </form>
+                </li>
+            @endguest --}}

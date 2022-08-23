@@ -8,7 +8,7 @@
     
     <x-searchbar></x-searchbar>
     {{--visualizzazione card per ulitmi annunci--}}
-    
+
     <div class="container">
         <div class="row">
            
@@ -33,5 +33,5 @@
             
         </div>
     </div>
-    
+
 </x-layout>

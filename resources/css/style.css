@@ -1,0 +1,57 @@
+/* Root */
+
+:root{
+    --main: #FFBA08;
+    --dark: #000000;
+    --light: #7F7F7F;
+    --white: #F2F2F2;
+}
+
+    /* Background Color Root */
+    .main-bg{
+        background-color: var(--main);
+    }
+    .dark-bg{
+        background-color: var(--dark);
+    }
+    .light-bg{
+        background-color: var(--light);
+    }
+    .white-bg{
+        background-color: var(--white);
+    }
+
+    /* Text Color Root */
+    .main-text{
+        color: var(--main);
+    }
+    .dark-text{
+        color: var(--dark);
+    }
+    .light-text{
+        color: var(--light);
+    }
+    .white-text{
+        color: var(--white);
+    }
+
+/* Navbar */
+.fixed-nav{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.nav-btn{
+    color: var(--dark);
+}
+
+/* MediaQuerry */
+@media screen and (min-width: 992px) {
+    .fixed-nav{
+        bottom: unset;
+        top: 0;
+    }
+}
