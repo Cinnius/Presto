@@ -5,15 +5,31 @@
         {{session('message')}}
     </div>
     @endif
-    
-    <x-searchbar></x-searchbar>
+    {{-- searchbar --}}
+    <div class="container">
+
+        <div class="row height d-flex justify-content-center align-items-center">
+
+          <div class="col-md-6">
+
+            <div class="form">
+              <i class="fa fa-search"></i>
+              <input type="text" class="form-control form-input" placeholder="cerca un articolo...">
+              <span class="left-pan"><i class="bi bi-search"></i></span>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
     {{--visualizzazione card per ulitmi annunci--}}
 
     <div class="container">
         <div class="row">
            
                 @foreach($announcements as $announcement)
-                <div class="col-4">
+                <div class="col-12">
                     <div class="card" style="width: 18rem;">
                         <img src="https://via.placeholder.com/200" class="card-img-top" alt="...">
                         <div class="card-body">

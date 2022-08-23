@@ -25,4 +25,7 @@ class PublicController extends Controller
         return view('index',compact('announcements'));
     }
     
+    public function profileView(){
+        return view('profileView');
+    }
 }
