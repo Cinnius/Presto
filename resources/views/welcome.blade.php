@@ -6,6 +6,7 @@
     </div>
     @endif
     
+    <x-searchbar></x-searchbar>
     {{--visualizzazione card per ulitmi annunci--}}
     
     <div class="container">

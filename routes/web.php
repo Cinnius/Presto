@@ -19,3 +19,5 @@ Route::get('/',[PublicController::class,'welcome'])->name('welcome');
 
 Route::get('/announcement/new',[AnnouncementController::class,'createAnnouncement'])->middleware('auth')->name('createAnnouncement');
 
+Route::get('/category/{category}',[PublicController::class,'categoryShow'])->name('categoryShow');
+
