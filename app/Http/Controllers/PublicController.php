@@ -21,7 +21,7 @@ class PublicController extends Controller
     }
 
     public function index(){
-        $announcements = Announcement::paginate(8);
+        $announcements = Announcement::paginate(2);
         return view('index',compact('announcements'));
     }
     
