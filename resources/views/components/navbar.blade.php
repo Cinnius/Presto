@@ -1,29 +1,36 @@
 <nav class="navbar navbar-expand main-bg fixed-nav custom-nav" aria-label="Second navbar example">
     <div class="container-fluid">
-        <ul class="navbar-nav me-auto d-flex justify-content-between w-100">
-            <li class="nav-item">
+        <ul class="navbar-nav me-auto d-flex justify-content-between justify-content-lg-center w-100">
+            <li class="nav-item px-md-3">
                 {{-- Home --}}
-                <a class="nav-link nav-btn" aria-current="page" href="{{ route('welcome') }}"><i
-                        class="bi bi-house-fill fs-1"></i></a>
+                <a class="nav-link nav-btn" aria-current="page" href="{{ route('welcome') }}">
+                    <i class="bi bi-house-fill fs-1 hideIcon hideIcon"></i><span class="hideSpan">Home</span>
+                </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-md-3">
                 {{-- Index --}}
-                <a class="nav-link nav-btn" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1"></i></a>
+                <a class="nav-link nav-btn" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
+                    <span class="hideSpan">Index</span>
+                </a>
             </li>
   
-            <li class="nav-item">
+            <li class="nav-item px-md-3">
                 {{-- User --}}
                 @guest
-                <a class="nav-link nav-btn" href="{{route('login')}}"><i class="bi bi-person-fill fs-1"></i></a>
+                <a class="nav-link nav-btn" href="{{route('login')}}">
+                    <i class="bi bi-person-fill fs-1 hideIcon"></i><span class="hideSpan">Login</span>
+                </a>
                 @else
-                <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1"></i></a>
+                <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
+                    </i><span class="hideSpan">Login</span>
+                </a>
                 @endguest
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-md-3">
                 {{-- Menù --}}
                 <a class="nav-link nav-btn" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button"
                     aria-controls="NavbarOffcanvas">
-                    <i class="bi bi-list fs-1"></i>
+                    <i class="bi bi-list fs-1 hideIcon"></i><span class="hideSpan">Menù</span>
                 </a>
             </li>
         </ul>

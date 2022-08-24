@@ -1,14 +1,16 @@
 <x-layout>
 
-    <div class="container-fluid mt-3">
+    <div class="container-fluid mt-2">
 
         {{-- header --}}
         <div class="row justify-content-between align-items-center">
-            <div class="col-10">
-                <h1 class="dark-text fw-bold display-1">Presto.it</h1>
+            <div class="col-10 col-lg-8">
+                <h1 class="dark-text fw-bold display-1 ms-lg-5">Presto.it</h1>
             </div>
-            <div class="col-2 mb-3">
-                <a href="{{ route('createAnnouncement') }}"><i class="bi bi-plus-square-fill text-dark fs-2"></i></a>
+            <div class="col-2 col-lg-4 mb-3 d-flex">
+                <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none w-100 text-center text-dark">
+                <i class="bi bi-plus-square-fill text-dark fs-2"></i>
+                <span class="hideSpan">Aggiungi</span></a>               
             </div>
         </div>
 
