@@ -22,7 +22,7 @@
                 </a>
                 @else
                 <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
-                    </i><span class="hideSpan">Login</span>
+                    </i><span class="hideSpan">User</span>
                 </a>
                 @endguest
             </li>
@@ -48,6 +48,20 @@
     </div>
     <div class="offcanvas-body">
         <h2 class="text-end">Presto.it</h2>
+        <div>
+            @guest
+            @else
+                @if (Auth::user()->is_revisor)
+                    <a href="{{route('indexRevisor')}}" type="button" class="btn btn-primary position-relative">
+                        Revisiona gli Articoli
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{App\Models\Announcement::toBeRevisionedCount()}}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </a>
+                @endif
+            @endguest
+        </div>
         <h3 class="fw-bold">Categorie</h3>
         <div class="col-12 d-flex flex-wrap">
             {{-- <ul class="ul-custom"> --}}
