@@ -36,3 +36,7 @@ Route::get('/announcement/detail/{announcement}',[AnnouncementController::class,
 Route::patch('/announcement/accept/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('acceptAnnouncement');
 Route::patch('/announcement/reject/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('rejectAnnouncement');
 Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->middleware('isRevisor')->name('indexRevisor');
+
+// Route work like revisor
+Route::get('/request/becomerevisor',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('becomeRevisor');
+Route::get('/request/makerevisor/{user}',[RevisorController::class,'makeRevisor'])->middleware('auth')->name('makeRevisor');

@@ -1,9 +1,3 @@
-:root {
-    --main: #FFBA08;
-    --dark: #000000;
-    --white: #F2F2F2;
-}
-
 /* card index */
 .card-shadow {
     box-shadow: 0 5px 20px 10px rgba(0, 0, 0, .2)
