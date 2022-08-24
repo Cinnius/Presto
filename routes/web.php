@@ -32,10 +32,7 @@ Route::get('/announcement/new',[AnnouncementController::class,'createAnnouncemen
 
 Route::get('/announcement/detail/{announcement}',[AnnouncementController::class,'announcementShow'])->name('announcementShow');
 
-Route::patch('/announcement/accept/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->name('acceptAnnouncement');
-
-Route::patch('/announcement/reject/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->name('rejectAnnouncement');
-
-
-
-Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->name('indexRevisor');
+/* route revisione */
+Route::patch('/announcement/accept/{announcement}', [RevisorController::class, 'acceptAnnouncement'])->middleware('isRevisor')->name('acceptAnnouncement');
+Route::patch('/announcement/reject/{announcement}', [RevisorController::class, 'rejectAnnouncement'])->middleware('isRevisor')->name('rejectAnnouncement');
+Route::get('/revisor/home', [RevisorController::class, 'indexRevisor'])->middleware('isRevisor')->name('indexRevisor');

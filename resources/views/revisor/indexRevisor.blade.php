@@ -1,6 +1,7 @@
 <x-layout>
     <div class="container">
         <div class="row">
+            @if($announcement)
             <div class="col-12 py-4 d-flex justify-content-center mt-5">
                 <div class="card card-shadow rounded" style="width: 18rem;">
                     <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
@@ -32,6 +33,13 @@
                     <button type="submit" class="btn btn-danger">Rifiuta</button>
                 </form>
             </div>
+            @else
+            <div class="container">
+                <div class="row">
+                    <h1>non hai articoli da controllare!</h1>
+                </div>
+            </div>
+            @endif
         </div>
     </div>
 </x-layout>
