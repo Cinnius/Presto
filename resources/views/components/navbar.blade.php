@@ -68,11 +68,15 @@
 
             @foreach ($categories as $category)
                 <div class="col-6 my-3 d-flex justify-content-center">
-                    <div class="category-custom">
-                        <a class="link-costum"
-                            href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                    <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
+                        <div class="category-custom text-center">
+                            <div class="mt-3">
+                                <img src="{{$category->icon}}" alt="">
+                                <p class="fw-bolder">{{ $category->name}}</p>
+                            </div>
+                        </div>
+                    </a>
                         {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
-                    </div>
                 </div>
             @endforeach
         </div>
