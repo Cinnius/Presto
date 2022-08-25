@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
@@ -28,7 +29,8 @@ class PublicController extends Controller
     }
     
     public function profileView(){
-        return view('profileView');
+        $announcements = Auth::user()->announcements()->get();
+        return view('profileView', compact('announcements'));
     }
 
 

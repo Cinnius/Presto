@@ -1,4 +1,24 @@
 <x-layout>
+
+        {{-- searchbar --}}
+        <div class="container">
+            <div class="row height d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                    <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
+
+                        <input type="text" class="form-control form-input" placeholder="cerca un articolo..."
+                            name="searched">
+                        <button type="submit" class="border-0 p-0">
+                            <span class="left-pan"><i class="bi bi-search"></i></span>
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container-fluid pt-2 py-5">
         <div class="row justify-content-md-around">
 
@@ -33,7 +53,6 @@
                     <p class="lead">Non sono presenti annunci per questa ricerca, prova con altre parole chiave</p>
                 </div>
             </div>
-            {!! route('index') !!}
             
             @endforelse
 
