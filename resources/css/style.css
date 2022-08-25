@@ -143,4 +143,17 @@ box-shadow: 3px 3px 10px 3px rgba(96, 96, 96, 0.6);
     .hideIcon{
         display:none;
     }
+
+}
+
+.logo-custom{
+    width: 70%;
+}
+
+.img-header{
+    width: 70%;
+    }
+
+.div-searchbar-c{
+    height: 15vh;
 }
