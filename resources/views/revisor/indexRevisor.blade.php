@@ -1,8 +1,13 @@
 <x-layout>
+
     <div class="container">
         <div class="row">
+            <div class="col-8 mx-auto">
+                <h2 class="text-center mt-5">Revisiona gli ultimi annunci</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!</p>
+            </div>
             @if ($announcement)
-                <div class="col-12 py-4 d-flex justify-content-center mt-5">
+                <div class="col-12 col-md-6 py-4 d-flex justify-content-center mt-5">
                     <div class="card card-shadow rounded" style="width: 18rem;">
                         <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
                         <div class="card-body">
@@ -26,27 +31,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-success">Accetta</button>
-                    </form>
-                </div>
-                <div class="col-6">
-                    <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta</button>
-                    </form>
+                <div class="col-4 mx-auto my-auto">
+                    <h2 class="text-center">Review</h2>
+                    <p>Questo annuncio è appropriato per la nostra piattaforma? Rispetta i nostri standard? Valuta attentamente la tua decisione!</p>
+                    <div class="my-5 d-flex justify-content-evenly">
+                        <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success">Accetta</button>
+                        </form>
+                        <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger">Rifiuta</button>
+                        </form>
+                    </div>
                 </div>
             @else
-                <div class="row">
-                    <h1>non hai articoli da controllare!</h1>
+                <div class="col-8 mx-auto mt-5 text-center">
+                    <h3>Non hai altri articoli da controllare!</h3>
+                    <p>Torna più tardi per controllare se ci sono nuovi annunci da revisionare oppure visualizza gli annunci nella sezione "Ultimi annunci processati" per controllare l'operato degli altri Revisori!</p>
                 </div>
             @endif
-            <div class="row">
-                    <a href="{{route('rewiewAnnouncements')}}"><h2>rivedi gli ultimi annunci processati</h2></a>
+            <div class="col-8 mx-auto mt-5 text-center">
+                <h2>Hai fatto un errore?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!</p>
+                <div>
+                    <a class="btn main-btn" href="{{route('rewiewAnnouncements')}}"><p class="my-auto">Ultimi annunci processati</p></a>
+                </div>
             </div>
         </div>
     </div>

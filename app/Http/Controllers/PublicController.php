@@ -29,7 +29,7 @@ class PublicController extends Controller
     }
     
     public function profileView(){
-        $announcements = Auth::user()->announcements()->get();
+        $announcements = Auth::user()->announcements()->where('is_accepted', true)->get();
         return view('profileView', compact('announcements'));
     }
 

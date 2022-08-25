@@ -5,3 +5,13 @@
         
         background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main))
         }
+
+.lastAnnounc-Sep{
+        margin-top: 12rem;
+}
+
+@media screen and (min-width: 768px) {
+        .lastAnnounc-Sep{
+                margin-top: unset;
+        }
+}

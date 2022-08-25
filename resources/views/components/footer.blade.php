@@ -4,18 +4,28 @@
         <div class="container text-md-start mt-5">
             <div class="row mt-3">
                 <div class="col-12 my-4 text-center">
+                    <a class="btn dark-btn mt-3 mb-5" href="#">Torna su</a>
+                </div>
+                <div class="col-12 col-lg-6 mb-4">
                     <div>
-                        <a class="btn dark-btn mb-4" href="#">Torna su</a>
+                        <h6 class="text-uppercase fw-bold mb-4">Vuoi lavorare con noi?</h6>
+                        <p>Sei interessato ad unirti al nostro staff? Vuoi guadagnare rimanendo comodamente seduto sul tuo divano? Vuoi un introito extra per le tue passioni?</p>
+                        <p>Unisci ora al nostro staff, stiamo cercando proprio di te!</p>
+                        <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">Diventa subito un revisore!</a>
                     </div>
-                    <p>Lavora con noi:</p>                   
-                    <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">Diventa revisore</a>
-                    <h6 class="text-uppercase fw-bold mb-4">Newsletter</h6>
-                    <p>Vuoi rimanere aggiornato sulle possibilità di lavoro e sulle ultime offerte? Iscriviti alla nostra Newsletter!</p>
-                    <div class="col-10 col-lg-6 mx-auto form-outline mb-4">
-                        <input type="email" id="form5Example25" class="form-control" />
-                        <label class="form-label" for="form5Example25">Email address</label>
+                </div>
+                <div class="col-12 col-lg-6 mb-4">
+                    <div class="row">
+                        <h6 class="text-uppercase fw-bold mb-4">Newsletter</h6>
+                        <p>Vuoi rimanere aggiornato sulle possibilità di lavoro e sulle ultime offerte? Iscriviti alla nostra Newsletter e rimani aggiornato su tutto quello che ci riguarda!</p>
+                        <div class="col-12 col-lg-10 form-outline mb-4">
+                            <input type="email" id="form5Example25" class="form-control"/>
+                            <label class="form-label" for="form5Example25">Email address</label>
+                        </div>
+                        <div class="col-12 col-lg2">
+                            <button type="submit" class="btn btn-dark mb-4">Subscribe</button>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-dark mb-4">Subscribe</button>
                 </div>
                 <div class="col-12 col-lg-4 mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">Presto srl</h6>

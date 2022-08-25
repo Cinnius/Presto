@@ -1,8 +1,13 @@
 <x-layout>
 
     <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-8 mx-auto mt-5">
+                <h2>Ultime Revisioni</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?</p>
+            </div>
+        </div>
         <div class="row justify-content-md-around">
-
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
@@ -38,19 +43,22 @@
                                     class="text-decoration-none text-dark fw-semibold"><i
                                         class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
                             </div>
-                            @if($announcement-> is_accepted)
-                            <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success">rifiuta</button>
-                            </form>
-                            @else
-                            <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                                @csrf
-                                @method('PATCH')
-                                <button type="submit" class="btn btn-success">Accetta</button>
-                            </form>
-                            @endif
+                            <div class="mt-3 text-center">
+                                <p>Vuoi modificare la visibilità?</p>
+                                @if($announcement-> is_accepted)
+                                <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-danger">rifiuta</button>
+                                </form>
+                                @else
+                                <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn btn-success">Accetta</button>
+                                </form>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>

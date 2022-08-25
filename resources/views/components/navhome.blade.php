@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand navhome-bg fixed-nav custom-nav" aria-label="Second navbar example">
     <div class="container-fluid">
-        <ul
-            class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 fs-5">
+        <ul class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 fs-5">
             {{-- Logo --}}
             <a class="navbar-brand hideLogo" href="">
                 <img src="image/gruppo_1_logotipo.png" class="CustomLogo ms-5" alt="">
@@ -9,7 +8,7 @@
             <li class="nav-item px-md-3 order-1 order-md-1">
                 {{-- Home --}}
                 <a class="nav-link nav-btn" aria-current="page" href="{{ route('welcome') }}">
-                    <i class="bi bi-house-fill fs-1 hideIcon hideIcon"></i><span class="hideSpan">Home</span>
+                    <i class="bi bi-house-fill fs-1 hideIcon"></i><span class="hideSpan">Home</span>
                 </a>
             </li>
             <li class="nav-item px-md-3 order-2 order-md-2">
@@ -18,8 +17,7 @@
                     <span class="hideSpan">Index</span>
                 </a>
             </li>
-
-            <li class="nav-item px-md-3 order-3 order-md-4 userWidth">
+            <li class="nav-item px-md-3 py-0 order-3 order-md-4 userWidth">
                 {{-- User --}}
                 @guest
                     <a class="nav-link nav-btn" href="{{ route('login') }}">
@@ -29,7 +27,10 @@
                 @else
                     <a class="nav-link nav-btn" href="{{ route('profileView') }}">
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>
-                        <span class="hideSpan userName me-5">{{ Auth::user()->name }}</span>
+                        <span class="hideSpan userName userHeight me-5">
+                            <p class="my-auto ps-2">{{ Auth::user()->name }}</p>
+                            <i class="bi bi-person-fill userIcon-height fs-1"></i>
+                        </span>
                     </a>
                 @endguest
             </li>
