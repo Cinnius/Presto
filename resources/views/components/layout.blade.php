@@ -17,7 +17,12 @@
 </head>
 
 <body>
-    <x-navbar />
+    @if(Route::currentRouteName()=="welcome")
+        <x-navhome/>
+    @else
+        <x-navbar/>
+    @endif
+
     {{ $slot }}
     <x-footer />
     @livewireScripts
