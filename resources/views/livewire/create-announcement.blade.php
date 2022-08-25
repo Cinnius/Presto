@@ -2,8 +2,8 @@
     <form wire:submit.prevent="store">
         @csrf
         <div class="container">
-            <div class="row">
-                <div class="col-12">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Titolo</label>
                         <input type="text" class="form-control" wire:model="title" @error('title') is-invalid @enderror>
@@ -29,11 +29,11 @@
                         <select wire:model.defer="category" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>                            
+                                <option class="option-form" value="{{$category->id}}">{{$category->name}}</option>                            
                             @endforeach
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Aggiungi annuncio</button>
+                    <button type="submit" class="btn main-btn">Aggiungi annuncio</button>
                     
                 </div>
             </div>

@@ -73,7 +73,7 @@
                             <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
+                                    class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
                             </div>
                         </div>
                     </div>

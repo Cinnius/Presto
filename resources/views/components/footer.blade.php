@@ -4,8 +4,11 @@
         <div class="container text-md-start mt-5">
             <div class="row mt-3">
                 <div class="col-12 my-4 text-center">
-                    <a href="{{route('becomeRevisor')}}" class="btn main-bg dark-text my-3 py-1 px-2">Diventa revisore</a>
-                    <a class="btn btn-dark mb-4" href="#">Torna su</a>
+                    <div>
+                        <a class="btn btn-dark mb-4" href="#">Torna su</a>
+                    </div>
+                    <p>Lavora con noi:</p>                   
+                    <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">Diventa revisore</a>
                     <h6 class="text-uppercase fw-bold mb-4">Newsletter</h6>
                     <p>Vuoi rimanere aggiornato sulle possibilità di lavoro e sulle ultime offerte? Iscriviti alla nostra Newsletter!</p>
                     <div class="col-10 col-lg-6 mx-auto form-outline mb-4">

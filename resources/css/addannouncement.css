@@ -1,0 +1,29 @@
+/* Form-controll */
+.form-control:focus {
+    border: 2px solid var(--main);
+    outline: 0;
+    box-shadow: none;
+}
+
+.form-select:focus {
+    border: 2px solid var(--main);
+    outline: 0;
+    box-shadow: none;
+}
+
+.main-btn{
+        --bs-btn-color: #000;
+        --bs-btn-bg: var(--main);
+        --bs-btn-border-color: var(--main);
+        --bs-btn-hover-color: #000;
+        --bs-btn-hover-bg: var(--main);
+        --bs-btn-hover-border-color: var(--main);
+        --bs-btn-focus-shadow-rgb: 217, 164, 6;
+        --bs-btn-active-color: #000;
+        --bs-btn-active-bg: var(--main);
+        --bs-btn-active-border-color: var(--main);
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #000;
+        --bs-btn-disabled-bg: var(--main);
+        --bs-btn-disabled-border-color: var(--main);
+}
