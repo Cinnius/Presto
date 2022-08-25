@@ -1,36 +1,45 @@
-<nav class="navbar navbar-expand main-bg fixed-nav custom-nav" aria-label="Second navbar example">
+<nav class="navbar navbar-expand navhome-bg fixed-nav custom-nav" aria-label="Second navbar example">
     <div class="container-fluid">
-        <ul class="navbar-nav me-auto d-flex justify-content-between justify-content-lg-center w-100">
-            <li class="nav-item px-md-3">
+        <ul
+            class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 fs-5">
+            {{-- Logo --}}
+            <a class="navbar-brand hideLogo" href="">
+                <img src="image/gruppo_1_logotipo.png" class="CustomLogo ms-5" alt="">
+            </a>
+            <li class="nav-item px-md-3 order-1 order-md-1">
                 {{-- Home --}}
                 <a class="nav-link nav-btn" aria-current="page" href="{{ route('welcome') }}">
                     <i class="bi bi-house-fill fs-1 hideIcon hideIcon"></i><span class="hideSpan">Home</span>
                 </a>
             </li>
-            <li class="nav-item px-md-3">
+            <li class="nav-item px-md-3 order-2 order-md-2">
                 {{-- Index --}}
                 <a class="nav-link nav-btn" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
                     <span class="hideSpan">Index</span>
                 </a>
             </li>
-  
-            <li class="nav-item px-md-3">
+
+            <li class="nav-item px-md-3 order-3 order-md-4 userWidth">
                 {{-- User --}}
                 @guest
-                <a class="nav-link nav-btn" href="{{route('login')}}">
-                    <i class="bi bi-person-fill fs-1 hideIcon"></i><span class="hideSpan">Login</span>
-                </a>
+                    <a class="nav-link nav-btn" href="{{ route('login') }}">
+                        <i class="bi bi-person-fill fs-1 hideIcon"></i>
+                        <span class="hideSpan userName me-5">Login</span>
+                    </a>
                 @else
-                <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
-                    </i><span class="hideSpan">User</span>
-                </a>
+                    <a class="nav-link nav-btn" href="{{ route('profileView') }}">
+                        <i class="bi bi-person-fill fs-1 hideIcon"></i>
+                        <span class="hideSpan userName me-5">{{ Auth::user()->name }}</span>
+                    </a>
                 @endguest
             </li>
-            <li class="nav-item px-md-3">
+
+            <li class="nav-item px-md-3 order-4 order-md-3">
                 {{-- Menù --}}
                 <a class="nav-link nav-btn" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button"
                     aria-controls="NavbarOffcanvas">
-                    <i class="bi bi-list fs-1 hideIcon"></i><span class="hideSpan">Menù</span>
+                    <i class="bi bi-list fs-1 hideIcon"></i>
+                    <span class="hideSpan">Menù</span>
                 </a>
             </li>
         </ul>
@@ -52,10 +61,10 @@
             @guest
             @else
                 @if (Auth::user()->is_revisor)
-                    <a href="{{route('indexRevisor')}}" type="button" class="btn btn-primary position-relative">
+                    <a href="{{ route('indexRevisor') }}" type="button" class="btn btn-primary position-relative">
                         Revisiona gli Articoli
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{App\Models\Announcement::toBeRevisionedCount()}}
+                            {{ App\Models\Announcement::toBeRevisionedCount() }}
                             <span class="visually-hidden">unread messages</span>
                         </span>
                     </a>
@@ -71,29 +80,14 @@
                     <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
                         <div class="category-custom text-center">
                             <div class="mt-3">
-                                <img src="{{$category->icon}}" alt="">
-                                <p class="fw-bolder">{{ $category->name}}</p>
+                                <img src="{{ $category->icon }}" alt="">
+                                <p class="fw-bolder">{{ $category->name }}</p>
                             </div>
                         </div>
                     </a>
-                        {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
+                    {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
                 </div>
             @endforeach
         </div>
     </div>
 </div>
-
-{{-- @guest
-            <li><a class="dropdown-item" href="{{route('register')}}">register</a></li>
-            <li><a class="dropdown-item" href="{{route('login')}}">login</a></li>
-            <li><hr class="dropdown-divider"></li>
-            @else
-            <li><a class="dropdown-item" href="#">{{Auth::user()->name}}</a></li>
-            <li><a class="dropdown-item" href="{{route('createAnnouncement')}}">Aggiungi annuncio</a></li>
-            <li class="nav-item">
-                  <a class="nav-link text-danger" href="{{route('logout')}}" onclick="event.preventDefault() ; document.querySelector('#form-logout').submit();">Logout</a>
-                  <form id="form-logout" action="{{ route('logout')}}" method="POST" class="d-none">
-                    @csrf
-                  </form>
-                </li>
-            @endguest --}}
