@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand navhome-bg fixed-nav custom-nav" aria-label="Second navbar example">
     <div class="container-fluid">
-        <ul class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 fs-5">
+        <ul
+            class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 fs-5">
             {{-- Logo --}}
             <a class="navbar-brand hideLogo" href="">
                 <img src="image/gruppo_1_logotipo.png" class="CustomLogo ms-5" alt="">
@@ -28,7 +29,7 @@
                 @else
                     <a class="nav-link nav-btn" href="{{ route('profileView') }}">
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>
-                        <span class="hideSpan userName me-5">{{Auth::user()->name}}</span>
+                        <span class="hideSpan userName me-5">{{ Auth::user()->name }}</span>
                     </a>
                 @endguest
             </li>
@@ -76,14 +77,17 @@
 
             @foreach ($categories as $category)
                 <div class="col-6 my-3 d-flex justify-content-center">
-                    <div class="category-custom">
-                        <a class="link-costum"
-                            href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
-                        {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
-                    </div>
+                    <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
+                        <div class="category-custom text-center">
+                            <div class="mt-3">
+                                <img src="{{ $category->icon }}" alt="">
+                                <p class="fw-bolder">{{ $category->name }}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
                 </div>
             @endforeach
         </div>
     </div>
 </div>
-

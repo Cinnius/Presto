@@ -33,7 +33,6 @@
                     <p class="lead">Non sono presenti annunci per questa ricerca, prova con altre parole chiave</p>
                 </div>
             </div>
-            {!! route('index') !!}
             
             @endforelse
 
