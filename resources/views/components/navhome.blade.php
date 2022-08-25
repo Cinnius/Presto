@@ -27,7 +27,7 @@
                     </a>
                 @else
                     <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center" href="{{ route('profileView') }}">
-                        <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i>
+                        {{-- <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i> --}}
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>
                         <span class="hideSpan userName userHeight me-5">
                             <p class="my-auto ps-2">{{ Auth::user()->name }}</p>

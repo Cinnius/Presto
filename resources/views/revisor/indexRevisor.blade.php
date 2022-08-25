@@ -58,7 +58,7 @@
                     <a class="text-decoration-none text-dark btn main-btn fst-italic fw-semibold fs-5 me-0 me-md-5" href="{{route('rewiewAnnouncements')}}">Rivedi gli ultimi annunci revisionati</a>
                 </div>
             </div>  
->>>>>>> fca2d4e99b93ff8979960bf41b1b9dd834935c10
+        </div>
     </div>
 
 </x-layout>
