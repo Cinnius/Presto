@@ -2,7 +2,7 @@
 
         {{-- searchbar --}}
         <div class="container">
-            <div class="row height d-flex justify-content-center align-items-center">
+            <div class="row mt-5 d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
                     <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
 
@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
 
     <div class="container-fluid pt-2 py-5">

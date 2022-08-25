@@ -1,10 +1,9 @@
 body{
 
-        background: #d1d5db;
+        background: var(--main);
     }
     
-    .height{
-    
+    .heightSearch{    
         height: 15vh;
     }
     

@@ -1,7 +1,6 @@
 <x-layout>
 
     {{-- profile --}}
-
     <section class="vh-100 white-bg">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">

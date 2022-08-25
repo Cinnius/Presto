@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="container">
+    <div class="container-fluid main-bg">
+        <h1 class="pt-5 text-center fw-semibold">Annunci da revisionare</h1>
         <div class="row">
             @if ($announcement)
                 <div class="col-12 py-4 d-flex justify-content-center mt-5">
@@ -26,29 +27,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-success">Accetta</button>
-                    </form>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3 col-xxl-2 d-flex justify-content-around ms-4">
+                        <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-success">Accetta</button>
+                        </form>
+                        <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <button type="submit" class="btn btn-danger">Rifiuta</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="btn btn-danger">Rifiuta</button>
-                    </form>
-                </div>
+        </div>
             @else
-                <div class="row">
-                    <h1>non hai articoli da controllare!</h1>
+                <div class="row mt-5 g-0">
+                    <div class="col-12">
+                        <h2 class="fst-italic text-center mx-3">Non hai articoli da revisionare!</h2>
+                    </div>
                 </div>
             @endif
-            <div class="row">
-                    <a href="{{route('rewiewAnnouncements')}}"><h2>rivedi gli ultimi annunci processati</h2></a>
-            </div>
-        </div>
+            <div class="row justify-content-center w-100 g-0">
+                <div class="col-12 d-flex justify-content-center justify-content-md-end mt-4 mt-xl-2 me-0">
+                    <a class="text-decoration-none text-dark btn main-btn fst-italic fw-semibold fs-5 me-0 me-md-5" href="{{route('rewiewAnnouncements')}}">Rivedi gli ultimi annunci revisionati</a>
+                </div>
+            </div>  
     </div>
 
 </x-layout>
