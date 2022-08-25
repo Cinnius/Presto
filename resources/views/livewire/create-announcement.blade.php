@@ -6,14 +6,14 @@
                 <div class="col-12 col-md-10">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Titolo</label>
-                        <input type="text" class="form-control" wire:model="title" @error('title') is-invalid @enderror>
+                        <input type="text" class="form-control" wire:model.debounce.2000ms="title" @error('title') is-invalid @enderror>
                         @error('title')
                             <span class="error">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Descrizione</label>
-                        <textarea class="form-control" cols="30" rows="10" wire:model="body"  @error('body') is-invalid @enderror></textarea>
+                        <textarea class="form-control" cols="30" rows="10" wire:model.debounce.2000ms="body"  @error('body') is-invalid @enderror></textarea>
                         @error('body')
                             <span class="error">{{$message}}</span>
                         @enderror

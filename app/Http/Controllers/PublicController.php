@@ -30,4 +30,14 @@ class PublicController extends Controller
     public function profileView(){
         return view('profileView');
     }
+
+
+    public function searchAnnouncements(Request $request){
+        $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(6);
+
+        return view( 'index', compact('announcements'));
+    }
+
+    
+
 }
