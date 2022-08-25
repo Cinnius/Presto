@@ -5,7 +5,7 @@
             <div class="row mt-3">
                 <div class="col-12 my-4 text-center">
                     <div>
-                        <a class="btn btn-dark mb-4" href="#">Torna su</a>
+                        <a class="btn dark-btn mb-4" href="#">Torna su</a>
                     </div>
                     <p>Lavora con noi:</p>                   
                     <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">Diventa revisore</a>
