@@ -18,11 +18,11 @@
                                     class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
                         </div>
                         <div class="position-absolute mt-3">
-                            <p class="text-decoration-none text-dark main-bg py-1 px-2 rounded ms-3 ">
+                            <p class="text-decoration-none text-dark fst-italic main-bg px-2 rounded ms-3">
                                 @if ($announcement->is_accepted)
-                                    annuncio accettato
+                                    Accettato
                                 @else
-                                    annuncio rifiutato
+                                    Rifiutato
                                     @endif
                             </p>
                         </div>
@@ -49,13 +49,13 @@
                                 <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn btn-danger">rifiuta</button>
+                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">Rifiuta</button>
                                 </form>
                                 @else
                                 <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn btn-success">Accetta</button>
+                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">Accetta</button>
                                 </form>
                                 @endif
                             </div>

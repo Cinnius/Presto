@@ -130,6 +130,10 @@ p, ul, li{
     display:block;
 }
 
+.hideIcon2{
+    display:none;
+}
+
 .hideLogo{
     display:none;
 }
@@ -165,11 +169,15 @@ p, ul, li{
 
 /* MediaQuerry */
 @media screen and (min-width: 768px) {
+
+    .textNav{
+        font-size: 18px;
+    }
+
     .navhome-bg{
         border:none;
         box-shadow:none;
     }
-   
 
     .fixed-nav{
         bottom: unset;
@@ -185,6 +193,14 @@ p, ul, li{
         display:none;
     }
 
+    .hideIcon2{
+        display:block;
+    }
+
+    .iconUser{
+        font-size: 5px;
+    }
+
     .hideLogo{
         display:block;
     }
@@ -197,4 +213,20 @@ p, ul, li{
         display:flex;
         flex-direction: row-reverse;
     }
+}
+
+/* Header */
+.logo-custom{
+    width:75%;
+    height: auto;
+}
+
+.img-header{
+    width: 70%;
+    }
+
+/* Searchbarhome */
+
+.widthCustom{
+    width: auto;
 }

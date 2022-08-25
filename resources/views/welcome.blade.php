@@ -1,29 +1,28 @@
 <x-layout>
 
-
-
     {{-- header --}}
-    <header class="container-fluid mt-2">
-        <div class="row justify-content-between align-items-center main-bg">
+    <header class="container-fluid main-bg">
+        <div class="row justify-content-between align-items-center pt-5 pt-md-2">
             <!-- logo -->
-            <div class="col-12 col-lg-6 d-flex flex-column align-items-center ">
-                <div>
-                <h1 class="dark-text fw-bold display-1 ms-lg-5"> Vendilo al più</h1>
+            <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-center">
+                <div class="col-12 col-xl-10 ms-5 ms-xl-0">
+                    <h1 class="dark-text fw-bold display-1 widthCustom"> Vendilo al più</h1>
                 </div>
-                <div class="d-flex justify-content-center ms-3">
-                <img class="logo-custom ps-5" src="image/logo1.png" alt="">
+                <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-3 ms-xl-5">
+                    <img class="logo-custom img-fluid ps-5" src="image/logo1.png" alt="word Presto">
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mb-3">
-                <img class="img-header mx-auto" src="image/img1.png" alt="">
+            <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
+                <img class="img-header mx-auto img-fluid" src="image/img1.png" alt="">
             </div>
     </header>
+
     {{-- searchbar --}}
 
-    <div class="container">
-        <div class="row height d-flex justify-content-end align-items-center mt-5 div-searchbar-c">
-            <div class="col-9 col-md-6 me-4">
+    <div class="container-fluid">
+        <div class="row heightSearch justify-content-end align-items-center mt-5 w-100 bg-black g-0 mx-0">
+            <div class="col-9 col-md-6 me-4 bg-black g-0">
                 <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
 
                     <input type="text" class="form-control form-input" placeholder="cerca un articolo..." name="searched">
@@ -36,8 +35,8 @@
             <!-- bottone aggiungi -->
             <div class="col-2 col-md-3 mb-4">
                 <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
-                    <i class="bi bi-plus-square-fill text-dark fs-2 "></i>
-                    <span class="hideSpan my-auto ms-3">Aggiungi</span></a>
+                    <i class="bi bi-plus-square-fill main-text fs-2 "></i>
+                    <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
             </div>
         </div>
     </div>
@@ -66,6 +65,7 @@
     {{-- visualizzazione card per ulitmi annunci --}}
 
     <div class="container-fluid">
+        <h2 class="mt-5 text-center fw-semibold mb-3">Ultimi annunci inseriti</h2>
         <div class="row justify-content-md-around">
 
             @foreach ($announcements as $announcement)

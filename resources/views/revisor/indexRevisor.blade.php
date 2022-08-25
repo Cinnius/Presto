@@ -53,14 +53,12 @@
                     <p>Torna più tardi per controllare se ci sono nuovi annunci da revisionare oppure visualizza gli annunci nella sezione "Ultimi annunci processati" per controllare l'operato degli altri Revisori!</p>
                 </div>
             @endif
-            <div class="col-8 mx-auto mt-5 text-center">
-                <h2>Hai fatto un errore?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!</p>
-                <div>
-                    <a class="btn main-btn" href="{{route('rewiewAnnouncements')}}"><p class="my-auto">Ultimi annunci processati</p></a>
+            <div class="row justify-content-center w-100 g-0">
+                <div class="col-12 d-flex justify-content-center justify-content-md-end mt-4 mt-xl-2 me-0">
+                    <a class="text-decoration-none text-dark btn main-btn fst-italic fw-semibold fs-5 me-0 me-md-5" href="{{route('rewiewAnnouncements')}}">Rivedi gli ultimi annunci revisionati</a>
                 </div>
-            </div>
-        </div>
+            </div>  
+>>>>>>> fca2d4e99b93ff8979960bf41b1b9dd834935c10
     </div>
 
 </x-layout>
