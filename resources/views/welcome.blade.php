@@ -70,7 +70,7 @@
             @foreach ($announcements as $announcement)
             <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                    <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
+                    <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200' : Storage::url($announcement->images()->first()->path) }}" class="card-img-top rounded p-1" alt="...">
                     <div class="position-absolute end-0 mt-3">
                         <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
                     </div>

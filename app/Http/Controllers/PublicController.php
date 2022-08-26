@@ -24,12 +24,12 @@ class PublicController extends Controller
     }
 
     public function index(){
-        $announcements = Announcement::where('is_accepted', true)->paginate(2);
+        $announcements = Announcement::where('is_accepted', true)->latest()->paginate(10);
         return view('index',compact('announcements'));
     }
     
     public function profileView(){
-        $announcements = Auth::user()->announcements()->where('is_accepted', true)->get();
+        $announcements = Auth::user()->announcements()->where('is_accepted', true)->latest()->get();
         return view('profileView', compact('announcements'));
     }
 
