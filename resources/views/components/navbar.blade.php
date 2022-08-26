@@ -52,7 +52,7 @@
             @guest
             @else
                 @if (Auth::user()->is_revisor)
-                    <a href="{{route('indexRevisor')}}" type="button" class="btn btn-primary position-relative">
+                    <a href="{{route('indexRevisor')}}" type="button" class="btn position-relative main-btn my-4">
                         Revisiona gli Articoli
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                             {{App\Models\Announcement::toBeRevisionedCount()}}

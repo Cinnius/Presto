@@ -1,7 +1,7 @@
 .gradient-custom {
  
         
-        background: -webkit-linear-gradient(90deg, var(--main), var(--light));
+        background: -webkit-linear-gradient(90deg,  var(--light), var(--main));
         
-        background: linear-gradient(180deg, var(--main), var(--light));
+        background: linear-gradient(180deg, var(--light), var(--main));
         }

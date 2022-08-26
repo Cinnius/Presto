@@ -1,7 +1,7 @@
 <x-layout>
 
     {{-- header --}}
-    <header class="container-fluid main-bg">
+    <header class="container-fluid main-bg ">
         <div class="row justify-content-between align-items-center pt-5 pt-md-2">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-center">
@@ -20,10 +20,10 @@
 
     {{-- searchbar --}}
 
-    <div class="container-fluid">
-        <div class="row heightSearch justify-content-end align-items-center mt-5 w-100 bg-black g-0 mx-0">
+    <section class="container-fluid p-0 mx-0">
+        <div class="row heightSearch justify-content-end align-items-center mt-5 w-100 bg-black g-0">
             <div class="col-9 col-md-6 me-4 bg-black g-0">
-                <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
+                <form action="{{ route('searchAnnouncements') }}" method="GET" class="form d-flex">
 
                     <input type="text" class="form-control form-input" placeholder="cerca un articolo..." name="searched">
                     <button type="submit" class="border-0 p-0">
@@ -33,13 +33,13 @@
                 </form>
             </div>
             <!-- bottone aggiungi -->
-            <div class="col-2 col-md-3 mb-4">
+            <div class="col-2 col-md-3">
                 <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
                     <i class="bi bi-plus-square-fill main-text fs-2 "></i>
                     <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
             </div>
         </div>
-    </div>
+    </section>
    
 
 

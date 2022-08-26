@@ -26,12 +26,12 @@
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
-                                        <h6>Email</h6>
-                                        <p class="text-muted">{{ Auth::user()->email }}</p>
+                                        <h6>Username</h6>
+                                        <p class="text-muted">{{ Auth::user()->name }}</p>
                                     </div>
                                     <div class="col-6 mb-3">
-                                        <h6>Phone</h6>
-                                        <p class="text-muted">123 456 789</p>
+                                        <h6>Email</h6>
+                                        <p class="text-muted">{{ Auth::user()->email }}</p>
                                     </div>
                                 </div>
 
