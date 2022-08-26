@@ -4,15 +4,20 @@
             <div class="col-6">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
+                        @if ($announcement->images)
+                        @foreach ($announcement->images as $image)
+                        <div class="carousel-item @if($loop->first)active @endif">
+                            <img src="{{ Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                        </div>
+                        @endforeach
+                        @else
                         <div class="carousel-item active">
-                            <img src="https://via.placeholder.com/200" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="https://via.placeholder.com/200" class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/200" class="d-block w-100" alt="...">
-                        </div>
+                        @endif
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -31,7 +36,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$announcement->title}}</h5>
                         <p class="card-text">{{$announcement->body}}</p>
-                        
+
                         <a href="{{route('categoryShow', ['category'=>$announcement->category])}}" class="btn btn-primary">vai a {{$announcement->category->name}}</a>
                         <div class="card-footer">
                             <p>creato il: {{$announcement->created_at->format('d/m/Y')}}</p>

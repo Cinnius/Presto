@@ -2,9 +2,9 @@
     <x-slot name="title">welcome</x-slot>
 
     @if (session()->has('message'))
-        <div class="alert alert-danger">
-            {{ session('message') }}
-        </div>
+    <div class="alert alert-danger">
+        {{ session('message') }}
+    </div>
     @endif
 
     {{-- header --}}
@@ -30,8 +30,7 @@
             <div class="col-8 col-md-6 me-4 bg-black g-0">
                 <form action="{{ route('searchAnnouncements') }}" method="GET" class="form d-flex">
 
-                    <input type="text" class="form-control form-input" placeholder="cerca un articolo..."
-                        name="searched">
+                    <input type="text" class="form-control form-input" placeholder="cerca un articolo..." name="searched">
                     <button type="submit" class="border-0 p-0">
                         <span class="left-pan"><i class="bi bi-search"></i></span>
                     </button>
@@ -40,8 +39,7 @@
             </div>
             <!-- bottone aggiungi -->
             <div class="col-2 col-md-3">
-                <a href="{{ route('createAnnouncement') }}"
-                    class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
+                <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
                     <i class="bi bi-plus-square-fill main-text fs-2 "></i>
                     <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
             </div>
@@ -70,39 +68,36 @@
         <div class="row justify-content-md-around">
 
             @foreach ($announcements as $announcement)
-                <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
-                    <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                        <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
-                        <div class="position-absolute end-0 mt-3">
-                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i
-                                    class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
-                            <p class="card-text fst-italic fw-normal text-truncate">{{ $announcement->body }}</p>
-                            <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
-                                {{ $announcement->price }}
+            <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
+                <div class="card card-shadow rounded position-relative" style="width: 18rem;">
+                    <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
+                    <div class="position-absolute end-0 mt-3">
+                        <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
+                        <p class="card-text fst-italic fw-normal text-truncate">{{ $announcement->body }}</p>
+                        <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
+                            {{ $announcement->price }}
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
+                                {{ $announcement->user->name ?? '' }}
                             </p>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
-                                    {{ $announcement->user->name ?? '' }}
-                                </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
-                                    {{ $announcement->created_at->format('d/m/Y') }}
-                                </p>
-                            </div>
-                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                    class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
-                            </div>
+                            <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
+                                {{ $announcement->created_at->format('d/m/Y') }}
+                            </p>
+                        </div>
+                        <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
+                            <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none text-dark fw-semibold"><i class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
                         </div>
                     </div>
                 </div>
+            </div>
             @endforeach
 
         </div>
     </div>
 
+ 
 </x-layout>

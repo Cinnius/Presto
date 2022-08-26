@@ -40,6 +40,10 @@ class AppServiceProvider extends ServiceProvider
             View::share('categories', Category::all());
         }
 
+        if (Schema::hasTable('announcements')){
+            View::share('announcements', Category::all());
+        }
+
         Paginator::useBootstrap();
     }
 }

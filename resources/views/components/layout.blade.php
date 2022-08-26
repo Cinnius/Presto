@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/983733541424742501/1012080676952092712/gruppo_1_logotipo.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    
 </head>
 
 <body>
@@ -25,6 +26,7 @@
 
     {{ $slot }}
     <x-footer />
+
     @livewireScripts
 </body>
 

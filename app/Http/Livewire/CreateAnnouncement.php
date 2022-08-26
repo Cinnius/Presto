@@ -97,6 +97,8 @@ class CreateAnnouncement extends Component
         $this->body="";
         $this->price="";
         $this->category="";
+        $this->temporary_images="";
+        $this->images = [];
     }
 
     public function render()
