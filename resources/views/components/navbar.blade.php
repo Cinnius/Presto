@@ -22,7 +22,7 @@
                 </a>
                 @else
                 <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
-                    </i><span class="hideSpan">User</span>
+                    </i><span class="hideSpan">{{Auth::user()->name}}</span>
                 </a>
                 @endguest
             </li>

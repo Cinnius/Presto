@@ -235,3 +235,56 @@ p, ul, li{
 .widthCustom{
     width: auto;
 }
+
+/* Service: Spedizione, servizio clienti, ... */
+.serviceHome{
+    border:2px dotted var(--light);
+    border-radius:50%;
+    width: 80px;
+    height: 80px;
+}
+
+.borderFooter{
+    background-color:var(--dark);
+    color:var(--main);
+}
+
+.cardFlipPersonalize{
+    width: 250px;
+    height: 270px;
+}
+
+.flipCard{
+    background-color: transparent;
+    width:300px;
+    height:300px;
+    /* perspective: 1000px; */
+}
+
+.cardInner{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: transform 1s;
+    transform-style:preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .cardInner{
+    transform: rotateY(180deg);
+}
+
+.cardFront,.cardBack{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cardBack{
+    color:var(--main);
+    height:190px;
+    transform: rotateY(180deg);
+}
