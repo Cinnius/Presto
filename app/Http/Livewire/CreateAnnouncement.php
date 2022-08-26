@@ -73,13 +73,8 @@ class CreateAnnouncement extends Component
             }
         }
         
-        // $category=Category::find($this->category);
-        // $announcement = $category->announcements()->create([
-        //     'title'=>$this->title,
-        //     'body'=>$this->body,
-        //     'price'=>$this->price,
-        // ]);
-        //  Auth::user()->announcements()->save($announcement);
+       
+          Auth::user()->announcements()->save($this->announcement);
         
 
         $this->clear();
