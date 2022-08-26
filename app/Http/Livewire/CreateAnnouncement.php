@@ -4,46 +4,87 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 
 class CreateAnnouncement extends Component
 {
+    use WithFileUploads;
     public $title;
     public $body;
     public $price;
     public $category;
+    public $message;
+    public $validated;
+    public $temporary_images;
+    public $images = [];
+    public $image;
+    public $form_id;
+    public $announcement;
 
-    protected $rules=[
+    protected $rules = [
         'title'=>'required|max:25',
         'body'=>'required|min:15',
         'price'=>'required|numeric',
         'category'=>'required',
+        'images.*'=>'image|max:1024',
+        'temporary_images.*'=>'image|max:1024',
+
     ];
 
-    protected $messages=[
+    protected $messages = [
         'required'=>'Il campo :attribute è richiesto',
         'min'=>'Il campo :attribute è troppo corto',
         'max'=>'Il campo :attribute è troppo lungo',
         'numeric'=>'Il campo :attribute dev\' essere numerico',
+        'temporary_images.required'=>'l\'immagine è richiesta',
+        'temporary_images.*.image'=>'i file devono essere immagini',
+        'temporary_images.*.max'=>'l\'immagine dev\' essere massimo di un mega',
+        'images.image'=>'i file devono essere immagini',
+        'images.max'=>'l\'immagine dev\' essere massimo di un mega',
+
     ];
+
+    public function updatedTemporaryImages() {
+        if($this->validate([
+            'temporary_images.*'=>'image|max:1024',
+        ])) {
+            foreach($this->temporary_images as $image) {
+                $this->images[] = $image;
+            }
+        }
+    }
+
+    public function removeImage($key) {
+        if(in_array($key, array_keys($this->images))){
+            unset ($this->images[$key]);
+        }
+    }
 
     public function store(){
         
         $this->validate();
+
+        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+        if(count($this->images)){
+            foreach($this->images as $image){
+                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+            }
+        }
         
-        $category=Category::find($this->category);
-        $announcement = $category->announcements()->create([
-            'title'=>$this->title,
-            'body'=>$this->body,
-            'price'=>$this->price,
-        ]);
-         Auth::user()->announcements()->save($announcement);
+        // $category=Category::find($this->category);
+        // $announcement = $category->announcements()->create([
+        //     'title'=>$this->title,
+        //     'body'=>$this->body,
+        //     'price'=>$this->price,
+        // ]);
+        //  Auth::user()->announcements()->save($announcement);
         
 
         $this->clear();
 
-        return redirect()->to('/')->with('message','Il tuo annuncio è stato inserito correttamente');
+        return redirect()->to('/')->with('message','Il tuo annuncio è stato inserito correttamente ed è in attesa di approvazione');
     }
 
     public function updated($propertyName)
