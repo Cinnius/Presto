@@ -54,8 +54,8 @@
                 </div>
             @endif
             <div class="row justify-content-center w-100 g-0">
-                <div class="col-12 d-flex justify-content-center justify-content-md-end mt-4 mt-xl-2 me-0">
-                    <a class="text-decoration-none text-dark btn main-btn fst-italic fw-semibold fs-5 me-0 me-md-5" href="{{route('rewiewAnnouncements')}}">Rivedi gli ultimi annunci revisionati</a>
+                <div class="col-12 d-flex justify-content-center mt-4 mt-xl-2 me-0">
+                    <a class="text-decoration-none text-dark btn main-btn fw-semibold me-0 me-md-5 mt-5" href="{{route('rewiewAnnouncements')}}">Rivedi gli ultimi annunci revisionati</a>
                 </div>
             </div>  
         </div>
