@@ -16,13 +16,22 @@
 
         }
 
-        .form span {
+        .pan-customR {
 
             position: absolute;
             right: 17px;
             top: 13px;
             padding: 2px;
             border-left: 1px solid #d1d5db;
+
+        }
+       .pan-customL {
+
+            position: absolute;
+            left: 17px;
+            top: 13px;
+            padding: 2px;
+            border-right: 1px solid #d1d5db;
 
         }
 
@@ -33,6 +42,14 @@
         .left-pan i {
 
             padding-left: 10px;
+        }
+        .right-pan {
+            padding-right: 7px;
+        }
+
+        .right-pan i {
+
+            padding-right: 10px;
         }
 
         .form-input {

@@ -1,12 +1,12 @@
 <x-layout>
 
         {{-- searchbar --}}
-        <div class="container">
+        {{-- <div class="container">
             <div class="row mt-5 d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
-                    <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
-
-                        <input type="text" class="form-control form-input" placeholder="cerca un articolo..."
+                    <form action="{{ route('searchAnnouncements') }}" method="GET" class="form"> --}}
+@livewire('live-search')
+                 {{--        <input type="text" class="form-control form-input" placeholder="cerca un articolo..." wire:model="search"
                             name="searched">
                         <button type="submit" class="border-0 p-0">
                             <span class="left-pan"><i class="bi bi-search"></i></span>
@@ -15,7 +15,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
 
 
