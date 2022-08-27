@@ -11,10 +11,10 @@
         @endif --}}
 
         @if (session()->has('message'))
-        <div class="alert alert-danger">
-            {{ session('message') }}
-        </div>
-        @endif    
+            <div class="alert alert-danger">
+                {{ session('message') }}
+            </div>
+        @endif
 
         <div class="row justify-content-between align-items-center pt-5 pt-md-2">
             <!-- logo -->
@@ -32,25 +32,20 @@
 
     {{-- searchbar --}}
 
-    <section class="container-fluid p-0 mx-0">
-        <div class="row heightSearch justify-content-end align-items-center w-100 bg-black g-0">
-            <div class="col-8 col-md-6 me-4 bg-black g-0">
-                <form action="{{ route('searchAnnouncements') }}" method="GET" class="form d-flex">
+    <section class="container-fluid bg-black">
+        <div class="container p-0 mx-0">
+            <div class="row  justify-content-end align-items-center w-100 bg-black g-0">
+                <div class="col-8 col-md-6 me-4 bg-black g-0">
+                    @livewire('live-search')
 
-                    <input type="text" class="form-control form-input" placeholder="cerca un articolo..."
-                        name="searched">
-                    <button type="submit" class="border-0 p-0">
-                        <span class="left-pan"><i class="bi bi-search"></i></span>
-                    </button>
-
-                </form>
-            </div>
-            <!-- bottone aggiungi -->
-            <div class="col-2 col-md-3">
-                <a href="{{ route('createAnnouncement') }}"
-                    class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
-                    <i class="bi bi-plus-square-fill main-text fs-2 "></i>
-                    <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
+                </div>
+                <!-- bottone aggiungi -->
+                <div class="col-2 col-md-3">
+                    <a href="{{ route('createAnnouncement') }}"
+                        class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
+                        <i class="bi bi-plus-square-fill main-text fs-2 "></i>
+                        <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
+                </div>
             </div>
         </div>
     </section>
@@ -79,7 +74,7 @@
             @foreach ($announcements as $announcement)
                 <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
+                        <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}"
                             class="card-img-top rounded p-1" alt="...">
                         <div class="position-absolute end-0 mt-3">
                             <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
@@ -133,7 +128,7 @@
                 <div class="my-auto">
                     <h5>SERVIZIO CLIENTI 24/7</h5>
                     <h6>Assistenza sempre disponibile</h6>
-                </div>                  
+                </div>
             </div>
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
                 <div class="serviceHome d-flex me-3">
@@ -159,7 +154,7 @@
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="/image/team_01.jpg" class="card-img-top" alt="...">
-                            </div>                       
+                            </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
                                 <i class="bi bi-facebook px-2"></i>
@@ -179,7 +174,7 @@
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="/image/team_02.jpg" class="card-img-top" alt="...">
-                            </div>                       
+                            </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
                                 <i class="bi bi-facebook px-2"></i>
@@ -192,14 +187,14 @@
                         <h6>Business manager</h6>
                     </div>
                 </div>
-            </div>     
+            </div>
             <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
                                 <img src="/image/team_03.jpg" class="card-img-top" alt="...">
-                            </div>                       
+                            </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
                                 <i class="bi bi-facebook px-2"></i>
@@ -212,7 +207,7 @@
                         <h6>Account manager</h6>
                     </div>
                 </div>
-            </div>     
+            </div>
             {{-- <div class="col-12 col-md-6">
                 <p>Dove consegniamo?</p>
                 <p>Vieni a trovarco</p>

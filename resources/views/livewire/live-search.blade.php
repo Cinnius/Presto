@@ -1,8 +1,6 @@
 <div>
     {{-- searchbar --}}
-    <div class="container">
-        <div class="row mt-5 d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
+  
                 <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
                     <input type="text" class="form-control form-input" placeholder="cerca un articolo..."
                         wire:model="searchValue" name="searched">
@@ -28,7 +26,4 @@
                     @endif
                 </form>
 
-            </div>
-        </div>
-    </div>
 </div>
