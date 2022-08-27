@@ -18,7 +18,8 @@ p, ul, li{
 :root{
     --main: #FFBA08;
     --dark: #000000;
-    --light: #7F7F7F;
+    --medium: #7F7F7F;
+    --light: #A5A5A5;
     --white: #F2F2F2;
     --mainLight: #fcca4a;
     --mainDark: #c7930f;
@@ -30,6 +31,9 @@ p, ul, li{
     }
     .dark-bg{
         background-color: var(--dark);
+    }
+    .medium-bg{
+        background-color: var(--medium);
     }
     .light-bg{
         background-color: var(--light);
@@ -44,9 +48,6 @@ p, ul, li{
     }
     .dark-text{
         color: var(--dark);
-    }
-    .light-text{
-        color: var(--light);
     }
     .white-text{
         color: var(--white);

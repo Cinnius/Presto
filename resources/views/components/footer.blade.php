@@ -1,10 +1,10 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start light-bg white-text">
+<footer class="text-center text-lg-start medium-bg white-text">
     <section class="">
         <div class="container text-md-start mt-5">
             <div class="row mt-3">
                 <div class="col-12 my-4 text-center">
-                    <a class="btn dark-btn mt-3 mb-5" href="#">Torna su</a>
+                    <a class="btn dark-btn my-3" href="#">Torna su</a>
                 </div>
                 <div class="col-12 col-lg-6 mb-4">
                     <div>
