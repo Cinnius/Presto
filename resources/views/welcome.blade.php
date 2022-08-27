@@ -114,34 +114,42 @@
     </div>
 
     {{-- Section transport and logistics --}}
+
     <section class="container mt-5">
-        <div class="row justify-content-center">
-                <div class="col-12 col-lg-1 fs-2 d-flex align-items-center text-center serviceHome mb-4 mb-md-0">
-                    <i class="col-12 bi bi-truck"></i>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-truck fs-2"></i>
                 </div>
-                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4 mb-md-0">
+                <div class="my-auto">
                     <h5>SPEDIZIONE GRATUITA</h5>
                     <h6>Spezione rapida in 3 giorni</h6>
                 </div>
-                <div class="col-12 col-lg-1 d-flex align-items-center text-center serviceHome mb-4 mb-md-0">
-                    <i class="col-12 bi bi-telephone-inbound fs-2"></i>
+            </div>
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
                 </div>
-                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4 mb-md-0">
+                <div class="my-auto">
                     <h5>SERVIZIO CLIENTI 24/7</h5>
                     <h6>Assistenza sempre disponibile</h6>
+                </div>                  
+            </div>
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
                 </div>
-                <div class="col-12 col-lg-1 d-flex align-items-center text-center serviceHome mb-4 mb-md-0v">
-                    <i class="col-12 bi bi-bag-check fs-2"></i>
-                </div>
-                <div class="col-12 col-lg-3 d-flex flex-column justify-content-center align-items-center align-items-md-start mb-4 mb-md-0">
+                <div class="my-auto">
                     <h5>I MIGLIORI AFFARI</h5>
                     <h6>Acquista al miglior prezzo</h6>
                 </div>
+            </div>
         </div>
     </section>
 
+
     {{-- Section our team, deliver, ... --}}
-    <section class="container-fluid mt-5">
+    <section class="container-fluid mt-5" id="ourteam">
         <h3 class="text-center fw-semibold">Il nostro team</h3>
         <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="row justify-content-center">
