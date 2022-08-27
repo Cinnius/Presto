@@ -1,36 +1,46 @@
 <x-layout>
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+            {{-- Carousel Thumbnail --}}
+            <div class="col-1">
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
                         @if ($announcement->images->isNotEmpty())
                             @foreach ($announcement->images as $image)
-                                <div class="carousel-item @if($loop->first)active @endif">
+                                <div class="swiper-slide ">
                                     <img src="{{ Storage::url($image->path)}}" class="d-block w-100" alt="...">
                                 </div>
                             @endforeach 
                         @else
-                            <div class="carousel-item active">
-                                <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="https://picsum.photos/500" class="d-block w-100" alt="...">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                             </div>
                         @endif
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
             </div>
-
-            <div class="col-4">
+            {{-- Carousel View --}}
+            <div class="col-7">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        @if ($announcement->images->isNotEmpty())
+                            @foreach ($announcement->images as $image)
+                                <div class="swiper-slide @if($loop->first)active @endif">
+                                    <img src="{{ Storage::url($image->path)}}" class="d-block w-100" alt="...">
+                                </div>
+                            @endforeach 
+                        @else
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            </div>
+                        @endif
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            {{-- Card --}}
+            <div class="col-2">
                 <div class="card" style="width: 18rem;">
                     <img src="https://via.placeholder.com/200" class="card-img-top" alt="...">
                     <div class="card-body">
