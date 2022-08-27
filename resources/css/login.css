@@ -1,7 +1,10 @@
 .gradient-custom {
- 
+        background: #f6d365;                
+        background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main));               
+        background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main))
+}
+
+.message-custom{
+        width: 240px;
         
-        background: -webkit-linear-gradient(90deg,  var(--light), var(--main));
-        
-        background: linear-gradient(180deg, var(--light), var(--main));
-        }
+}

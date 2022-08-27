@@ -11,10 +11,12 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,800&display=swap"
         rel="stylesheet">
     <title>{{ $title ?? '' }}</title>
+    {{-- Icon on web tab --}}
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/983733541424742501/1012080676952092712/gruppo_1_logotipo.png">
+    {{-- Swiper --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
-    
 </head>
 
 <body>
@@ -27,6 +29,8 @@
     {{ $slot }}
     <x-footer />
 
+    {{-- Swiper --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     @livewireScripts
 </body>
 

@@ -11,7 +11,7 @@
                             <img class="rounded-circle w-50" src="\image\user_placeholder.jpg" alt="Avatar"
                                 class="img-fluid my-5">
                             <h5 class="dark-text mt-3 fw-semibold fs-6">{{ Auth::user()->name }}</h5>
-                            <p class="dark-text">ruolo:
+                            <p class="dark-text">Ruolo:
                                 @if (Auth::user()->is_revisor)
                                     Revisore
                                 @else
