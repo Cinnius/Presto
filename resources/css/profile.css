@@ -1,10 +1,8 @@
 .gradient-custom {
-        background: #f6d365;
-        
-        background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main));
-        
+        background: #f6d365;        
+        background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main));        
         background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), var(--main))
-        }
+}
 
 .lastAnnounc-Sep{
         margin-top: 12rem;
