@@ -151,26 +151,26 @@
 
 
     {{-- Section countdown --}}
-    <section class="container height-countdown mt-5 py-5">
-        <div class="row h-100 flex-column align-content-center">
-            <div class="col-12 col-md-5 me-lg-5">
+    <section class="container height-countdown mt-5 py-lg-5">
+        <div class="row h-100 flex-md-column align-content-md-center">
+            <div class="col-12 col-md-5 me-lg-5 order-2 order-md-1">
                 <img src="/image/car.png" class="img-fluid rounded border shadow" alt="">
             </div>
-            <div class="col-12 col-lg-4 text-center py-3">
+            <div class="col-12 col-lg-4 text-center py-3 order-1 order-md-2">
                 <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo" alt="">FFER</span>
                 <h6 class="mt-2">Time is running out!</h6>
                 <h6>This offer will go away in:</h6>
             </div>
-            <div class="col-12 col-lg-6 d-flex fs-5">
-                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+            <div class="col-12 col-lg-6 d-flex fs-6 fs-lg-5 mb-2 mb-lg-0 order-1 order-md-2">
+                <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown1"></p>
                     <p class="text-dark h-100 text-center">Giorni</p>
                 </div>
-                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+                <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown2"></p>
                     <p class="text-dark h-100 text-center">Ore</p>
                 </div>
-                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+                <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown3"></p>
                     <p class="text-dark h-100 text-center">Minuti</p>
                 </div>
