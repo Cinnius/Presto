@@ -78,7 +78,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn">
+                    <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn my-5">
                         <p class="my-auto">Aggiungi un Articolo</p>
                     </a>
                 </div>
