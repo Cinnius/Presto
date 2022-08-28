@@ -206,6 +206,11 @@ li {
     width: auto;
 }
 
+/* Countdown */
+.height-countdown{
+    height: 450px;
+}
+
 /* Service: Spedizione, servizio clienti, ... */
 .serviceHome {
     border: 2px dotted var(--light);

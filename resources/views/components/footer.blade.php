@@ -33,8 +33,8 @@
                 </div>
                 <div class="col-12 col-lg-4 mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">Link Utili</h6>
-                    <p><i class="bi bi-question-circle-fill me-3"></i><a href="#ourteam" class="white-text">Help</a></p>
-                    <p><i class="bi bi-archive-fill me-3"></i><a href="#ourteam" class="white-text">Chi siamo</a></p>
+                    <p><i class="bi bi-question-circle-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">Help</a></p>
+                    <p><i class="bi bi-archive-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">Chi siamo</a></p>
                     <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">Condizioni di Utilizzo</a></p>
                     <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">Privacy</a></p>
                 </div>

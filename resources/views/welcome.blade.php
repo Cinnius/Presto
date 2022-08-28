@@ -40,7 +40,7 @@
             </div>
 
             <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
-                <img class="img-header mx-auto img-fluid" src="image/img1.png" alt="">
+                <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
     </header>
 
@@ -150,8 +150,41 @@
     </section>
 
 
+    {{-- Section countdown --}}
+    <section class="container height-countdown mt-5 py-5">
+        <div class="row h-100 flex-column align-content-center">
+            <div class="col-12 col-md-5 me-lg-5">
+                <img src="/image/car.png" class="img-fluid rounded border shadow" alt="">
+            </div>
+            <div class="col-12 col-lg-4 text-center py-3">
+                <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo" alt="">FFER</span>
+                <h6 class="mt-2">Time is running out!</h6>
+                <h6>This offer will go away in:</h6>
+            </div>
+            <div class="col-12 col-lg-6 d-flex fs-5">
+                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+                    <p class="text-center mt-2" id="countdown1"></p>
+                    <p class="text-dark h-100 text-center">Giorni</p>
+                </div>
+                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+                    <p class="text-center mt-2" id="countdown2"></p>
+                    <p class="text-dark h-100 text-center">Ore</p>
+                </div>
+                <div class="col-3 col-xl-2 border border-dark rounded me-2 gradient-custom border-opacity-25">
+                    <p class="text-center mt-2" id="countdown3"></p>
+                    <p class="text-dark h-100 text-center">Minuti</p>
+                </div>
+                <div class="col-3 col-xl-2 border border-dark rounded gradient-custom border-opacity-25">
+                    <p class="text-center mt-2" id="countdown4"></p>
+                    <p class="text-dark h-100 text-center">Secondi</p>
+                </div>              
+            </div>
+        </div>
+    </section>
+
+
     {{-- Section our team, deliver, ... --}}
-    <section class="container-fluid mt-5" id="ourteam">
+    <section class="container-fluid mt-5 pt-5" id="ourteam">
         <h3 class="text-center fw-semibold">Il nostro team</h3>
         <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <div class="row justify-content-center">
