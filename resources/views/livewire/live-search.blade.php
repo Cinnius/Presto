@@ -16,8 +16,8 @@
                         <ul class="list-group">
 
                             @forelse ($announcements as $announcement)
-                                <a href="{{ route('announcementShow', compact('announcement')) }}">
-                                    <li class="list-group-item">{{ $announcement->title }}</li>
+                                <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none">
+                                    <li class="list-group-item main-bg bg-white rounded">{{ $announcement->title }}</li>
                                 </a>
                             @empty
                                 <p class="text-danger">Nessun annuncio trovato!</p>

@@ -178,6 +178,8 @@ p, ul, li{
 
     .textNav{
         font-size: 18px;
+        position: absolute;
+        top:0;
     }
 
     .navhome-bg{
@@ -210,10 +212,10 @@ p, ul, li{
     .hideLogo{
         display:block;
     }
-
+/* 
     .userWidth{
-        width: 100%;
-    }
+        width:20%;
+    } */
 
     .userName{
         display:flex;

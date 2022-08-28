@@ -17,7 +17,22 @@
                     <span class="hideSpan">Index</span>
                 </a>
             </li>
-            <li class="nav-item px-md-3 py-0 order-3 order-md-4 userWidth">
+
+            {{-- Searchbar - navbarhome --}}
+            <li class="nav-item px-md-3 order-4 my-auto w-75 justify-content-end">
+                <div class="col-9 col-xxl-8 position-absolute top-0 w-25">
+                    @livewire('live-search')
+                </div>
+                <!-- bottone aggiungi -->
+                <div class="col-2 mx-auto px-5 px-xxl-0">
+                    <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none mx-auto text-dark d-flex">
+                        <i class="bi bi-plus-square-fill dark-text"></i>
+                        <span class="hideSpan my-auto ms-3 dark-text">Aggiungi</span></a>
+                </div>
+            </li>
+            <li class="nav-item px-md-3 py-0 order-3 order-md-5 userWidth">
+
+
                 {{-- User --}}
                 @guest
                     <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center" href="{{ route('login') }}">

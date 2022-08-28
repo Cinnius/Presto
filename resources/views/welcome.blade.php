@@ -19,7 +19,7 @@
         <div class="row justify-content-between align-items-center pt-5 pt-md-2">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-center">
-                <h1 class="dark-text fw-bold display-1"> Vendilo al più</h1>
+                <h1 class="dark-text fw-bold display-1"> Vendilo al più </h1>
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-3 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="image/logo1.png" alt="word Presto">
                 </div>
@@ -32,7 +32,7 @@
 
     {{-- searchbar --}}
 
-    <section class="container-fluid bg-black">
+    {{-- <section class="container-fluid bg-black">
         <div class="container p-0 mx-0">
             <div class="row  justify-content-end align-items-center w-100 bg-black g-0">
                 <div class="col-8 col-md-6 me-4 bg-black g-0">
@@ -43,12 +43,12 @@
                 <div class="col-2 col-md-3">
                     <a href="{{ route('createAnnouncement') }}"
                         class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
-                        <i class="bi bi-plus-square-fill main-text fs-2 "></i>
+                        <i class="bi bi-plus-square-fill main-text fs-2"></i>
                         <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
 

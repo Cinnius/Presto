@@ -1,11 +1,17 @@
-        .heightSearch {
+        /* .heightSearch {
             height: 10vh;
-        }
+        } */
 
         .form {
-
-            position: relative;
+            position:relative;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
         }
+
+        /* .form-width{
+            width:29%;
+        } */
 
         .form .fa-search {
 
@@ -13,8 +19,8 @@
             top: 20px;
             left: 20px;
             color: #9ca3af;
-
         }
+
 
         .pan-customR {
 
@@ -23,6 +29,7 @@
             top: 13px;
             padding: 2px;
             border-left: 1px solid #d1d5db;
+            margin-right: unset;
 
         }
        .pan-customL {
