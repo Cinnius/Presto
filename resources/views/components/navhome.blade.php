@@ -18,8 +18,8 @@
                 </a>
             </li>
 
-            {{-- Searchbar - navbarhome --}}
-            <li class="nav-item px-md-3 order-4 my-auto w-75 justify-content-end">
+            {{-- Searchbar - navbarhome da grandi schermi--}}
+            <li class="nav-item px-md-3 order-4 my-auto w-75 justify-content-end hideSpan">
                 <div class="col-9 col-xxl-8 position-absolute top-0 w-25">
                     @livewire('live-search')
                 </div>
@@ -30,8 +30,9 @@
                         <span class="hideSpan my-auto ms-3 dark-text">Aggiungi</span></a>
                 </div>
             </li>
-            <li class="nav-item px-md-3 py-0 order-3 order-md-5 userWidth">
 
+
+            <li class="nav-item px-md-3 py-0 order-3 order-md-5 userWidth">
 
                 {{-- User --}}
                 @guest

@@ -1,7 +1,21 @@
 <x-layout>
 
+    {{-- Searchbar home da piccoli schermi --}}
+    <div class="container-fluid main-bg hideIcon searchbar-little">
+        <div class="row">
+            <div class="col-12 position-absolute top-0 w-75 py-2">
+                @livewire('live-search')
+            </div>
+            <!-- bottone aggiungi -->
+            <div class="col-2 mx-auto mt-4 position-absolute end-0">
+                <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none mx-auto text-dark d-flex">
+                    <i class="bi bi-plus-square-fill dark-text"></i></a>
+            </div>
+        </div>
+    </div>
+
     {{-- header --}}
-    <header class="container-fluid main-bg ">
+    <header class="container-fluid main-bg">
         <x-slot name="title">welcome</x-slot>
 
         {{-- @if (session()->has('message'))
