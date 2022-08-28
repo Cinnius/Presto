@@ -11,3 +11,16 @@
     box-shadow: none;
 }
 
+.img-preview{
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+}
+
+.img-preview:hover{
+    transform: scale(2) translateY(-10px);
+}
+
+.Photo-Preview-BG{
+    background-color: rgba(165, 165, 165, 0.4);
+}
