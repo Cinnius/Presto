@@ -50,11 +50,6 @@
         </div>
     </section> --}}
 
-
-
-
-
-
     {{-- @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -66,50 +61,48 @@
     @endif --}}
 
     {{-- visualizzazione card per ulitmi annunci --}}
-
-    <div class="container-fluid">
-        <h2 class="mt-5 text-center fw-semibold mb-3">Ultimi annunci inseriti</h2>
-        <div class="row justify-content-md-around">
-
-            @foreach ($announcements as $announcement)
-                <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
-                    <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                        <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}"
-                            class="card-img-top rounded p-1" alt="...">
-                        <div class="position-absolute end-0 mt-3">
-                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i
-                                    class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
-                            <p class="card-text fst-italic fw-normal text-truncate">{{ $announcement->body }}</p>
-                            <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
-                                {{ $announcement->price }}
-                            </p>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
-                                    {{ $announcement->user->name ?? '' }}
-                                </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
-                                    {{ $announcement->created_at->format('d/m/Y') }}
-                                </p>
-                            </div>
-                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                    class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
+    <section class="container-fluid">
+        <div class="row">
+            <h2 class="mt-5 text-center fw-semibold mb-3">Ultimi annunci inseriti</h2>
+            <div class="swiper mySwiper3 last-ann-swiper">
+                <div class="swiper-wrapper">
+                    @foreach ($announcements as $announcement)
+                        <div class="swiper-slide">
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-6">
+                                        <div class="position-absolute mt-3">
+                                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded ms-3 ">
+                                                <i class="bi bi-bookmark-fill"></i>
+                                                {{ $announcement->category->name }}
+                                            </a>
+                                        </div>
+                                        <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{ $announcement->title }}</h3>
+                                            <h4 class="card-text">€ {{ $announcement->price }}</h4>
+                                            <p class="card-text"><small class="text-muted">Ultimo aggiornamento: {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
+                                            <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
+                                                <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
+                                                <p class="my-auto ms-4">Dettagli Prodotto</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-            @endforeach
-
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
-    </div>
+    </section>
 
     {{-- Section transport and logistics --}}
-
     <section class="container mt-5">
         <div class="row">
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">

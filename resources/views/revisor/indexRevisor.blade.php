@@ -9,7 +9,7 @@
             @if ($announcement)
                 <div class="col-12 col-md-6 py-4 d-flex justify-content-center mt-5">
                     <div class="card card-shadow rounded" style="width: 18rem;">
-                        <img src="https://via.placeholder.com/200" class="card-img-top rounded p-1" alt="...">
+                        <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}" class="card-img-top rounded p-1" alt="...">
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
                             <p class=" card-text fst-italic fw-normal">Aggiunto il:

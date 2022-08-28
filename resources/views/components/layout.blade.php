@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/983733541424742501/1012080676952092712/gruppo_1_logotipo.png">
     {{-- Swiper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
@@ -31,6 +32,8 @@
 
     {{-- Swiper --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
     @livewireScripts
 </body>
 

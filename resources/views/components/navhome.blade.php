@@ -75,19 +75,28 @@
     </div>
     <div class="offcanvas-body">
         <h2 class="text-end">Presto.it</h2>
-        <div>
-            @guest
-            @else
-                @if (Auth::user()->is_revisor)
-                    <a href="{{ route('indexRevisor') }}" type="button" class="btn position-relative main-btn my-4">
-                        Revisiona gli Articoli
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {{ App\Models\Announcement::toBeRevisionedCount() }}
-                            <span class="visually-hidden">unread messages</span>
-                        </span>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn">
+                        <p class="my-auto">Aggiungi un Articolo</p>
                     </a>
-                @endif
-            @endguest
+                </div>
+                @guest
+                @else
+                    @if (Auth::user()->is_revisor)
+                        <div class="col-12">
+                            <a href="{{ route('indexRevisor') }}" type="button" class="btn position-relative main-btn my-4">
+                                <p class="my-auto">Revisiona gli Articoli</p>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
+                    @endif
+                @endguest
+            </div>
         </div>
         <h3 class="fw-bold">Categorie</h3>
         <div class="col-12 d-flex flex-wrap">

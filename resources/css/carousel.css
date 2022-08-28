@@ -67,3 +67,8 @@
 	height: 100%;
 	object-fit: cover;
 }
+
+/* Last Announcement Swiper */
+.last-ann-swiper{
+	height: 300px;
+}
