@@ -9,7 +9,7 @@
             </li>
             <li class="nav-item px-md-3">
                 {{-- Index --}}
-                <a class="nav-link nav-btn" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
+                <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
                     <span class="hideSpan">Index</span>
                 </a>
             </li>
@@ -17,18 +17,18 @@
             <li class="nav-item px-md-3">
                 {{-- User --}}
                 @guest
-                <a class="nav-link nav-btn" href="{{route('login')}}">
+                <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" href="{{route('login')}}">
                     <i class="bi bi-person-fill fs-1 hideIcon"></i><span class="hideSpan">Login</span>
                 </a>
                 @else
-                <a class="nav-link nav-btn" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
+                <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" href="{{route('profileView')}}"><i class="bi bi-person-fill fs-1 hideIcon">
                     </i><span class="hideSpan">{{Auth::user()->name}}</span>
                 </a>
                 @endguest
             </li>
             <li class="nav-item px-md-3">
                 {{-- Menù --}}
-                <a class="nav-link nav-btn" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button"
+                <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button"
                     aria-controls="NavbarOffcanvas">
                     <i class="bi bi-list fs-1 hideIcon"></i><span class="hideSpan">Menù</span>
                 </a>
