@@ -24,7 +24,7 @@ class PublicController extends Controller
     }
 
     public function index(){
-        $announcements = Announcement::where('is_accepted', true)->latest()->paginate(10);
+        $announcements = Announcement::where('is_accepted', true)->latest()->paginate(12);
         return view('index',compact('announcements'));
     }
     

@@ -10,11 +10,13 @@
     </div>
 
 
-    <div class="container-fluid pt-2 py-5">
+{{--     <div class="container-fluid pt-2 py-5">
         <div class="row justify-content-md-around">
 
+     
+
             @forelse ($announcements as $announcement)
-                <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
+                <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
                         <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
                             class="card-img-top rounded p-1" alt="...">
@@ -61,5 +63,5 @@
                 {{ $announcements->links() }}
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-layout>

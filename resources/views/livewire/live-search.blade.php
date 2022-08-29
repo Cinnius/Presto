@@ -2,7 +2,7 @@
     {{-- searchbar --}}
 
     <form action="{{ route('searchAnnouncements') }}" method="GET" class="form">
-        <input type="text" class="form-control form-input shadow" placeholder="{{__('ui.search_Placeholder')}}" wire:model="searchValue"
+        <input type="text" class="form-control form-input" placeholder="{{__('ui.search_Placeholder')}}" wire:model="searchValue"
             name="searched">
         <button type="submit" class="border-0 p-0">
             <span class="left-pan pan-customR "><i class="bi bi-search"></i></span>

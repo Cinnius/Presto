@@ -30,6 +30,6 @@ class LiveSearch extends Component
     {
         $this->announcements = Announcement::where('title',  'like', '%'.$this->searchValue.'%')->get();
         
-        return view('livewire.live-search');
+        return view('livewire.search-sort');
     }
 }

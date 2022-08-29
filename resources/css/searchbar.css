@@ -2,7 +2,12 @@
             height: 10vh;
         } */
 
-s
+        .form {
+            position:relative;
+            display:flex;
+            align-items: center;
+            flex-direction: column;
+        }
 
         /* .form-width{
             width:29%;
