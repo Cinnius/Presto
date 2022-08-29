@@ -6,5 +6,6 @@
 @import'login';
 @import'index';
 @import'announcement';
+@import'sortbar';
 @import"carousel";
 @import"/node_modules/flag-icon-css/css/flag-icons.css";

@@ -1,0 +1,11 @@
+.sort-Search-Position{
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.sort-Clear-Position{
+    position: absolute;
+    top: -63px;
+    left: -305px;
+}
