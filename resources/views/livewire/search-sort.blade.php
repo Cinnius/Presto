@@ -1,33 +1,25 @@
 <div>
     {{-- Sorting Section --}}
-    
-    <div class="col-2">
-        <div class="col-2 fixed-top bg-danger sorting-Bar">
-            <div class="ms-3 my-3">
-                <h3>Filtri di Ricerca</h3>
-{{--                 <p wire:click="searchByCategory('Elettronica')">c</p>
- --}}
-                <div>
-                    <h4 class="ms-2">Nome</h4>
-                    <div class="form-check">
-                        <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting"
-                        id="Name-Asc">
-                        <label class="form-check-label" for="Name-Asc">Ordine Crescente</label>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 fixed-top sorting-Bar">
+                <div class="ms-3 my-3 d-flex align-items-center justify-content-center">
+                    <p class="ms-5 me-2 my-auto">Nome</p>
+                    <div class="form-check mx-2">
+                        <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting" id="Name-Asc">
+                        <label class="form-check-label" for="Name-Asc">Crescente</label>
                     </div>
                     <div class="form-check mx-2">
-                        <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio"
-                            name="Sorting" id="Name-Desc">
+                        <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio" name="Sorting" id="Name-Desc">
                         <label class="form-check-label" for="Name-Desc">Decrescente</label>
                     </div>
                     <p class="ms-5 me-2 my-auto">Prezzo</p>
                     <div class="form-check mx-2">
-                        <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting"
-                        id="Price_Asc">
+                        <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting" id="Price_Asc">
                         <label class="form-check-label" for="Price_Asc">Crescente</label>
                     </div>
                     <div class="form-check mx-2">
-                        <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio"
-                        name="Sorting" id="Price_Desc">
+                        <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio" name="Sorting" id="Price_Desc">
                         <label class="form-check-label" for="Price_Desc">Decrescente</label>
                     </div>
                     <p class="ms-5 me-2 my-auto">Data</p>
@@ -46,7 +38,7 @@
     
 
     {{-- search zone --}}
-    <div class="container index-Position">
+   <div class="container index-Position">
         <div class="row mt-md-5 d-flex justify-content-center align-items-center">
             <div class="col-12 mt-md-5 ">
                 {{-- Search Bar --}}
@@ -176,10 +168,8 @@
     </div>
     {{-- End Search Zone --}}   
     
->>>>>>> 73aa20aac964569ebe870879da0200a9229861a3
+    {{-- Page Navigation --}}
+    {{-- <div class="col-12 d-flex justify-content-center mb-4">
+        {{ $announcements->links() }}
+    </div> --}}
 </div>
-
-{{-- Page Navigation --}}
-{{-- <div class="col-12 d-flex justify-content-center mb-4">
-    {{ $announcements->links() }}
-</div> --}}
