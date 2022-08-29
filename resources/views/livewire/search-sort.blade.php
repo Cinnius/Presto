@@ -68,7 +68,7 @@
                 <div class="col-10">
                     <div class="row">
                         @forelse ($announcements as $announcement)
-                            <div class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                            <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
                                 <div class="card card-shadow rounded position-relative" style="width: 18rem;">
                                     <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
                                         class="card-img-top rounded p-1" alt="...">
@@ -131,7 +131,7 @@
             <div class="col-10">
                 <div class="row">
                     @forelse ($announcements as $announcement)
-                        <div class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                        <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
                             <div class="card card-shadow rounded position-relative" style="width: 18rem;">
                                 <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
                                     class="card-img-top rounded p-1" alt="...">

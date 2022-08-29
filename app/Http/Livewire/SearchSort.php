@@ -32,6 +32,7 @@ class SearchSort extends Component
    
     public function render()
     {
+        sleep(1);
         $this->announcements = Announcement::where('title',  'like', '%'.$this->searchValue.'%')->orderBy($this->sortField, $this->sortDirection)->get();
         
         return view('livewire.search-sort');
