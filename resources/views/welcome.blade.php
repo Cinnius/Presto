@@ -34,7 +34,7 @@
         <div class="row justify-content-between align-items-center pt-5 pt-md-2">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-center">
-                <h1 class="dark-text fw-bold display-1"> Vendilo al più </h1>
+                <h1 class="dark-text fw-bold display-1"> {{__('ui.slogan')}} </h1>
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-3 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="image/logo1.png" alt="word Presto">
                 </div>
