@@ -11,18 +11,18 @@
                             <img class="rounded-circle w-50" src="\image\user_placeholder.jpg" alt="Avatar"
                                 class="img-fluid my-5">
                             <h5 class="dark-text mt-3 fw-semibold fs-6">{{ Auth::user()->name }}</h5>
-                            <p class="dark-text">Ruolo:
+                            <p class="dark-text">{{__('ui.role')}}
                                 @if (Auth::user()->is_revisor)
-                                    Revisore
+                                    {{__('ui.role_Revisor')}}
                                 @else
-                                    Utente
+                                    {{__('ui.role_User')}}
                                 @endif
                             </p>
                             @if (Auth::user()->is_revisor)
                         <div class="col-12">
                             <a href="{{ route('indexRevisor') }}" type="button"
                                 class="btn position-relative main-btn my-4">
-                                <p class="my-auto">Revisiona gli Articoli</p>
+                                <p class="my-auto">{{__('ui.revisor_Article')}}</p>
                                 <span
                                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-md-8">
                             <div class="card-body p-4">
-                                <h6>Informazioni</h6>
+                                <h6>{{__('ui.information')}}</h6>
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
@@ -91,7 +91,7 @@
 
     <section class="container">
         <div class="row justify-content-md-around mt-5">
-            <h2>I tuoi annunci</h2>
+            <h2>{{__('ui.my_Announcement')}}</h2>
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
@@ -109,25 +109,25 @@
                                 {{ $announcement->price }}
                             </p>
                             <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Seller')}}
                                     {{ $announcement->user->name ?? '' }}
                                 </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Created')}}
                                     {{ $announcement->created_at->format('d/m/Y') }}
                                 </p>
                             </div>
                             <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
+                                        class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 @empty
                     <div class="col-12">
-                        <h4>Non hai ancora creato nessun annuncio</h4>
-                        <a href="{{ route('createAnnouncement') }}">Crea il tuo primo annuncio!</a>
+                        <h4>{{__('ui.my_Announcement_Empty')}}</h4>
+                        <a href="{{ route('createAnnouncement') }}">{{__('ui.my_Announcement_Empty_Text')}}</a>
                     </div>
                 @endforelse
 
