@@ -8,7 +8,8 @@
             </div>
             <!-- bottone aggiungi -->
             <div class="col-2 mx-auto mt-4 position-absolute end-0">
-                <a href="{{ route('createAnnouncement') }}" class="fw-semibold text-decoration-none mx-auto text-dark d-flex">
+                <a href="{{ route('createAnnouncement') }}"
+                    class="fw-semibold text-decoration-none mx-auto text-dark d-flex">
                     <i class="bi bi-plus-square-fill dark-text"></i></a>
             </div>
         </div>
@@ -44,35 +45,7 @@
             </div>
     </header>
 
-    {{-- searchbar --}}
 
-    {{-- <section class="container-fluid bg-black">
-        <div class="container p-0 mx-0">
-            <div class="row  justify-content-end align-items-center w-100 bg-black g-0">
-                <div class="col-8 col-md-6 me-4 bg-black g-0">
-                    @livewire('live-search')
-
-                </div>
-                <!-- bottone aggiungi -->
-                <div class="col-2 col-md-3">
-                    <a href="{{ route('createAnnouncement') }}"
-                        class="fw-semibold text-decoration-none w-100 text-center text-dark d-flex ">
-                        <i class="bi bi-plus-square-fill main-text fs-2"></i>
-                        <span class="hideSpan my-auto ms-3 main-text">Aggiungi</span></a>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-    @endforeach
-    </ul>
-    </div>
-    @endif --}}
 
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
@@ -86,19 +59,23 @@
                                 <div class="row g-0">
                                     <div class="col-md-6">
                                         <div class="position-absolute mt-3">
-                                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded ms-3 ">
+                                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
+                                                class="text-decoration-none text-dark main-bg py-1 px-2 rounded ms-3 ">
                                                 <i class="bi bi-bookmark-fill"></i>
                                                 {{ $announcement->category->name }}
                                             </a>
                                         </div>
-                                        <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}" class="img-fluid rounded-start" alt="...">
+                                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}"
+                                            class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="card-body">
                                             <h3 class="card-title">{{ $announcement->title }}</h3>
                                             <h4 class="card-text">€ {{ $announcement->price }}</h4>
-                                            <p class="card-text"><small class="text-muted">Ultimo aggiornamento: {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
-                                            <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
+                                            <p class="card-text"><small class="text-muted">Ultimo aggiornamento:
+                                                    {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
+                                            <a href="{{ route('announcementShow', compact('announcement')) }}"
+                                                class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
                                                 <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
                                                 <p class="my-auto ms-4">Dettagli Prodotto</p>
                                             </a>
@@ -157,7 +134,8 @@
                 <img src="/image/car.png" class="img-fluid rounded border shadow" alt="">
             </div>
             <div class="col-12 col-lg-4 text-center py-3 order-1 order-md-2">
-                <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo" alt="">FFER</span>
+                <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo"
+                        alt="">FFER</span>
                 <h6 class="mt-2">Time is running out!</h6>
                 <h6>This offer will go away in:</h6>
             </div>
@@ -177,7 +155,7 @@
                 <div class="col-3 col-xl-2 border border-dark rounded gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown4"></p>
                     <p class="text-dark h-100 text-center">Secondi</p>
-                </div>              
+                </div>
             </div>
         </div>
     </section>

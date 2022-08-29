@@ -85,7 +85,7 @@ class CreateAnnouncement extends Component
 
         $this->clear();
 
-        return redirect()->to('/')->with('message','Il tuo annuncio è stato inserito correttamente ed è in attesa di approvazione');
+        return redirect()->to('/announcement/new')->with('message','Il tuo annuncio è stato inserito correttamente ed è in attesa di approvazione');
     }
 
     public function updated($propertyName)

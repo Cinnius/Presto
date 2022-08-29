@@ -1,4 +1,31 @@
 <div>
+    @if (session()->has('message'))
+            <!-- Modal -->
+            <div class="modal fade" role="dialog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $function(){
+                    $("#exampleModal").modal('show');
+                });
+            </script>
+
+    @endif
     <form wire:submit.prevent="store">
         @csrf
         <section class="container">
@@ -7,23 +34,26 @@
                     <h3 class="text-center">Informazioni Annuncio</h3>
                     <div class="mb-3">
                         <label class="form-label">Titolo</label>
-                        <input type="text" class="form-control" wire:model.debounce.2000ms="title" @error('title') is-invalid @enderror>
+                        <input type="text" class="form-control" wire:model.debounce.2000ms="title" value={{old('title')}}
+                            @error('title') is-invalid @enderror>
                         @error('title')
-                            <span class="error">{{$message}}</span>
+                            <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Descrizione</label>
-                        <textarea class="form-control" cols="30" rows="10" wire:model.debounce.2000ms="body"  @error('body') is-invalid @enderror></textarea>
+                        <textarea class="form-control" cols="30" rows="10" wire:model.debounce.2000ms="body" value={{old('body')}}
+                            @error('body') is-invalid @enderror></textarea>
                         @error('body')
-                            <span class="error">{{$message}}</span>
+                            <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Prezzo</label>
-                        <input type="number" step="0.01" class="form-control" wire:model="price" @error('price') is-invalid @enderror>
+                        <input type="number" step="0.01" class="form-control" wire:model="price"
+                            @error('price') is-invalid @enderror>
                         @error('price')
-                        <span class="error">{{$message}}</span>
+                            <span class="error">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="mb-3">
@@ -31,15 +61,16 @@
                         <select wire:model.defer="category" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             @foreach ($categories as $category)
-                                <option class="option-form" value="{{$category->id}}">{{$category->name}}</option>                            
+                                <option class="option-form" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="mb-4">
                         <label class="form-label">Immagini</label>
-                        <input type="file" wire:model="temporary_images" name="images" multiple class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="img">
+                        <input type="file" wire:model="temporary_images" name="images" multiple
+                            class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="img">
                         @error('temporary_images.*')
-                        <p class="text-danger"> {{$message}} </p>
+                            <p class="text-danger"> {{ $message }} </p>
                         @enderror
                     </div>
                     <div class="text-center">
@@ -51,15 +82,17 @@
                     <h3 class="text-center">Photo preview</h3>
                     @if (!empty($images))
                         <div class="row">
-                            @foreach($images as $key=>$image)
-                            <div class="col-6 col-md-3 my-3">
-                                <div>
-                                    <img src="{{$image->temporaryUrl()}}" alt="" class="img-preview shadow rounded">
+                            @foreach ($images as $key => $image)
+                                <div class="col-6 col-md-3 my-3">
+                                    <div>
+                                        <img src="{{ $image->temporaryUrl() }}" alt=""
+                                            class="img-preview shadow rounded">
+                                    </div>
+                                    <div class="mt-4 text-center">
+                                        <button type="button" class="btn btn-danger px-2 shadow"
+                                            wire:click="removeImage({{ $key }})">Cancella</button>
+                                    </div>
                                 </div>
-                                <div class="mt-4 text-center">
-                                    <button type="button" class="btn btn-danger px-2 shadow" wire:click="removeImage({{$key}})">Cancella</button>
-                                </div>
-                            </div>
                             @endforeach
                         </div>
                     @else
@@ -71,4 +104,9 @@
             </div>
         </section>
     </form>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button>
+
 </div>

@@ -18,6 +18,19 @@
                                     Utente
                                 @endif
                             </p>
+                            @if (Auth::user()->is_revisor)
+                        <div class="col-12">
+                            <a href="{{ route('indexRevisor') }}" type="button"
+                                class="btn position-relative main-btn my-4">
+                                <p class="my-auto">Revisiona gli Articoli</p>
+                                <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </div>
+                    @endif
                             <i class="far fa-edit mb-5"></i>
                         </div>
                         <div class="col-md-8">
