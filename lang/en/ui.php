@@ -79,4 +79,17 @@ return [
     'footer_Link_ConditionRule'=>'terms of use',
     'footer_Link_Privacy'=>'Privacy',
     'footer_Link_Contact'=>'Contact',
+    
+    // Navbar
+    'nav_Index'=>'Announcements',
+    'nav_Review'=>'Revise Announcements',
+    'nav_Categories'=>'Category',
+    // Search Bar
+    'search_Placeholder'=>'Search for announcement or category...',
+    // Login Page
+    'login'=>'Login',
+    'login_Text'=>'Insert yours email and password!',
+    'login_Remember'=>'Remember me',
+    'login_Error'=>'Don\'t have an account?',
+    'login_Error_Register'=>'Sign Up!',
 ];
