@@ -5,17 +5,15 @@
 
 /* Header */
 .index-Position{
-    margin-top: 80px;
-    padding-top: 8px; 
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 48px;
+    margin-top: 100px;
 }
 
 /* Sorting Bar */
 .sorting-Bar{
-    top: 70px;
-    z-index: 1040;
+    top: 65px;
+    z-index: 1;
+    border: 2px solid black;
+    background-color: rgba(165, 165, 165, 0.95);
 }
 
 /* button - page index */
