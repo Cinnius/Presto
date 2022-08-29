@@ -17,7 +17,7 @@
 
     {{-- header --}}
     <header class="container-fluid main-bg">
-        <x-slot name="title">welcome</x-slot>
+        <x-slot name="title">Welcome</x-slot>
 
         {{-- @if (session()->has('message'))
             <div class="col-12 col-md-4 ms-0 ms-5 alert bg-black main-text text-center pt-2">
@@ -50,7 +50,7 @@
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
         <div class="row">
-            <h2 class="mt-5 text-center fw-semibold mb-3">Ultimi annunci inseriti</h2>
+            <h2 class="mt-5 text-center fw-semibold mb-3">{{__('ui.last_Added_Announcement')}}</h2>
             <div class="swiper mySwiper3 last-ann-swiper">
                 <div class="swiper-wrapper">
                     @foreach ($announcements as $announcement)
@@ -72,12 +72,12 @@
                                         <div class="card-body">
                                             <h3 class="card-title">{{ $announcement->title }}</h3>
                                             <h4 class="card-text">€ {{ $announcement->price }}</h4>
-                                            <p class="card-text"><small class="text-muted">Ultimo aggiornamento:
+                                            <p class="card-text"><small class="text-muted">{{__('ui.last_Update')}}
                                                     {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
                                             <a href="{{ route('announcementShow', compact('announcement')) }}"
                                                 class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
                                                 <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
-                                                <p class="my-auto ms-4">Dettagli Prodotto</p>
+                                                <p class="my-auto ms-4">{{__('ui.detail_Product')}}</p>
                                             </a>
                                         </div>
                                     </div>
@@ -101,8 +101,8 @@
                     <i class="mx-auto my-auto bi bi-truck fs-2"></i>
                 </div>
                 <div class="my-auto">
-                    <h5>SPEDIZIONE GRATUITA</h5>
-                    <h6>Spezione rapida in 3 giorni</h6>
+                    <h5>{{__('ui.gratis_Shipment')}}</h5>
+                    <h6>{{__('ui.gratis_Shipment_Text')}}</h6>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
@@ -110,8 +110,8 @@
                     <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
                 </div>
                 <div class="my-auto">
-                    <h5>SERVIZIO CLIENTI 24/7</h5>
-                    <h6>Assistenza sempre disponibile</h6>
+                    <h5>{{__('ui.client_Service')}}</h5>
+                    <h6>{{__('ui.client_Service_Text')}}</h6>
                 </div>
             </div>
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
@@ -119,8 +119,8 @@
                     <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
                 </div>
                 <div class="my-auto">
-                    <h5>I MIGLIORI AFFARI</h5>
-                    <h6>Acquista al miglior prezzo</h6>
+                    <h5>{{__('ui.best_Deals')}}</h5>
+                    <h6>{{__('ui.best_Deals_Text')}}</h6>
                 </div>
             </div>
         </div>
@@ -136,25 +136,25 @@
             <div class="col-12 col-lg-4 text-center py-3 order-1 order-md-2">
                 <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo"
                         alt="">FFER</span>
-                <h6 class="mt-2">Time is running out!</h6>
-                <h6>This offer will go away in:</h6>
+                <h6 class="mt-2">{{__('ui.time_Deals')}}</h6>
+                <h6>{{__('ui.time_Deals_Text')}}</h6>
             </div>
             <div class="col-12 col-lg-6 d-flex fs-6 fs-lg-5 mb-2 mb-lg-0 order-1 order-md-2">
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown1"></p>
-                    <p class="text-dark h-100 text-center">Giorni</p>
+                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_D')}}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown2"></p>
-                    <p class="text-dark h-100 text-center">Ore</p>
+                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_H')}}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown3"></p>
-                    <p class="text-dark h-100 text-center">Minuti</p>
+                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_M')}}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown4"></p>
-                    <p class="text-dark h-100 text-center">Secondi</p>
+                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_S')}}</p>
                 </div>
             </div>
         </div>
@@ -163,8 +163,8 @@
 
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">
-        <h3 class="text-center fw-semibold">Il nostro team</h3>
-        <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <h3 class="text-center fw-semibold">{{__('ui.our_Teams')}}</h3>
+        <p class="text-center">{{__('ui.our_Teams_Text')}}</p>
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
