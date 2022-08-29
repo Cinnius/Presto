@@ -21,11 +21,11 @@
 </head>
 
 <body>
-    @if(Route::currentRouteName()=="welcome")
-        <x-navhome/>
-    @else
+    {{-- @if(Route::currentRouteName()=="welcome") --}}
+    <x-navhome/>
+    {{-- @else
         <x-navbar/>
-    @endif
+    @endif --}}
 
     {{ $slot }}
     <x-footer />
