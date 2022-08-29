@@ -1,42 +1,50 @@
 <div>
 
-
+    
     {{-- Sorting Section --}}
-
+    
     <div class="col-2">
         <div class="col-2 fixed-top bg-danger sorting-Bar">
             <div class="ms-3 my-3">
                 <h3>Filtri di Ricerca</h3>
+{{--                 <p wire:click="searchByCategory('Elettronica')">c</p>
+ --}}
                 <div>
                     <h4 class="ms-2">Nome</h4>
                     <div class="form-check">
-                        <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting" id="Name-Asc">
+                        <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting"
+                        id="Name-Asc">
                         <label class="form-check-label" for="Name-Asc">Ordine Crescente</label>
                     </div>
                     <div class="form-check">
-                        <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio" name="Sorting" id="Name-Desc">
+                        <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio"
+                            name="Sorting" id="Name-Desc">
                         <label class="form-check-label" for="Name-Desc">Ordine Decrescente</label>
                     </div>
                 </div>
                 <div>
                     <h4 class="ms-2">Prezzo</h4>
                     <div class="form-check">
-                        <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting" id="Price_Asc">
+                        <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting"
+                        id="Price_Asc">
                         <label class="form-check-label" for="Price_Asc">Ordine Crescente</label>
                     </div>
                     <div class="form-check">
-                        <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio" name="Sorting" id="Price_Desc">
+                        <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio"
+                        name="Sorting" id="Price_Desc">
                         <label class="form-check-label" for="Price_Desc">Ordine Decrescente</label>
                     </div>
                 </div>
                 <div>
                     <h4 class="ms-2">Data</h4>
                     <div class="form-check">
-                        <input wire:click="sortBy('created_at','asc')" class="form-check-input" type="radio" name="Sorting" id="Date_Asc">
-                        <label class="form-check-label" for="Date_Asc">Ordine Crescente</label>
-                    </div>
-                    <div class="form-check">
-                        <input wire:click="sortBy('created_at','desc')" class="form-check-input" type="radio" name="Sorting" id="Date_Desc">
+                        <input wire:click="sortBy('created_at','asc')" class="form-check-input" type="radio"
+                            name="Sorting" id="Date_Asc">
+                            <label class="form-check-label" for="Date_Asc">Ordine Crescente</label>
+                        </div>
+                        <div class="form-check">
+                            <input wire:click="sortBy('created_at','desc')" class="form-check-input" type="radio"
+                            name="Sorting" id="Date_Desc">
                         <label class="form-check-label" for="Date_Desc">Ordine Decrescente</label>
                     </div>
                 </div>
@@ -58,7 +66,8 @@
                     </button>
                     @if (!empty($searchValue))
                         <div wire:click='resetSearchValue' class="showX">
-                            <span wire:click='resetSearchValue'  class=" pan-customL right-pan"><i class="bi bi-x-square-fill text-dark"></i></span>
+                            <span wire:click='resetSearchValue' class=" pan-customL right-pan"><i
+                                    class="bi bi-x-square-fill text-dark"></i></span>
                         </div>
                 </form>
             </div>
@@ -68,7 +77,8 @@
                 <div class="col-10">
                     <div class="row">
                         @forelse ($announcements as $announcement)
-                            <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                            <div wire:loading.class="opacity-75"
+                                class="col-12 col-md-4 py-4 d-flex justify-content-center">
                                 <div class="card card-shadow rounded position-relative" style="width: 18rem;">
                                     <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
                                         class="card-img-top rounded p-1" alt="...">
@@ -131,7 +141,8 @@
             <div class="col-10">
                 <div class="row">
                     @forelse ($announcements as $announcement)
-                        <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                        <div wire:loading.class="opacity-75"
+                            class="col-12 col-md-4 py-4 d-flex justify-content-center">
                             <div class="card card-shadow rounded position-relative" style="width: 18rem;">
                                 <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
                                     class="card-img-top rounded p-1" alt="...">
@@ -179,16 +190,17 @@
                     @endforelse
 
 
-                    {{-- Page Navigation --}}
-                    {{-- <div class="col-12 d-flex justify-content-center mb-4">
-                            {{ $announcements->links() }}
-                        </div> --}}
                 </div>
             </div>
         </div>
     </div>
 
-@endif
+    @endif
+    {{-- Page Navigation --}}
+{{--     <div class="col-12 d-flex justify-content-center mb-4">
+        {{ $announcements->links() }}
+    </div> --}}
+
 
 
 </div>

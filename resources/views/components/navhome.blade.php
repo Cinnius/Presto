@@ -16,7 +16,7 @@
             </li>
             <li class="nav-item px-md-3 order-2 order-md-2">
                 {{-- Index --}}
-                <a class="nav-link nav-btn nav-trans" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
+                <a class="nav-link nav-btn nav-trans link-dot d-flex  justify-content-center" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
                     <span class="hideSpan">{{__('ui.nav_Index')}}</span>
                 </a>
             </li>
@@ -30,7 +30,7 @@
                 <!-- bottone aggiungi -->
                 <li class="hideSpan w-25">
                     <a href="{{ route('createAnnouncement') }}"
-                        class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans">
+                        class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans link-dot">
                         <i class="bi bi-plus-square-fill dark-text"></i>
                         <span class="hideSpan my-auto ms-3 dark-text">{{__('ui.create_Add_Announcements')}}</span></a>
             </li>
@@ -39,14 +39,14 @@
             {{-- User --}}
             <li class="nav-item px-md-3 py-0 order-3  order-md-5">
                 @guest
-                    <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center nav-trans"
-                        href="{{ route('login') }}">
+                    <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center nav-trans link-dot d-flex align-items-end justify-content-center"
+                        href="{{ route('login') }}" >
                         <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i>
                         <i class="bi bi-person-fill fs-1 hideIcon "></i>
                         <span class="hideSpan me-5">Login</span>
                     </a>
                 @else
-                    <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center nav-trans"
+                    <a class="nav-link nav-btn d-flex  align-items-center nav-trans  d-flex align-items-end justify-content-md-center link-dot"
                         href="{{ route('profileView') }}">
                         {{-- <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i> --}}
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>
@@ -61,7 +61,7 @@
             <li class="nav-item px-md-3 order-4 order-md-3">
                 {{-- Menù --}}
                 <a class="nav-link nav-btn nav-trans" data-bs-toggle="offcanvas" href="#NavbarOffcanvas" role="button"
-                    aria-controls="NavbarOffcanvas">
+                    aria-controls="NavbarOffcanvas" >
                     <i class="bi bi-list fs-1 hideIcon"></i>
                     <span class="hideSpan">Menù</span>
                 </a>
@@ -73,12 +73,13 @@
 {{-- Off Canvas --}}
 <div class="offcanvas offcanvas-end white-bg" tabindex="-1" id="NavbarOffcanvas" aria-labelledby="NavbarOffcanvasLabel">
     <div class="offcanvas-header">
-        <div>
-            <a href=""><i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
-            <ul>
-                <li><x-_locale lang="it" nation="it"></x-_locale></li>
-                <li><x-_locale lang="en" nation="gb"></x-_locale></li>
-                <li><x-_locale lang="es" nation="es"></x-_locale></li>
+        <div class="d-flex">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark ">
+                <li class="dropdown-item d-flex"><x-_locale lang="it" nation="it"></x-_locale> Italiano</li>
+                <li class="dropdown-item d-flex"><x-_locale lang="en" nation="gb"></x-_locale>English</li>
+                <li class="dropdown-item d-flex"><x-_locale lang="es" nation="es"></x-_locale>Español</li>
             </ul>
             <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
         </div>
