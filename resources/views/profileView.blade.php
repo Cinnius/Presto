@@ -1,5 +1,5 @@
 <x-layout>
-
+    <x-slot name="title">User Profile</x-slot>
     {{-- profile --}}
     <div class="container-fluid py-5 white-bg">
         <div class="row d-flex justify-content-center align-items-center">

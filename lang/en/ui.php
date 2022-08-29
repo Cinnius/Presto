@@ -25,7 +25,7 @@ return [
         'role'=>'Role:',
         'role_Revisor'=>'Revisor',
         'role_User'=>'User',
-        'revisor_Article'=>'Revise arnnouncements',
+        'revisor_Article'=>'Revise announcements',
         'information'=>'Info',
         'my_Announcement'=>'My announcements',
         'Announcement_Seller'=>'Sell by:',
@@ -38,4 +38,20 @@ return [
         'Announcement_Updated'=>'Last edit',
         'category_Empty'=>'There is no article in this category',
         'category_Empty_Text'=>'Add new announcements',
+
+        // Index Revisor
+    'review_Title'=>'Revise last added announcements',
+    'review'=>'Revise',
+    'review_Text'=>'evaluate if this announcement meets our standards',
+    'review_Empty'=>'There aren\'t new announcement to revise!',
+    'review_Empty_Text'=>'Come back later to check if new announcements has been added, or go on last revised announcements' ,
+    'last_Review'=>'Revise last added announcements',
+    // Review Announcements
+    'last_Review_Title'=>'Last revised announcements',
+    'last_Review_Title_Text'=>'evaluate if this revised announcements are correctly added or reject',
+    'last_Review_Accepted'=>'Accepted',
+    'last_Review_Accepted'=>'Rejected',
+    'modify_Visibility_Accepted'=>'Accept',
+    'modify_Visibility_Rejected'=>'Reject',
+    'last_Review_Empty'=>'there are no announcement to check',
 ];

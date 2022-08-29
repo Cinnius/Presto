@@ -1,5 +1,5 @@
 <x-layout>
-
+    <x-slot name="title">Annunci inseriti</x-slot>
     <div class="container">
         <div class="row mt-5 d-flex justify-content-center align-items-center">
             <div class="col-md-6">
