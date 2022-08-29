@@ -52,7 +52,7 @@ return [
     'modify_Visibility_Accepted'=>'Accetta',
     'modify_Visibility_Rejected'=>'Rifiuta',
     'last_Review_Empty'=>'Non sono presenti annunci',
-    // Create Announcements Page
+    // Create Announcements Livewire
     'create_Info'=>'Informazioni Annuncio',
     'create_Info_Title'=>'Titolo',
     'create_Info_Description'=>'Descrizione',
@@ -89,4 +89,15 @@ return [
     'login_Error'=>'Non hai ancora un account?',
     'login_Error_Register'=>'Registrati!',
     // Register Page
+    'register'=>'Registrati',
+    'register_Text'=>'Inserisci la tua email, username e password!',
+    'register_Pass'=>'Reinserisci la tua password',
+    'register_BTN'=>'Registrati!',
+    'register_Error'=>'Hai già un account?',
+    'register_Error_Login'=>'Accedi!',
+    // Announcement Show Page
+    'announcements_Delivery'=>'Questo prodotto può essere spedito solo in Italia e Città del Vaticano. Vuoi usare la spedizione internazionale? Scopri di più!',
+    // Create Announcements Page
+    'add_Announcement'=>'Inserisci il tuo annuncio',
+    'announcements_Info'=>'Altre Informazioni',
 ];

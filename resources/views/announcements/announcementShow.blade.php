@@ -55,14 +55,14 @@
             {{-- Other Information --}}
             <div class="col-2">
                 <div>
-                    <p class="mt-3 px-2 py-1">Questo prodotto può essere spedito solo in Italia e Città del Vaticano. Vuoi usare la spedizione internazionale? Scopri di più!</p>
+                    <p class="mt-3 px-2 py-1">{{__('ui.announcements_Delivery')}}</p>
                 </div>
                 <div class="mt-3 ms-3 light-bg px-3 py-2">
-                    <h4>Altre Informazioni</h4>
+                    <h4>{{__('ui.announcements_Info')}}</h4>
                     <div>
-                        <p class="my-1">creato il: {{$announcement->created_at->format('d/m/Y')}}</p>
-                        <p class="my-1">ultima modifica: {{$announcement->updated_at->format('d/m/Y')}}</p>
-                        <p class="my-1">inserito da: {{$announcement->user->name ?? ''}}</p>
+                        <p class="my-1">{{__('ui.nnouncement_Created')}} {{$announcement->created_at->format('d/m/Y')}}</p>
+                        <p class="my-1">{{__('ui.nnouncement_Updated')}} {{$announcement->updated_at->format('d/m/Y')}}</p>
+                        <p class="my-1">{{__('ui.nnouncement_Seller')}} {{$announcement->user->name ?? ''}}</p>
                     </div>
                 </div>
             </div>
