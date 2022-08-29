@@ -4,13 +4,13 @@
     {{-- Searchbar home da piccoli schermi --}}
     <div class="container-fluid main-bg hideIcon searchbar-little">
         <div class="row">
-            <div class="col-12 position-absolute top-0 w-75 py-2">
+            <div class="col-10 position-absolute top-0 w-searchbar py-2">
                 @livewire('live-search')
             </div>
             <!-- bottone aggiungi -->
-            <div class="col-2 mx-auto mt-4 position-absolute end-0">
+            <div class="col-1 me-3 mt-3 position-absolute end-0">
                 <a href="{{ route('createAnnouncement') }}"
-                    class="fw-semibold text-decoration-none mx-auto text-dark d-flex">
+                    class="fw-semibold text-decoration-none mx-auto fs-3 text-dark d-flex">
                     <i class="bi bi-plus-square-fill dark-text"></i></a>
             </div>
         </div>
@@ -164,7 +164,7 @@
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">
         <h3 class="text-center fw-semibold">{{__('ui.our_Teams')}}</h3>
-        <p class="text-center">{{__('ui.our_Teams_Text')}}</p>
+        <p class="text-center">{{__('ui.out_Teams_Text')}}</p>
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">

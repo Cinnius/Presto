@@ -28,7 +28,7 @@ li {
     --dark: #000000;
     --medium: #7F7F7F;
     --light: #A5A5A5;
-    --white: #F2F2F2;
+    --white: #f2f2f2;
     --mainLight: #fcca4a;
     --mainDark: #c7930f;
 }
@@ -108,6 +108,10 @@ li {
 }
 
 /* Navbar */
+.w-searchbar{
+    width: 90%;
+}
+
 .navhome-bg {
     background-color: var(--main);
 }
@@ -288,7 +292,7 @@ li {
 @media screen and (min-width: 768px) {
 
     .textNav {
-        font-size: 18px;
+        font-size: 16px;
         position: absolute;
         top: 0;
     }
