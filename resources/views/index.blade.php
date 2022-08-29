@@ -30,17 +30,17 @@
                                 {{ $announcement->price }}
                             </p>
                             <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Seller')}}
                                     {{ $announcement->user->name ?? '' }}
                                 </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Created')}}
                                     {{ $announcement->created_at->format('d/m/Y') }}
                                 </p>
                             </div>
                             <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
+                                        class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
             @empty
                 <div class="col-12">
                     <div class="alter alter warning py-3 shadow">
-                        <p class="lead">Non sono presenti annunci per questa ricerca, prova con altre parole chiave
+                        <p class="lead">{{__('ui.index_Empty')}}
                         </p>
                     </div>
                 </div>

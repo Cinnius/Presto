@@ -15,17 +15,17 @@
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="btn btn-primary">vai al dettaglio</a>
                                 <div class="card-footer">
-                                    <p>creato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
-                                    <p>ultima modifica: {{ $announcement->updated_at->format('d/m/Y') }}</p>
-                                    <p>inserito da: {{ $announcement->user->name ?? '' }}</p>
+                                    <p>{{__('ui.Announcement_Created')}} {{ $announcement->created_at->format('d/m/Y') }}</p>
+                                    <p>{{__('ui.Announcement_Updated')}} {{ $announcement->updated_at->format('d/m/Y') }}</p>
+                                    <p>{{__('ui.Announcement_Seller')}} {{ $announcement->user->name ?? '' }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                 @empty
-                    <p>Non vi è presente alcun articolo in codesta categoria</p>
-                    <a href="{{ route('createAnnouncement') }}">Aggiungi articolo</a>
+                    <p>{{__('ui.category_Empty')}}</p>
+                    <a href="{{ route('createAnnouncement') }}">{{__('ui.category_Empty_Text')}}</a>
                 @endforelse
                 
             </div>
