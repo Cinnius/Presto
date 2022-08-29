@@ -185,9 +185,9 @@ li {
     vertical-align: 0.075em;
 }
 
-.logo-custom {
+/* .logo-custom {
     width: 70%;
-}
+} */
 
 .img-header {
     width: 70%;
@@ -200,7 +200,7 @@ li {
 
 /* Header */
 .logo-custom {
-    width: 68%;
+    width: 72%;
     height: auto;
 }
 
