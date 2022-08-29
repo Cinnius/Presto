@@ -20,4 +20,22 @@ return [
     'time_Deals_Text_S'=>'Seconds',
     'our_Teams'=>'Our team',
     'out_Teams_Text'=>'our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
+
+        // Profile Page
+        'role'=>'Role:',
+        'role_Revisor'=>'Revisor',
+        'role_User'=>'User',
+        'revisor_Article'=>'Revise arnnouncements',
+        'information'=>'Info',
+        'my_Announcement'=>'My announcements',
+        'Announcement_Seller'=>'Sell by:',
+        'Announcement_Created'=>'Created at:',
+        'my_Announcement_Empty'=>'You haven\'t created any announcement yet',
+        'my_Announcement_Empty_Text'=>'Create your first announcement!',
+        // Index Page
+        'index_Empty'=>'There are no announcements for this search, try with other keywords.',
+        // Category Page
+        'Announcement_Updated'=>'Last edit',
+        'category_Empty'=>'There is no article in this category',
+        'category_Empty_Text'=>'Add new announcements',
 ];
