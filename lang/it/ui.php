@@ -9,7 +9,7 @@ return [
     'gratis_Shipment'=>'Spedizione Gratuita',
     'gratis_Shipment_Text'=>'Spezione rapida in 3 giorni',
     'client_Service'=>'SERVIZIO CLIENTI 24/7',
-    'client_Service'=>'Assistenza sempre disponibile',
+    'client_Service_Text'=>'Assistenza sempre disponibile',
     'best_Deals'=>'I MIGLIORI AFFARI',
     'best_Deals_Text'=>'Acquista al miglior prezzo',
     'time_Deals'=>'Time is running out!',
