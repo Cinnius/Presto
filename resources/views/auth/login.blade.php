@@ -10,8 +10,8 @@
                             <div class="mb-md-5 mt-md-4 pb-5">
                                 <form action="{{ route('login') }}" method="POST">
                                     @csrf
-                                    <h2 class="fw-bold mb-2 text-uppercase">Accedi</h2>
-                                    <p class="text-dark-50 mb-5">Inserisci la tua email e password!</p>
+                                    <h2 class="fw-bold mb-2 text-uppercase">{{__('ui.login')}}</h2>
+                                    <p class="text-dark-50 mb-5">{{__('ui.login_Text')}}</p>
 
                                     <div class="form-outline form-white mb-4">
                                         <label class="form-label">Email</label>
@@ -29,7 +29,7 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-check-label">Ricordami</label>
+                                        <label class="form-check-label">{{__('ui.login_Remember')}}</label>
                                         <input type="checkbox" name="remember" class="form-check-input">
 
                                     </div>
@@ -41,8 +41,8 @@
                             </div>
 
                             <div class="mb-5">
-                                <p class="mb-3">Non hai ancora un account?
-                                <a href="{{ route('register') }}" class="text-dark fw-bold">Registrati!</a>
+                                <p class="mb-3">{{__('ui.login_Error')}}
+                                <a href="{{ route('register') }}" class="text-dark fw-bold">{{__('ui.login_Error_Register')}}</a>
                                 </p>
                             </div>
 

@@ -10,7 +10,7 @@
             <li class="nav-item px-md-3">
                 {{-- Index --}}
                 <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
-                    <span class="hideSpan">Index</span>
+                    <span class="hideSpan">{{__('ui.nav_Index')}}</span>
                 </a>
             </li>
   
@@ -42,6 +42,11 @@
     <div class="offcanvas-header">
         <div>
             <a href=""><i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
+            <ul>
+                <li><x-_locale lang="it" nation="it"></x-_locale></li>
+                <li><x-_locale lang="en" nation="gb"></x-_locale></li>
+                <li><x-_locale lang="es" nation="es"></x-_locale></li>
+             </ul>
             <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,7 +57,7 @@
             <div class="row">
                 <div class="col-12">
                     <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn">
-                        <p class="my-auto">Aggiungi un Articolo</p>
+                        <p class="my-auto">{{__('ui.create_Add_Announcements')}}</p>
                     </a>
                 </div>
                 @guest
@@ -60,7 +65,7 @@
                     @if (Auth::user()->is_revisor)
                         <div class="col-12">
                             <a href="{{ route('indexRevisor') }}" type="button" class="btn position-relative main-btn my-4">
-                                <p class="my-auto">Revisiona gli Articoli</p>
+                                <p class="my-auto">{{__('ui.nav_Review')}}</p>
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                     {{ App\Models\Announcement::toBeRevisionedCount() }}
                                     <span class="visually-hidden">unread messages</span>
@@ -71,7 +76,7 @@
                 @endguest
             </div>
         </div>
-        <h3 class="fw-bold">Categorie</h3>
+        <h3 class="fw-bold">{{__('ui.nav_Categories')}}</h3>
         <div class="col-12 d-flex flex-wrap">
             {{-- <ul class="ul-custom"> --}}
 

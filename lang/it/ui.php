@@ -1,7 +1,7 @@
 <?php 
 
 return [
-    // Welcome
+    // Welcome Page
     'slogan'=>'Vendilo al più',
     'last_Added_Announcement'=>'Ultimi annunci inseriti',
     'last_Update'=>'Ultimo aggiornamento:',
@@ -37,14 +37,14 @@ return [
     'Announcement_Updated'=>'ultima modifica:',
     'category_Empty'=>'Non vi è presente alcun articolo in codesta categoria',
     'category_Empty_Text'=>'Aggiungi articolo',
-    // Index Revisor
+    // Index Revisor Page
     'review_Title'=>'Revisiona gli ultimi annunci',
     'review'=>'Review',
     'review_Text'=>'Questo annuncio è appropriato per la nostra piattaforma? Rispetta i nostri standard? Valuta attentamente la tua decisione!',
     'review_Empty'=>'Non hai altri articoli da controllare!',
     'review_Empty_Text'=>'Torna più tardi per controllare se ci sono nuovi annunci da revisionare oppure visualizza gli annunci nella sezione "Ultimi annunci processati" per controllare l\'operato degli altri Revisori!',
     'last_Review'=>'Rivedi gli ultimi annunci revisionati',
-    // Review Announcements
+    // Review Announcements Page
     'last_Review_Title'=>'Ultime Revisioni',
     'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',
     'last_Review_Accepted'=>'Accepted',
@@ -52,7 +52,7 @@ return [
     'modify_Visibility_Accepted'=>'Accetta',
     'modify_Visibility_Rejected'=>'Rifiuta',
     'last_Review_Empty'=>'Non sono presenti annunci',
-    // Create Announcements
+    // Create Announcements Page
     'create_Info'=>'Informazioni Annuncio',
     'create_Info_Title'=>'Titolo',
     'create_Info_Description'=>'Descrizione',
@@ -76,4 +76,17 @@ return [
     'footer_Link_ConditionRule'=>'Condizioni d\'Utilizzo',
     'footer_Link_Privacy'=>'Privacy',
     'footer_Link_Contact'=>'Contatti',
+    // Navbar
+    'nav_Index'=>'Annunci',
+    'nav_Review'=>'Revisiona Annunci',
+    'nav_Categories'=>'Categorie',
+    // Search Bar
+    'search_Placeholder'=>'cerca un articolo o una categoria...',
+    // Login Page
+    'login'=>'Accedi',
+    'login_Text'=>'Inserisci la tua email e password!',
+    'login_Remember'=>'Ricordami',
+    'login_Error'=>'Non hai ancora un account?',
+    'login_Error_Register'=>'Registrati!',
+    // Register Page
 ];
