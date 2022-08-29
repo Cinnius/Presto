@@ -1,4 +1,5 @@
 <x-layout>
+    <x-slot name="title">Welcome</x-slot>
 
     {{-- Searchbar home da piccoli schermi --}}
     <div class="container-fluid main-bg hideIcon searchbar-little">
@@ -17,7 +18,6 @@
 
     {{-- header --}}
     <header class="container-fluid main-bg">
-        <x-slot name="title">Welcome</x-slot>
 
         {{-- @if (session()->has('message'))
             <div class="col-12 col-md-4 ms-0 ms-5 alert bg-black main-text text-center pt-2">
