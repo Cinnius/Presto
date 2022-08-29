@@ -76,6 +76,11 @@
     <div class="offcanvas-header">
         <div>
             <a href=""><i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
+         <ul>
+            <li><x-_locale lang="it" nation="it"></x-_locale></li>
+            <li><x-_locale lang="en" nation="gb"></x-_locale></li>
+            <li><x-_locale lang="es" nation="es"></x-_locale></li>
+         </ul>
             <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -12,6 +12,8 @@ Route::controller(PublicController::class)->group(
                 Route::get('/index','index')->name('index');
                 Route::get('/user/profile', 'profileView')->name('profileView');
                 Route::get('/announcements/research', 'searchAnnouncements')->name('searchAnnouncements');
+
+                Route::post('/lang/{lang}', 'setLanguageLocale')->name('set_language_locale');
         }
 );
 
