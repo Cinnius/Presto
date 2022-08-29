@@ -9,8 +9,7 @@ class LiveSearch extends Component
 {
     public $searchValue = ' ';
     public $announcements;
-    public $sortField = 'title';
-    public $sortDirection = 'asc';
+
 
     public function resetSearchValue() {
         $this->searchValue = '';
@@ -21,10 +20,7 @@ class LiveSearch extends Component
         $this->resetSearchValue();
     }
 
-    public function sortBy($field){
-        $this->sortField = $field;
-        
-    }
+
    
     public function render()
     {
