@@ -37,4 +37,20 @@ return [
     'Announcement_Updated'=>'ultima modifica:',
     'category_Empty'=>'Non vi è presente alcun articolo in codesta categoria',
     'category_Empty_Text'=>'Aggiungi articolo',
+    // Index Revisor
+    'review_Title'=>'Revisiona gli ultimi annunci',
+    'review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!',
+    'review'=>'Review',
+    'review_Text'=>'Questo annuncio è appropriato per la nostra piattaforma? Rispetta i nostri standard? Valuta attentamente la tua decisione!',
+    'review_Empty'=>'Non hai altri articoli da controllare!',
+    'review_Empty_Text'=>'Torna più tardi per controllare se ci sono nuovi annunci da revisionare oppure visualizza gli annunci nella sezione "Ultimi annunci processati" per controllare l\'operato degli altri Revisori!',
+    'last_Review'=>'Rivedi gli ultimi annunci revisionati',
+    // Review Announcements
+    'last_Review_Title'=>'Ultime Revisioni',
+    'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',
+    'last_Review_Accepted'=>'Accepted',
+    'last_Review_Accepted'=>'Rejected',
+    'modify_Visibility_Accepted'=>'Accetta',
+    'modify_Visibility_Rejected'=>'Rifiuta',
+    'last_Review_Empty'=>'Non sono presenti annunci',
 ];

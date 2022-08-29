@@ -3,8 +3,8 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-8 mx-auto mt-5">
-                <h2>Ultime Revisioni</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?</p>
+                <h2>{{__('ui.last_Review_Title')}}</h2>
+                <p>{{__('ui.last_Review_Title_Text')}}</p>
             </div>
         </div>
         <div class="row justify-content-md-around">
@@ -20,9 +20,9 @@
                         <div class="position-absolute mt-3">
                             <p class="text-decoration-none text-dark fst-italic main-bg px-2 rounded ms-3">
                                 @if ($announcement->is_accepted)
-                                    Accettato
+                                    {{__('ui.last_Review_Accepted')}}
                                 @else
-                                    Rifiutato
+                                    {{__('ui.last_Review_Rejected')}}
                                     @endif
                             </p>
                         </div>
@@ -33,29 +33,29 @@
                             <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
                                 {{ $announcement->price }}</p>
                             <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">Venduto da:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Seller')}} 
                                     {{ $announcement->user->name ?? '' }}</p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">Creato il:
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Created')}} 
                                     {{ $announcement->created_at->format('d/m/Y') }}</p>
                             </div>
                             <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
+                                        class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
                             </div>
                             <div class="mt-3 text-center">
-                                <p>Vuoi modificare la visibilità?</p>
+                                <p>{{__('ui.modify_Visibility')}}Vuoi modificare la visibilità?</p>
                                 @if($announcement-> is_accepted)
                                 <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">Rifiuta</button>
+                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">{{__('ui.modify_Visibility_Rejected')}}</button>
                                 </form>
                                 @else
                                 <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
                                     @csrf
                                     @method('PATCH')
-                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">Accetta</button>
+                                    <button type="submit" class="btn main-btn fst-italic fw-semibold">{{__('ui.modify_Visibility_Accepted')}}</button>
                                 </form>
                                 @endif
                             </div>
@@ -65,7 +65,7 @@
             @empty
                 <div class="col-12">
                     <div class="alter alter warning py-3 shadow">
-                        <p class="lead">Non sono presenti annunci</p>
+                        <p class="lead">{{__('ui.last_Review_Empty')}}</p>
                     </div>
                 </div>
             @endforelse
