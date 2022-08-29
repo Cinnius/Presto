@@ -87,9 +87,9 @@
                 <div class="swiper-wrapper">
                     @foreach ($announcements as $announcement)
                         <div class="swiper-slide">
-                            <div class="card mb-3" style="max-width: 540px;">
+                            <div class="card mb-3 last-ann-card">
                                 <div class="row g-0">
-                                    <div class="col-md-6">
+                                    <div class="col-12 col-lg-6">
                                         <div class="position-absolute mt-3">
                                             <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
                                                 class="text-decoration-none text-dark main-bg py-1 px-2 rounded ms-3 ">
@@ -100,7 +100,7 @@
                                         <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}"
                                             class="img-fluid rounded-start" alt="...">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-12 col-lg-6">
                                         <div class="card-body">
                                             <h3 class="card-title">{{ $announcement->title }}</h3>
                                             <h4 class="card-text">€ {{ $announcement->price }}</h4>
@@ -164,7 +164,7 @@
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">
         <h3 class="text-center fw-semibold">{{__('ui.our_Teams')}}</h3>
-        <p class="text-center">{{__('ui.out_Teams_Text')}}</p>
+        <p class="text-center">{{__('ui.our_Teams_Text')}}</p>
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
