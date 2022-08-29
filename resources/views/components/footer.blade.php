@@ -4,42 +4,41 @@
         <div class="container text-md-start mt-5">
             <div class="row mt-3">
                 <div class="col-12 my-4 text-center">
-                    <a class="btn dark-btn my-3" href="#">Torna su</a>
+                    <a class="btn dark-btn my-3" href="#">{{__('ui.footer_BackToTop')}}</a>
                 </div>
                 <div class="col-12 col-lg-6 mb-4">
                     <div>
-                        <h6 class="text-uppercase fw-bold mb-4">Vuoi lavorare con noi?</h6>
-                        <p>Sei interessato ad unirti al nostro staff? Vuoi guadagnare rimanendo comodamente seduto sul tuo divano? Vuoi un introito extra per le tue passioni?</p>
-                        <p>Unisci ora al nostro staff, stiamo cercando proprio di te!</p>
-                        <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">Diventa subito un revisore!</a>
+                        <h6 class="text-uppercase fw-bold mb-4">{{__('ui.footer_Work')}}</h6>
+                        <p>{{__('ui.footer_Work_Text')}}</p>
+                        <p>{{__('ui.footer_Work_Text2')}}</p>
+                        <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">{{__('ui.footer_Work_BTN')}}!</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 mb-4">
                     <div class="row">
                         <h6 class="text-uppercase fw-bold mb-4">Newsletter</h6>
-                        <p>Vuoi rimanere aggiornato sulle possibilità di lavoro e sulle ultime offerte? Iscriviti alla nostra Newsletter e rimani aggiornato su tutto quello che ci riguarda!</p>
+                        <p>{{__('ui.footer_Newsletter')}}</p>
                         <div class="col-12 col-lg-10 form-outline mb-4">
                             <input type="email" id="form5Example25" class="form-control"/>
                             <label class="form-label" for="form5Example25">Email address</label>
                         </div>
                         <div class="col-12 col-lg2">
-                            <button type="submit" class="btn btn-dark mb-4">Subscribe</button>
+                            <button type="submit" class="btn btn-dark mb-4">{{__('ui.footer_Newsletter_BTN')}}</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">Presto srl</h6>
-                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 <div class="col-12 col-lg-4 mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">Link Utili</h6>
-                    <p><i class="bi bi-question-circle-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">Help</a></p>
-                    <p><i class="bi bi-archive-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">Chi siamo</a></p>
-                    <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">Condizioni di Utilizzo</a></p>
-                    <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">Privacy</a></p>
+                    <h6 class="text-uppercase fw-bold mb-4">{{__('ui.footer_Link')}}</h6>
+                    <p><i class="bi bi-question-circle-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">{{__('ui.footer_Link_Help')}}</a></p>
+                    <p><i class="bi bi-archive-fill me-3"></i><a href="{{route('welcome')}}#ourteam" class="white-text">{{__('ui.footer_Link_AboutUS')}}</a></p>
+                    <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">{{__('ui.footer_Link_ConditionRule')}}</a></p>
+                    <p><i class="bi bi-shield-fill-exclamation me-3"></i><a href="#!" class="white-text">{{__('ui.footer_Link_Privacy')}}</a></p>
                 </div>
                 <div class="col-12 col-lg-4 mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">Contatti</h6>
+                    <h6 class="text-uppercase fw-bold mb-4">{{__('ui.footer_Link_Contact')}}</h6>
                     <p><i class="bi bi-house-fill me-3"></i> New York, NY 10012, US</p>
                     <p><i class="bi bi-envelope-fill me-3"></i>Presto@Presto.it</p>
                     <p><i class="bi bi-telephone-fill me-3"></i> + 01 234 567 88</p>

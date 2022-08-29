@@ -5,9 +5,9 @@
         <section class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 gradient-custom px-4 py-4 rounded border-end border-white border-4">
-                    <h3 class="text-center">Informazioni Annuncio</h3>
+                    <h3 class="text-center">{{__('ui.create_Info')}}</h3>
                     <div class="mb-3">
-                        <label class="form-label">Titolo</label>
+                        <label class="form-label">{{__('ui.create_Info_Title')}}</label>
                         <input type="text" class="form-control" wire:model.debounce.2000ms="title" value={{old('title')}}
                             @error('title') is-invalid @enderror>
                         @error('title')
@@ -15,7 +15,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Descrizione</label>
+                        <label class="form-label">{{__('ui.create_Info_Description')}}</label>
                         <textarea class="form-control" cols="30" rows="10" wire:model.debounce.2000ms="body" value={{old('body')}}
                             @error('body') is-invalid @enderror></textarea>
                         @error('body')
@@ -23,7 +23,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Prezzo</label>
+                        <label class="form-label">{{__('ui.create_Info_Price')}}</label>
                         <input type="number" step="0.01" class="form-control" wire:model="price"
                             @error('price') is-invalid @enderror>
                         @error('price')
@@ -31,7 +31,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Categoria</label>
+                        <label class="form-label">{{__('ui.create_Info_Category')}}</label>
                         <select wire:model.defer="category" class="form-select" aria-label="Default select example">
                             <option selected>Open this select menu</option>
                             @foreach ($categories as $category)
@@ -40,7 +40,7 @@
                         </select>
                     </div>
                     <div class="mb-4">
-                        <label class="form-label">Immagini</label>
+                        <label class="form-label">{{__('ui.create_Info_Image')}}</label>
                         <input type="file" wire:model="temporary_images" name="images" multiple
                             class="form-control @error('temporary_images.*') is-invalid @enderror" placeholder="img">
                         @error('temporary_images.*')
@@ -48,7 +48,7 @@
                         @enderror
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn main-btn">Aggiungi annuncio</button>
+                        <button type="submit" class="btn main-btn">{{__('ui.create_Add_Announcements')}}</button>
                     </div>
                 </div>
                 {{-- Photo Preview --}}
@@ -64,14 +64,14 @@
                                     </div>
                                     <div class="mt-4 text-center">
                                         <button type="button" class="btn btn-danger px-2 shadow"
-                                            wire:click="removeImage({{ $key }})">Cancella</button>
+                                            wire:click="removeImage({{ $key }})">{{__('ui.create_Image_Delete')}}</button>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
                     @else
                         <div class="ms-5">
-                            <p>Ancora non hai caricato nessuna immagine, prova a caricarne qualcuna!</p>
+                            <p>{{__('ui.create_Image_Empty')}}</p>
                         </div>
                     @endif
                 </div>
@@ -79,8 +79,8 @@
         </section>
     </form>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Launch demo modal
-    </button>
+    </button> --}}
 
 </div>

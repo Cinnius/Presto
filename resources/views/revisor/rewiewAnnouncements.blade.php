@@ -4,7 +4,6 @@
         <div class="row text-center">
             <div class="col-8 mx-auto mt-5">
                 <h2>{{__('ui.last_Review_Title')}}</h2>
-                <p>{{__('ui.last_Review_Title_Text')}}</p>
             </div>
         </div>
         <div class="row justify-content-md-around">
