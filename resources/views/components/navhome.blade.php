@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand navhome-bg fixed-nav custom-nav" aria-label="Second navbar example">
+<nav class="navbar navbar-expand navhome-bg fixed-nav custom-nav position-fixed" aria-label="Second navbar example">
     <div class="container-fluid">
         <ul
-            class="navbar-nav mx-auto my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 textNav">
+            class="navbar-nav my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 textNav">
             {{-- Logo --}}
-            <a class="navbar-brand hideLogo nav-trans" href="">
-                <img src="image/gruppo_1_logotipo.png" class="CustomLogo ms-5" alt="Logo of site">
+            <a class="navbar-brand hideLogo nav-trans ms-3 me-5" href="">
+                <img src="image/gruppo_1_logotipo.png" class="CustomLogo" alt="Logo of site">
             </a>
             <li class="nav-item px-md-3 order-1 order-md-1 position-relative">
                 {{-- Home --}}
@@ -22,28 +22,27 @@
             </li>
 
             {{-- Searchbar - navbarhome da grandi schermi --}}
-            <li class="nav-item px-md-3 order-4 my-auto w-75 justify-content-end hideSpan">
-                <div class="col-9 col-xxl-8 position-absolute top-0 w-25">
+            <li class="nav-item order-4  hideSpan order-md-6">
+                <div class="col-9 col-xxl-8 search-custom w-25">
                     @livewire('live-search')
                 </div>
+                </li>
                 <!-- bottone aggiungi -->
-                <div class="col-2 mx-auto px-5 px-xxl-0">
+                <li class="hideSpan w-25">
                     <a href="{{ route('createAnnouncement') }}"
                         class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans">
                         <i class="bi bi-plus-square-fill dark-text"></i>
                         <span class="hideSpan my-auto ms-3 dark-text">{{__('ui.create_Add_Announcements')}}</span></a>
-                </div>
             </li>
 
-
-            <li class="nav-item px-md-3 py-0 order-3 order-md-5 userWidth">
-
-                {{-- User --}}
+            
+            {{-- User --}}
+            <li class="nav-item px-md-3 py-0 order-3  order-md-5">
                 @guest
                     <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center nav-trans"
                         href="{{ route('login') }}">
                         <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i>
-                        <i class="bi bi-person-fill fs-1 hideIcon"></i>
+                        <i class="bi bi-person-fill fs-1 hideIcon "></i>
                         <span class="hideSpan me-5">Login</span>
                     </a>
                 @else
@@ -53,7 +52,7 @@
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>
                         <span class="hideSpan userName userHeight me-5">
                             <p class="my-auto ps-2">{{ Auth::user()->name }}</p>
-                            <i class="bi bi-person-fill userIcon-height fs-1"></i>
+                            <i class="bi bi-person-fill userIcon-height fs-2 mt-1"></i>
                         </span>
                     </a>
                 @endguest
@@ -72,7 +71,7 @@
 </nav>
 
 {{-- Off Canvas --}}
-<div class="offcanvas offcanvas-end" tabindex="-1" id="NavbarOffcanvas" aria-labelledby="NavbarOffcanvasLabel">
+<div class="offcanvas offcanvas-end white-bg" tabindex="-1" id="NavbarOffcanvas" aria-labelledby="NavbarOffcanvasLabel">
     <div class="offcanvas-header">
         <div>
             <a href=""><i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>

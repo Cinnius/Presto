@@ -7,7 +7,7 @@ return [
     'last_Update'=>'Ultimo aggiornamento:',
     'detail_Product'=>'Dettaglio Prodotto',
     'gratis_Shipment'=>'Spedizione Gratuita',
-    'gratis_Shipment_Text'=>'Spezione rapida in 3 giorni',
+    'gratis_Shipment_Text'=>'Spedizione rapida in 3 giorni',
     'client_Service'=>'SERVIZIO CLIENTI 24/7',
     'client_Service_Text'=>'Assistenza sempre disponibile',
     'best_Deals'=>'I MIGLIORI AFFARI',
@@ -19,7 +19,7 @@ return [
     'time_Deals_Text_M'=>'Minuti',
     'time_Deals_Text_S'=>'Secondi',
     'our_Teams'=>'Il nostro team',
-    'out_Teams_Text'=>'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
+    'our_Teams_Text'=>'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
     // Profile Page
     'role'=>'Ruolo:',
     'role_Revisor'=>'Revisor',
