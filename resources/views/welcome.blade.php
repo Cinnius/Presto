@@ -31,10 +31,10 @@
             </div>
         @endif
 
-        <div class="row justify-content-between align-items-center pt-5 pt-md-2">
+        <div class="row justify-content-between align-items-center pt-5 pt-md-2 h-header-custom">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-center">
-                <h1 class="dark-text fw-bold display-1"> {{__('ui.slogan')}} </h1>
+                <h1 class="dark-text fw-bolder display-4"> {{__('ui.slogan')}} </h1>
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-3 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="image/logo1.png" alt="word Presto">
                 </div>
@@ -43,10 +43,42 @@
             <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
-    </header>
-
-
-
+        </header>
+        
+        
+        {{-- Section transport and logistics --}}
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                    <div class="serviceHome d-flex me-3">
+                        <i class="mx-auto my-auto bi bi-truck fs-2"></i>
+                    </div>
+                    <div class="my-auto">
+                        <h5>{{__('ui.gratis_Shipment')}}</h5>
+                        <h6>{{__('ui.gratis_Shipment_Text')}}</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                    <div class="serviceHome d-flex me-3">
+                        <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
+                    </div>
+                    <div class="my-auto">
+                        <h5>{{__('ui.client_Service')}}</h5>
+                        <h6>{{__('ui.client_Service_Text')}}</h6>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                    <div class="serviceHome d-flex me-3">
+                        <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
+                    </div>
+                    <div class="my-auto">
+                        <h5>{{__('ui.best_Deals')}}</h5>
+                        <h6>{{__('ui.best_Deals_Text')}}</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
         <div class="row">
@@ -93,38 +125,6 @@
         </div>
     </section>
 
-    {{-- Section transport and logistics --}}
-    <section class="container mt-5">
-        <div class="row">
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                <div class="serviceHome d-flex me-3">
-                    <i class="mx-auto my-auto bi bi-truck fs-2"></i>
-                </div>
-                <div class="my-auto">
-                    <h5>{{__('ui.gratis_Shipment')}}</h5>
-                    <h6>{{__('ui.gratis_Shipment_Text')}}</h6>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                <div class="serviceHome d-flex me-3">
-                    <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
-                </div>
-                <div class="my-auto">
-                    <h5>{{__('ui.client_Service')}}</h5>
-                    <h6>{{__('ui.client_Service_Text')}}</h6>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                <div class="serviceHome d-flex me-3">
-                    <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
-                </div>
-                <div class="my-auto">
-                    <h5>{{__('ui.best_Deals')}}</h5>
-                    <h6>{{__('ui.best_Deals_Text')}}</h6>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     {{-- Section countdown --}}

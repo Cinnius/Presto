@@ -19,7 +19,7 @@ return [
     'time_Deals_Text_M'=>'Minutes',
     'time_Deals_Text_S'=>'Seconds',
     'our_Teams'=>'Our team',
-    'out_Teams_Text'=>'our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
+    'our_Teams_Text'=>'our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
 
         // Profile Page
         'role'=>'Role:',

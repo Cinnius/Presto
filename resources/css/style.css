@@ -12,8 +12,12 @@ h5,
 h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+
 }
 
+
+
+button,
 p,
 ul,
 li {
@@ -196,12 +200,12 @@ li {
 
 /* Header */
 .logo-custom {
-    width: 75%;
+    width: 68%;
     height: auto;
 }
 
 .img-header {
-    width: 70%;
+    width: 50%;
 }
 
 /* Searchbarhome */
@@ -211,7 +215,7 @@ li {
 }
 
 /* Countdown */
-.height-countdown{
+.height-countdown {
     height: 450px;
 }
 
@@ -280,26 +284,37 @@ li {
     position: absolute;
     top: 45px;
 }
-.nav-trans{
-   
-}
-.nav-trans:hover{
+
+.nav-trans {}
+
+.nav-trans:hover {
     transform: scale(1.1);
 }
 
 
 /* MediaQuerry */
 @media screen and (min-width: 768px) {
+    .search-custom {
+        position: absolute;
+        top: 3px;
+        right: 250px;
+    }
 
     .textNav {
+
         font-size: 16px;
         position: absolute;
         top: 0;
     }
 
     .navhome-bg {
-        border: none;
-        box-shadow: none;
+        background-color: #ffc020;
+        height: 7vh;
+
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        box-shadow: 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.718);
+
     }
 
     .fixed-nav {
@@ -328,17 +343,22 @@ li {
         display: block;
     }
 
-    /* 
-    .userWidth{
-        width:20%;
+
+    /* .userWidth{
+        width:100%;
+
     } */
 
     .userName {
         display: flex;
         flex-direction: row-reverse;
     }
+
     .dot {
         top: 35px;
     }
-    
+
+    .h-header-custom {
+        height: 70vh;
+    }
 }
