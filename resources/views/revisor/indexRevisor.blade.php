@@ -36,6 +36,11 @@
                     <p>{{__('ui.review_Text')}}</p>
                     <div class="my-5 d-flex justify-content-evenly">
                         <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
+                            <p>Adulti: <span class="{{$image->adult}}" ></span></p>
+                            <p>Satira: <span class="{{$image->spoof}}" ></span></p>
+                            <p>Medicina: <span class="{{$image->medical}}" ></span></p>
+                            <p>Violenza: <span class="{{$image->violence}}" ></span></p>
+                            <p>Nudo: <span class="{{$image->racy}}" ></span></p>
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success">Accetta</button>
