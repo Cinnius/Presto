@@ -48,7 +48,7 @@ return [
     'last_Review_Title'=>'Ultime Revisioni',
     'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',
     'last_Review_Accepted'=>'Accepted',
-    'last_Review_Accepted'=>'Rejected',
+    'last_Review_Rejected'=>'Rejected',
     'modify_Visibility'=>'Vuoi modificare la visibilità?',
     'modify_Visibility_Accepted'=>'Accetta',
     'modify_Visibility_Rejected'=>'Rifiuta',

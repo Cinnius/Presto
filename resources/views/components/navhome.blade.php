@@ -30,7 +30,7 @@
                 <!-- bottone aggiungi -->
                 <li class="hideSpan w-25">
                     <a href="{{ route('createAnnouncement') }}"
-                        class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans link-dot">
+                        class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans">
                         <i class="bi bi-plus-square-fill dark-text"></i>
                         <span class="hideSpan my-auto ms-3 dark-text">{{__('ui.create_Add_Announcements')}}</span></a>
             </li>

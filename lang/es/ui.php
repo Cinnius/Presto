@@ -49,7 +49,7 @@ return [
     'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',
     'modify_Visibility'=>'Quieres cambiar la visibilidad?',
     'last_Review_Accepted'=>'Aceptado',
-    'last_Review_Accepted'=>'Rechazado',
+    'last_Review_Rejected'=>'Rechazado',
     'modify_Visibility_Accepted'=>'Aceptar',
     'modify_Visibility_Rejected'=>'Rechazar',
     'last_Review_Empty'=>'No hay anuncios',
