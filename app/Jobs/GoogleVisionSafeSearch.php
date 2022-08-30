@@ -36,17 +36,23 @@ class GoogleVisionSafeSearch implements ShouldQueue
         if(!$i){
             return;
         }
-        $image = file_get_contents(storage_path('app/public/'.$i->path));
+
+        $image = file_get_contents(storage_path('app/public/' . $i->path));
+
         putenv('GOOGLE_APPLICATION_CREDENTIALS='.base_path('google_credential.json'));
+
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->safeSearchDetection($image);
         $imageAnnotator->close();
+
         $safe = $response->getSafeSearchAnnotation();
+
         $adult = $safe->getAdult();
         $medical = $safe->getMedical();
         $spoof = $safe->getSpoof();
         $violence = $safe->getViolence();
         $racy = $safe->getRacy();
+
         $likelihoodName = [
             'text-secondary bi bi-circle-fill', 'text-success bi bi-circle-fill', 'text-succes bi bi-circle-fill', 'text-warning bi bi-circle-fill', 'text-warning bi bi-circle-fill', 'text-danger bi bi-circle-fill',
         ];
@@ -57,6 +63,6 @@ class GoogleVisionSafeSearch implements ShouldQueue
         $i->violence = $likelihoodName[$violence];
         $i->racy = $likelihoodName[$racy];
 
-        $i->save;
+        $i->save();
     }
 }

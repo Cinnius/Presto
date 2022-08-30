@@ -7,6 +7,13 @@
                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!</p>
             </div>
             @if ($announcement)
+                @foreach ($announcement->images as $image)
+                    <p>Adulti: <span class="{{$image->adult}}" ></span></p>
+                    <p>Satira: <span class="{{$image->spoof}}" ></span></p>
+                    <p>Medicina: <span class="{{$image->medical}}" ></span></p>
+                    <p>Violenza: <span class="{{$image->violence}}" ></span><p>
+                    <p>Nudo: <span class="{{$image->racy}}" ></span></p>
+                @endforeach
                 <div class="col-12 col-md-6 py-4 d-flex justify-content-center mt-5">
                     <div class="card card-shadow rounded" style="width: 18rem;">
                         <img src="{{ $announcement->images()->get()->isEmpty() ? 'https://via.placeholder.com/200': $announcement->images()->first()->getUrl(400, 300) }}" class="card-img-top rounded p-1" alt="...">
@@ -36,11 +43,6 @@
                     <p>{{__('ui.review_Text')}}</p>
                     <div class="my-5 d-flex justify-content-evenly">
                         <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}" method="POST">
-                            <p>Adulti: <span class="{{$image->adult}}" ></span></p>
-                            <p>Satira: <span class="{{$image->spoof}}" ></span></p>
-                            <p>Medicina: <span class="{{$image->medical}}" ></span></p>
-                            <p>Violenza: <span class="{{$image->violence}}" ></span></p>
-                            <p>Nudo: <span class="{{$image->racy}}" ></span></p>
                             @csrf
                             @method('PATCH')
                             <button type="submit" class="btn btn-success">Accetta</button>
