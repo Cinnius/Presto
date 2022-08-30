@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="container-fluid">
-        <div class="row text-center">
+        <div class="row text-center margin-custom">
             <div class="col-8 mx-auto mt-5">
                 <h2>{{__('ui.last_Review_Title')}}</h2>
             </div>
@@ -43,7 +43,7 @@
                                         class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
                             </div>
                             <div class="mt-3 text-center">
-                                <p>{{__('ui.modify_Visibility')}}Vuoi modificare la visibilità?</p>
+                                <p>{{__('ui.modify_Visibility')}}</p>
                                 @if($announcement-> is_accepted)
                                 <form action="{{ route('rejectAnnouncement', ['announcement' => $announcement]) }}" method="POST">
                                     @csrf

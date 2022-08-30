@@ -1,5 +1,8 @@
 @import'bootstrap/dist/css/bootstrap';
 @import'bootstrap-icons/font/bootstrap-icons';
+@import'root_and_fonts';
+@import'button';
+@import'navbar';
 @import'style';
 @import'searchbar';
 @import'profile';
@@ -8,4 +11,5 @@
 @import'announcement';
 @import'sortbar';
 @import"carousel";
+@import'revisor';
 @import"/node_modules/flag-icon-css/css/flag-icons.css";

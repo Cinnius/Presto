@@ -4,11 +4,11 @@
             class="navbar-nav my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 textNav">
             {{-- Logo --}}
             <a class="navbar-brand hideLogo nav-trans ms-3 me-5" href="{{route('welcome')}}">
-                <img src="image/gruppo_1_logotipo.png" class="CustomLogo" alt="Logo of site">
+                <img src="/image/gruppo_1_logotipo.png" class="CustomLogo" alt="Logo of site">
             </a>
             <li class="nav-item px-md-3 order-1 order-md-1 position-relative">
                 {{-- Home --}}
-                <a class="nav-link nav-btn  link-dot d-flex align-items-end justify-content-center nav-trans" aria-current="page" href="{{ route('welcome') }}">
+                <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans" aria-current="page" href="{{ route('welcome') }}">
                     <i class="bi bi-house-fill fs-1 hideIcon"></i><span class="hideSpan">Home</span>
                 </a>
 {{--                 <div class="dot"></div>
@@ -39,14 +39,14 @@
             {{-- User --}}
             <li class="nav-item px-md-3 py-0 order-3  order-md-5">
                 @guest
-                    <a class="nav-link nav-btn d-flex justify-content-md-end align-items-center nav-trans link-dot d-flex align-items-end justify-content-center"
+                    <a class="nav-link nav-btn nav-trans link-dot d-flex align-items-end align-items-center justify-content-center"
                         href="{{ route('login') }}" >
                         <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i>
                         <i class="bi bi-person-fill fs-1 hideIcon "></i>
                         <span class="hideSpan me-5">Login</span>
                     </a>
                 @else
-                    <a class="nav-link nav-btn d-flex  align-items-center nav-trans  d-flex align-items-end justify-content-md-center link-dot"
+                    <a class="nav-link nav-btn d-flex  align-items-end nav-trans  d-flex align-items-end justify-content-md-center link-dot"
                         href="{{ route('profileView') }}">
                         {{-- <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i> --}}
                         <i class="bi bi-person-fill fs-1 hideIcon"></i>

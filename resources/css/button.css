@@ -1,0 +1,40 @@
+/* button main */
+.main-btn {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--main);
+    box-shadow: 3px 3px 10px 3px rgba(4, 4, 4, 0.369);
+    --bs-btn-border-color: var(--main);
+    --bs-btn-hover-color: #000;
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: var(--mainDark);
+    --bs-btn-active-border-color: var(--main);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: var(--main);
+    --bs-btn-disabled-border-color: var(--main);
+}
+
+.main-btn:hover {
+    box-shadow: 3px 3px 10px 3px rgba(4, 4, 4, 0.6);
+}
+
+/* dark btn */
+.dark-btn {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #414549;
+    box-shadow: 3px 3px 10px 3px rgba(15, 15, 15, 0.369);
+    --bs-btn-border-color: #414549;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--light);
+    --bs-btn-active-border-color: #414549;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--light);
+    --bs-btn-disabled-border-color: #414549;
+}
+
+.dark-btn:hover {
+    box-shadow: 3px 3px 10px 3px rgba(96, 96, 96, 0.6);
+}
+

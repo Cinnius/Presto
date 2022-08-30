@@ -1,10 +1,10 @@
 <x-layout>
 
     <div class="container">
-        <div class="row">
+        <div class="row margin-custom">
             <div class="col-8 mx-auto">
                 <h2 class="text-center mt-5">{{__('ui.review_Title')}}</h2>
-                <p>{{__('ui.review_Title_Text')}}</p>
+                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum illum dicta aperiam ea aut?!</p>
             </div>
             @if ($announcement)
                 <div class="col-12 col-md-6 py-4 d-flex justify-content-center mt-5">
