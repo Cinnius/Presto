@@ -8,6 +8,10 @@
             </div>
             @if ($announcement)
                 @foreach ($announcement->images as $image)
+
+                @foreach ($image->labels as $label)
+                    <p>{{$label}}</p>
+                    @endforeach
                     <p>Adulti: <span class="{{$image->adult}}" ></span></p>
                     <p>Satira: <span class="{{$image->spoof}}" ></span></p>
                     <p>Medicina: <span class="{{$image->medical}}" ></span></p>

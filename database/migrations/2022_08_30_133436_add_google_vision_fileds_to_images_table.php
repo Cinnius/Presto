@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('images', function (Blueprint $table) {
-            $table->text('lables')->nullable();
+            $table->text('labels')->nullable();
             $table->string('adult')->nullable();
             $table->string('spoof')->nullable();
             $table->string('medical')->nullable();
@@ -32,7 +32,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('images', function (Blueprint $table) {
-            $table->dropColumn(['lables', 'adult', 'spoof', 'medical', 'violence', 'racy']);
+            $table->dropColumn(['labels', 'adult', 'spoof', 'medical', 'violence', 'racy']);
         });
     }
 };
