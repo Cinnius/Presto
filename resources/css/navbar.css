@@ -34,7 +34,7 @@
 }
 
 .custom-nav {
-    border-top: solid 1px;
+    border-bottom: solid 1px;
     color: #7F7F7F;
     box-shadow: 0px 0px 6px 0px #7F7F7F;
 }
@@ -101,8 +101,8 @@
 @media screen and (min-width: 768px) {
     .search-custom {
         position: absolute;
-        top: 3px;
-        right: 250px;
+        top: 10px;
+        right: 50px;
     }
 
     .textNav {
@@ -115,11 +115,9 @@
     .navhome-bg {
         background-color: #ffc020;
         height: 7vh;
-
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
         box-shadow: 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.718);
-
     }
 
     .fixed-nav {
