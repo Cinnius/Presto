@@ -1,0 +1,165 @@
+/* Navbar */
+.w-searchbar{
+    width: 90%;
+}
+
+.navhome-bg {
+    background-color: var(--main);
+}
+
+.fixed-nav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.nav-btn {
+    color: var(--dark);
+}
+
+.link-costum {
+    text-decoration: none;
+    color: #000000;
+}
+
+.category-custom {
+    border: solid 3px;
+    height: 120px;
+    width: 120px;
+    border-radius: 15%;
+    box-shadow: 3px 3px 8px 3px var(--main);
+
+}
+
+.custom-nav {
+    border-top: solid 1px;
+    color: #7F7F7F;
+    box-shadow: 0px 0px 6px 0px #7F7F7F;
+}
+
+.hideSpan {
+    display: none;
+}
+
+.hideIcon {
+    display: block;
+}
+
+.hideIcon2 {
+    display: none;
+}
+
+.hideLogo {
+    display: none;
+}
+
+.CustomLogo {
+    height: 40px;
+    width: auto;
+}
+
+.userWidth {
+    width: auto;
+}
+
+.userHeight {
+    height: 40px;
+}
+
+.userIcon-height::before {
+    vertical-align: 0.075em;
+}
+
+/* .logo-custom {
+    width: 70%;
+} */
+
+.img-header {
+    width: 70%;
+}
+
+.div-searchbar-c {
+    height: 15vh;
+}
+
+.dot {
+    height: 11px;
+    width: 11px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 75%;
+}
+
+.nav-trans:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+    .search-custom {
+        position: absolute;
+        top: 3px;
+        right: 250px;
+    }
+
+    .textNav {
+
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+    }
+
+    .navhome-bg {
+        background-color: #ffc020;
+        height: 7vh;
+
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        box-shadow: 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.718);
+
+    }
+
+    .fixed-nav {
+        bottom: unset;
+        top: 0;
+        position: relative;
+    }
+
+    .hideSpan {
+        display: block;
+    }
+
+    .hideIcon {
+        display: none;
+    }
+
+    .hideIcon2 {
+        display: block;
+    }
+
+    .iconUser {
+        font-size: 5px;
+    }
+
+    .hideLogo {
+        display: block;
+    }
+
+
+    /* .userWidth{
+        width:100%;
+
+    } */
+
+    .userName {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .dot {
+        top: 80%;
+    }
+}

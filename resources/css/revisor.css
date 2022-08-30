@@ -1,0 +1,10 @@
+.margin-custom{
+
+}
+
+/* MediaQuerry */
+@media screen and (min-width: 768px) {
+    .margin-custom{
+        margin-top: 5%;
+    }
+}

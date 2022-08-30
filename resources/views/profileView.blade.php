@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name="title">User Profile</x-slot>
     {{-- profile --}}
-    <div class="container-fluid py-5 white-bg">
+    <div class="container-fluid py-5 white-bg margin-custom">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col col-lg-6 mb-5 mb-lg-0">
                 <div class="card mb-3" style="border-radius: .5rem;">

@@ -49,6 +49,7 @@ return [
     // Review Announcements
     'last_Review_Title'=>'Last revised announcements',
     'last_Review_Title_Text'=>'Evaluate if this revised announcements are correctly added or reject',
+    'modify_Visibility'=>'Do you want to change the visibility?',
     'last_Review_Accepted'=>'Accepted',
     'last_Review_Accepted'=>'Rejected',
     'modify_Visibility_Accepted'=>'Accept',
