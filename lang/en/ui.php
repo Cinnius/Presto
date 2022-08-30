@@ -51,7 +51,7 @@ return [
     'last_Review_Title_Text'=>'Evaluate if this revised announcements are correctly added or reject',
     'modify_Visibility'=>'Do you want to change the visibility?',
     'last_Review_Accepted'=>'Accepted',
-    'last_Review_Accepted'=>'Rejected',
+    'last_Review_Rejected'=>'Rejected',
     'modify_Visibility_Accepted'=>'Accept',
     'modify_Visibility_Rejected'=>'Reject',
     'last_Review_Empty'=>'There are no announcement to check',

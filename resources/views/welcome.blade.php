@@ -40,9 +40,9 @@
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-4 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="/image/logo1.png" alt="word Presto">
                 </div>
-                <div class="col-7 d-flex justify-content-end me-5">
+                {{-- <div class="col-7 d-flex justify-content-end me-5">
                     <a href="{{route('createAnnouncement')}}" class="btn fw-bold text-dark btn-outline-light border-dark shadow">Scopri di più</a>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">

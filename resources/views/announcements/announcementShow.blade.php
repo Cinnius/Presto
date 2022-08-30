@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center margin-custom">
             {{-- Carousel Thumbnail --}}
             <div class="col-1">
                 <div thumbsSlider="" class="swiper mySwiper">
@@ -60,9 +60,9 @@
                 <div class="mt-3 ms-3 light-bg px-3 py-2">
                     <h4>{{__('ui.announcements_Info')}}</h4>
                     <div>
-                        <p class="my-1">{{__('ui.nnouncement_Created')}} {{$announcement->created_at->format('d/m/Y')}}</p>
-                        <p class="my-1">{{__('ui.nnouncement_Updated')}} {{$announcement->updated_at->format('d/m/Y')}}</p>
-                        <p class="my-1">{{__('ui.nnouncement_Seller')}} {{$announcement->user->name ?? ''}}</p>
+                        <p class="my-1">{{__('ui.Announcement_Created')}} {{$announcement->created_at->format('d/m/Y')}}</p>
+                        <p class="my-1">{{__('ui.Announcement_Updated')}} {{$announcement->updated_at->format('d/m/Y')}}</p>
+                        <p class="my-1">{{__('ui.Announcement_Seller')}} {{$announcement->user->name ?? ''}}</p>
                     </div>
                 </div>
             </div>
