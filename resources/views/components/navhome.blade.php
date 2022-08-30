@@ -3,7 +3,7 @@
         <ul
             class="navbar-nav my-auto d-flex justify-content-around justify-content-md-start align-items-center w-100 textNav">
             {{-- Logo --}}
-            <a class="navbar-brand hideLogo nav-trans ms-3 me-5" href="">
+            <a class="navbar-brand hideLogo nav-trans ms-3 me-5" href="{{route('welcome')}}">
                 <img src="image/gruppo_1_logotipo.png" class="CustomLogo" alt="Logo of site">
             </a>
             <li class="nav-item px-md-3 order-1 order-md-1 position-relative">
@@ -76,10 +76,10 @@
         <div class="d-flex">
             <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <i class="bi bi-gear-fill fs-2 dark-text mx-2"></i></a>
-            <ul class="dropdown-menu dropdown-menu-dark ">
-                <li class="dropdown-item d-flex"><x-_locale lang="it" nation="it"></x-_locale> Italiano</li>
-                <li class="dropdown-item d-flex"><x-_locale lang="en" nation="gb"></x-_locale>English</li>
-                <li class="dropdown-item d-flex"><x-_locale lang="es" nation="es"></x-_locale>Español</li>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item d-flex"><x-_locale lang="it" nation="it">Italiano</x-_locale> </li>
+                <li class="dropdown-item d-flex"><x-_locale lang="en" nation="gb">English</x-_locale></li>
+                <li class="dropdown-item d-flex"><x-_locale lang="es" nation="es">Español</x-_locale></li>
             </ul>
             <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
         </div>

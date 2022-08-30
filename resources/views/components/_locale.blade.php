@@ -2,5 +2,6 @@
 @csrf
 <button type="submit" >
         <span class="flag-icon flag-icon-{{$nation}}"></span>
+        <span>{{$slot}}</span>
 </button>
 </form>

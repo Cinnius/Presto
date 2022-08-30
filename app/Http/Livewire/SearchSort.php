@@ -11,7 +11,7 @@ class SearchSort extends Component
     public $searchValue = ' ';
     public $announcements;
     public $sortField = 'created_at';
-    public $sortDirection = 'asc';
+    public $sortDirection = 'desc';
   
 
     public function mount()
@@ -38,7 +38,7 @@ class SearchSort extends Component
     public function render()
     {
         sleep(1);
-        $this->announcements = Announcement::where('title',  'like', '%'.$this->searchValue.'%')->orderBy($this->sortField, $this->sortDirection)->get();
+        $this->announcements = Announcement::where('is_accepted', true)->where('title',  'like', '%'.$this->searchValue.'%')->orderBy($this->sortField, $this->sortDirection)->get();
          
         
         return view('livewire.search-sort');
