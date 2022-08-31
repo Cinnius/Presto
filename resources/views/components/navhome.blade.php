@@ -121,7 +121,7 @@
                     <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
                         <div class="category-custom text-center">
                             <div class="mt-3">
-                                <img src="{{ $category->icon }}" alt="">
+                                <img src="/{{ $category->icon }}" alt="">
                                 <p class="fw-bolder">{{ $category->name }}</p>
                             </div>
                         </div>

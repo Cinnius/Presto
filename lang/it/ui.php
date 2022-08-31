@@ -44,6 +44,7 @@ return [
     'review_Empty'=>'Non hai altri articoli da controllare!',
     'review_Empty_Text'=>'Torna più tardi per controllare se ci sono nuovi annunci da revisionare oppure visualizza gli annunci nella sezione "Ultimi annunci processati" per controllare l\'operato degli altri Revisori!',
     'last_Review'=>'Rivedi gli ultimi annunci revisionati',
+    'Announcement_Description'=>'Descrizione',
     // Review Announcements Page
     'last_Review_Title'=>'Ultime Revisioni',
     'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',

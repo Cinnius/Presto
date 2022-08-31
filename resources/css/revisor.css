@@ -2,9 +2,54 @@
 
 }
 
+.control-custom-left{
+    left:65%;
+    top:70%;
+    width: 35px;
+    height: 35px
+}
+
+.control-custom-right{
+    right: 10%;
+    top:70%;
+    width: 35px;
+    height: 35px
+}
+
+.carousel-control-prev-icon{
+    background-image: url("../../public/image/freccia-left.png");
+}
+
+.carousel-control-next-icon{
+    background-image: url("../../public/image/freccia-right.png");
+}
+
+.borderstart-custom{
+    border-top: 2px solid var(--white);
+}
+
 /* MediaQuerry */
 @media screen and (min-width: 768px) {
     .margin-custom{
         margin-top: 5%;
+    }
+
+    .control-custom-left{
+        left:78%;
+        top:85%;
+        width: 35px;
+        height: 35px
+    }
+    
+    .control-custom-right{
+        right: 12%;
+        top:85%;
+        width: 35px;
+        height: 35px
+    }
+
+    .borderstart-custom{
+        border-top:none;
+        border-left: 2px solid var(--white);
     }
 }

@@ -44,6 +44,7 @@ return [
     'review_Empty'=>'No tiene otros artículos que comprobar.',
     'review_Empty_Text'=>'Vuelva más tarde para comprobar si hay nuevos anuncios que revisar, o vea los anuncios en la sección "Últimos anuncios procesados" para comprobar el trabajo de otros revisores.',
     'last_Review'=>'Revise los últimos anuncios revisados',
+    'Announcement_Description'=>'Descripción',
     // Review Announcements
     'last_Review_Title'=>'Últimas revisiones',
     'last_Review_Title_Text'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, voluptates optio dicta repellendus mollitia, praesentium excepturi, neque tempora suscipit magni reiciendis eum numquam. Repudiandae exercitationem aliquam, rerum eos magnam consequatur?',
