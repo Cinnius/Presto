@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Comment;
 use App\Models\Announcement;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -45,5 +46,9 @@ class User extends Authenticatable
 
     public function announcements(){
         return $this -> hasMany(Announcement::class);
+    }
+
+    public function comments(){
+        return $this -> hasMany(Comment::class);
     }
 }
