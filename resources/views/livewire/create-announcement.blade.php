@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.create_Info_Description')}}</label>
-                        <textarea class="form-control" cols="30" rows="10" wire:model.debounce.1000ms="body" value={{old('body')}}
+                        <textarea class="form-control" cols="30" rows="10" wire:model.debounce.500ms="body" value={{old('body')}}
                             @error('body') is-invalid @enderror></textarea>
                         @error('body')
                             <span class="error">{{ $message }}</span>
