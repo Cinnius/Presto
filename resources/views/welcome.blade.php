@@ -35,7 +35,7 @@
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-md-center">
                 <div class="">
-                    <h1 class="dark-text fw-bolder display-5 ms-5 ps-md-3 ms-md-5"> {{__('ui.slogan')}} </h1>
+                    <h1 class="dark-text fw-bolder display-5 ms-5 ps-md-3 ms-md-5"> {{ __('ui.slogan') }} </h1>
                 </div>
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-4 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="/image/logo1.png" alt="word Presto">
@@ -48,46 +48,56 @@
             <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
-        </header>
-        
-        
-        {{-- Section transport and logistics --}}
-        <section class="container mt-5">
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                    <div class="serviceHome d-flex me-3">
-                        <i class="mx-auto my-auto bi bi-truck fs-2"></i>
-                    </div>
-                    <div class="my-auto">
-                        <h5>{{__('ui.gratis_Shipment')}}</h5>
-                        <h6>{{__('ui.gratis_Shipment_Text')}}</h6>
-                    </div>
+    </header>
+
+    {{-- div per info --}}
+    <div class="fixed-bottom d-flex justify-content-end mb-5 me-5">
+        <div class="">
+            <button type="submit" id="infoButton" class="btn main-btn d-none me-0 ">
+                <i class="bi bi-chat-right-dots-fill fs-4"></i>
+                <p class="fw-bold">dicci cosa pensi!</p>
+            </button>
+            <div id="infoSectionAttachement"></div>
+        </div>
+    </div>
+
+    {{-- Section transport and logistics --}}
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-truck fs-2"></i>
                 </div>
-                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                    <div class="serviceHome d-flex me-3">
-                        <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
-                    </div>
-                    <div class="my-auto">
-                        <h5>{{__('ui.client_Service')}}</h5>
-                        <h6>{{__('ui.client_Service_Text')}}</h6>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
-                    <div class="serviceHome d-flex me-3">
-                        <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
-                    </div>
-                    <div class="my-auto">
-                        <h5>{{__('ui.best_Deals')}}</h5>
-                        <h6>{{__('ui.best_Deals_Text')}}</h6>
-                    </div>
+                <div class="my-auto">
+                    <h5>{{ __('ui.gratis_Shipment') }}</h5>
+                    <h6>{{ __('ui.gratis_Shipment_Text') }}</h6>
                 </div>
             </div>
-        </section>
-        
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
+                </div>
+                <div class="my-auto">
+                    <h5>{{ __('ui.client_Service') }}</h5>
+                    <h6>{{ __('ui.client_Service_Text') }}</h6>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+                <div class="serviceHome d-flex me-3">
+                    <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
+                </div>
+                <div class="my-auto">
+                    <h5>{{ __('ui.best_Deals') }}</h5>
+                    <h6>{{ __('ui.best_Deals_Text') }}</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
         <div class="row">
-            <h2 class="mt-5 text-center fw-semibold mb-3">{{__('ui.last_Added_Announcement')}}</h2>
+            <h2 class="mt-5 text-center fw-semibold mb-3">{{ __('ui.last_Added_Announcement') }}</h2>
             <div class="swiper mySwiper3 last-ann-swiper">
                 <div class="swiper-wrapper">
                     @foreach ($announcements as $announcement)
@@ -109,12 +119,12 @@
                                         <div class="card-body">
                                             <h3 class="card-title">{{ $announcement->title }}</h3>
                                             <h4 class="card-text">€ {{ $announcement->price }}</h4>
-                                            <p class="card-text"><small class="text-muted">{{__('ui.last_Update')}}
+                                            <p class="card-text"><small class="text-muted">{{ __('ui.last_Update') }}
                                                     {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
                                             <a href="{{ route('announcementShow', compact('announcement')) }}"
                                                 class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
                                                 <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
-                                                <p class="my-auto ms-4">{{__('ui.detail_Product')}}</p>
+                                                <p class="my-auto ms-4">{{ __('ui.detail_Product') }}</p>
                                             </a>
                                         </div>
                                     </div>
@@ -141,25 +151,25 @@
             <div class="col-12 col-lg-4 text-center py-3 order-1 order-md-2">
                 <span class="fs-1 fw-bold">BEST <img src="/image/logo.png" class="img-fluid CustomLogo"
                         alt="">FFER</span>
-                <h6 class="mt-2">{{__('ui.time_Deals')}}</h6>
-                <h6>{{__('ui.time_Deals_Text')}}</h6>
+                <h6 class="mt-2">{{ __('ui.time_Deals') }}</h6>
+                <h6>{{ __('ui.time_Deals_Text') }}</h6>
             </div>
             <div class="col-12 col-lg-6 d-flex fs-6 fs-lg-5 mb-2 mb-lg-0 order-1 order-md-2">
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown1"></p>
-                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_D')}}</p>
+                    <p class="text-dark h-100 text-center">{{ __('ui.time_Deals_Text_D') }}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown2"></p>
-                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_H')}}</p>
+                    <p class="text-dark h-100 text-center">{{ __('ui.time_Deals_Text_H') }}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded me-lg-2 gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown3"></p>
-                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_M')}}</p>
+                    <p class="text-dark h-100 text-center">{{ __('ui.time_Deals_Text_M') }}</p>
                 </div>
                 <div class="col-3 col-xl-2 border border-dark rounded gradient-custom border-opacity-25">
                     <p class="text-center mt-2" id="countdown4"></p>
-                    <p class="text-dark h-100 text-center">{{__('ui.time_Deals_Text_S')}}</p>
+                    <p class="text-dark h-100 text-center">{{ __('ui.time_Deals_Text_S') }}</p>
                 </div>
             </div>
         </div>
@@ -168,8 +178,8 @@
 
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">
-        <h3 class="text-center fw-semibold">{{__('ui.our_Teams')}}</h3>
-        <p class="text-center">{{__('ui.our_Teams_Text')}}</p>
+        <h3 class="text-center fw-semibold">{{ __('ui.our_Teams') }}</h3>
+        <p class="text-center">{{ __('ui.our_Teams_Text') }}</p>
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
