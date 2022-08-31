@@ -53,13 +53,17 @@
     {{-- div per info --}}
     <div class="fixed-bottom d-flex justify-content-end mb-5 me-5">
         <div class="">
-            <button type="submit" id="infoButton" class="btn main-btn d-none me-0 ">
+            <button type="submit" id="infoButton" class="gradient-custom border-0 rounded main-btn d-none me-0 ">
                 <i class="bi bi-chat-right-dots-fill fs-4"></i>
                 <p class="fw-bold">dicci cosa pensi!</p>
             </button>
-            <div id="infoSectionAttachement"></div>
+            <div id="infoSectionAttachement" class="d-none">
+                @livewire('create-comment')
+            </div>
         </div>
     </div>
+    
+
 
     {{-- Section transport and logistics --}}
     <section class="container mt-5">
