@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row margin-custom">
             <div class="col-8 mx-auto">
                 <h2 class="text-center mt-5">{{ __('ui.review_Title') }}</h2>
@@ -9,6 +9,7 @@
                     illum dicta aperiam ea aut?!</p>
             </div>
             @if ($announcement)
+            <div class="row w-100">
                 <div class="card-body">
                     <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
                     <p class=" card-text fst-italic fw-normal">{{ __('ui.Announcement_Created') }}
@@ -30,14 +31,17 @@
                     </div>
                 </div>
 
-                @if(count($announcement->images)>0)
+                <div class="row justify-content-around">
+                    @if(count($announcement->images)>0)
                     @foreach ($announcement->images as $image)
-                        <div class="col-12 col-md-6 py-4 d-flex justify-content-center mt-5">
-                            <div class="card card-shadow rounded" style="width: 18rem;">
-                                <img src="{{ $image->getUrl(400, 300) }}" class="card-img-top rounded p-1" alt="...">
+                    <div class="col-5 d-flex flex-wrap mb-3 border-dark border rounded">
+                        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                            <!-- <div class="card card-shadow rounded" style="width: 18rem;"> -->
+                                <img src="{{ $image->getUrl(400, 300) }}" class="img-fluid rounded" alt="...">
 
-                            </div>
+                            <!-- </div> -->
                         </div>
+                        <div class="col-5 ms-3">
                         <p>Adulti: <span class="{{ $image->adult }}"></span></p>
                         <p>Satira: <span class="{{ $image->spoof }}"></span></p>
                         <p>Medicina: <span class="{{ $image->medical }}"></span></p>
@@ -45,11 +49,16 @@
                         <p>Nudo: <span class="{{ $image->racy }}"></span></p>
                         @if (!empty($image->labels))
                             @foreach ($image->labels as $label)
-                                <p>{{ $label }}</p>
+                                {{ $label }}
                             @endforeach
                         @endif
+                        </div>
+                    </div>
                     @endforeach
-                @endif
+                    @endif
+                </div>
+               
+                </div>
                 <div class="col-4 mx-auto my-auto">
                     <h2 class="text-center">{{ __('ui.review') }}</h2>
                     <p>{{ __('ui.review_Text') }}</p>
