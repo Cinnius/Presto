@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\AddWatermark;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
