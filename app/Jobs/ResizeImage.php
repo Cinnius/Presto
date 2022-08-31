@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Jobs;
+use Spatie\Image\Image as SpatieImage;
 
 use Spatie\Image\Image;
 use Illuminate\Bus\Queueable;
@@ -23,6 +24,7 @@ class ResizeImage implements ShouldQueue
 
     public function __construct($filePath, $w, $h)
     {
+
         $this->path = dirname($filePath);
         $this->fileName = basename($filePath);
         $this->w = $w;
@@ -38,10 +40,21 @@ class ResizeImage implements ShouldQueue
     {
         $w = $this->w;
         $h = $this->h;
-        $scrPath = storage_path().'/app/public/'.$this->path.'/'.$this->fileName;
+        $srcPath = storage_path().'/app/public/'.$this->path.'/'.$this->fileName;
         $destPath = storage_path().'/app/public/'.$this->path."/crop_{$w}x{$h}_".$this->fileName;
 
-        $croppedImage = Image::load($scrPath)
+        $image = SpatieImage::load($srcPath);
+
+        $image->watermark(base_path('public/image/logo_watermark.png'))
+            ->watermarkOpacity(20)
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
+         
+            ->watermarkHeight(600)    
+             ->watermarkWidth(600);   
+
+            $image->save($srcPath);
+        $croppedImage = Image::load($srcPath)
+            
                             ->crop(Manipulations::CROP_CENTER, $w, $h)
                             ->save($destPath);
     }
