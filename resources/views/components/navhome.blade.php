@@ -126,7 +126,6 @@
                             </div>
                         </div>
                     </a>
-                    {{-- <i class="bi bi-pc-display-horizontal"></i> --}}
                 </div>
             @endforeach
         </div>

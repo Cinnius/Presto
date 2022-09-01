@@ -30,10 +30,6 @@ class SearchSort extends Component
         $this->searchValue = '';
         $this->announcements = [];
     }
-    
-/*     public function searchByCategory($categoryValue, Category $category){
-        $this-> announcements = Announcement::where($categoryValue === $category->name)->get();
-    } */
    
     public function render()
     {

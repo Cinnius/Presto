@@ -3,7 +3,9 @@
     width: 72%;
     height: auto;
 }
-
+.visibilityHide{
+    visibility: hidden;
+}
 .img-header {
     width: 50%;
 }
@@ -100,7 +102,9 @@
         width: 60%;
         height: auto;
     }
-
+    .visibilityHide{
+        visibility: visible;
+    }
     .h-header-custom {
         height: 70vh;
     }
