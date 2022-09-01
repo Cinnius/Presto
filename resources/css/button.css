@@ -55,3 +55,12 @@
     box-shadow: 3px 3px 10px 3px rgba(96, 96, 96, 0.6);
 }
 
+.main-btn-alternative{
+    background-color: var(--main);
+}
+.main-btn-alternative:hover{
+    background-color: var(--main);
+}
+.main-btn-alternative:active{
+    background-color: var(--main);
+}

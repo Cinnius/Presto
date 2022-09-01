@@ -17,18 +17,7 @@ return [
 
     'driver' => env('SCOUT_DRIVER', 'tntsearch'),
 
-    'tntsearch' => [
-        'storage'  => storage_path(), //place where the index files will be stored
-        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
-        'fuzzy' => [
-            'prefix_length' => 2,
-            'max_expansions' => 50,
-            'distance' => 2
-        ],
-        'asYouType' => true,
-        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
-        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
-    ],
+  
     /*
     |--------------------------------------------------------------------------
     | Index Prefix
@@ -146,4 +135,16 @@ return [
         'key' => env('MEILISEARCH_KEY', null),
     ],
 
+    'tntsearch' => [
+        'storage'  => storage_path(), //place where the index files will be stored
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
+        'fuzzy' => [
+            'prefix_length' => 2,
+            'max_expansions' => 50,
+            'distance' => 2
+        ],
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', true),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
+    ],
 ];
