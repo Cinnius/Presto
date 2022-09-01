@@ -16,21 +16,22 @@
         </div>
     </div>
 
+    {{-- Message --}}
+    @if (session()->has('message'))
+        <div class="toast show position-fixed bottom-0 m-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header main-bg">
+                <img src="/image/gruppo_1_logotipo.png" class="toastLogo rounded me-2" alt="...">
+                <strong class="me-auto text-dark">Presto.it</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body white-bg">
+                {{ session('message') }}
+            </div>
+        </div>
+    @endif
+    
     {{-- header --}}
     <header class="container-fluid main-bg">
-
-        {{-- @if (session()->has('message'))
-            <div class="col-12 col-md-4 ms-0 ms-5 alert bg-black main-text text-center pt-2">
-                {{ session('message') }}
-            </div>
-        @endif --}}
-
-        @if (session()->has('message'))
-            <div class="alert alert-danger">
-                {{ session('message') }}
-            </div>
-        @endif
-
         <div class="row justify-content-between align-items-center pt-5 pt-md-2 h-header-custom">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-md-center">
@@ -44,15 +45,15 @@
                     <a href="{{route('createAnnouncement')}}" class="btn fw-bold text-dark btn-outline-light border-dark shadow">Scopri di più</a>
                 </div> --}}
             </div>
-
             <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
+        </div>
     </header>
 
     {{-- div per info --}}
-    <div class="fixed-bottom d-flex justify-content-end mb-5 me-5">
-        <div class="">
+    <span class="fixed-bottom commentPosition mb-5 me-5">
+        <div>
             <button type="submit" id="infoButton" class="gradient-custom border-0 rounded main-btn d-none me-0 ">
                 <i class="bi bi-chat-right-dots-fill fs-4"></i>
                 <p class="fw-bold">dicci cosa pensi!</p>
@@ -61,9 +62,7 @@
                 @livewire('create-comment')
             </div>
         </div>
-    </div>
-    
-
+    </span>
 
     {{-- Section transport and logistics --}}
     <section class="container mt-5">
@@ -144,8 +143,6 @@
         </div>
     </section>
 
-
-
     {{-- Section countdown --}}
     <section class="container height-countdown mt-5 py-lg-5">
         <div class="row h-100 flex-md-column align-content-md-center">
@@ -183,25 +180,24 @@
     <section class="container-fluid">
         <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
         <div class="row">
-            <div class="col-12 col-md-3">
-                @foreach($comments as $comment)
-                <div class="card p-2 p-md-3">
-                    <figure class="py-md-3 mb-0">
-                      <blockquote class="blockquote">
-                        <p>{{ $comment->comment }}</p>
-                        {{-- <p>A well-known quote, contained in a blockquote element.</p> --}}
-                      </blockquote>
-                      <figcaption class="blockquote-footer mb-0 text-muted">
-                        {{ Auth::user()->name }}
-                        <cite class="position-absolute end-0 me-4"> {{ $comment->created_at->format('d/m/Y H:i') }}</cite>
-                      </figcaption>
-                    </figure>
+            @foreach($comments as $comment)
+                <div class="col-12 col-md-3">
+                    <div class="card p-2 p-md-3">
+                        <figure class="py-md-3 mb-0">
+                        <blockquote class="blockquote">
+                            <p>{{ $comment->comment }}</p>
+                            {{-- <p>A well-known quote, contained in a blockquote element.</p> --}}
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            {{ Auth::user()->name }}
+                            <cite class="position-absolute end-0 me-4"> {{ $comment->created_at->format('d/m/Y H:i') }}</cite>
+                        </figcaption>
+                        </figure>
+                    </div>
                 </div>
-                @endforeach
-            </div>
+            @endforeach
         </div>
     </section>
-
 
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">
@@ -268,13 +264,7 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="col-12 col-md-6">
-                <p>Dove consegniamo?</p>
-                <p>Vieni a trovarco</p>
-                <p>La nostra storia</p> 
-            </div> --}}
         </div>
     </section>
-
 
 </x-layout>
