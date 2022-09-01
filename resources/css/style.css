@@ -26,6 +26,7 @@
     border-radius: 50%;
     width: 80px;
     height: 80px;
+    
 }
 
 
@@ -78,6 +79,19 @@
 
 .margin-top{
     margin-top: 180px;
+}
+
+.commentPosition{
+    left: unset;
+    right: 0;
+}
+
+.toast{
+    z-index: 1030;
+}
+
+.toastLogo{
+    height: 25px;
 }
 
 /* MediaQuerry */

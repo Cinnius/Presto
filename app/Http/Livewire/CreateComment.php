@@ -23,11 +23,14 @@ class CreateComment extends Component
         
         $this->validate();
         
-        $this->comment = Auth::user()->comments()->create($this->validate());       
+        if (Auth::user()) {
+            $this->comment = Auth::user()->comments()->create($this->validate());
+            return redirect()->to('/')->with('message','Il tuo commento è stato inserito correttamente');
+        } else {
+            return redirect()->to('/')->with('message','Devi registrati per lasciare un commento');
+        }
         
         $this->clear();
-        
-        return redirect()->to('/')->with('message','Il tuo commento è stato inserito correttamente');
     }
 
     protected function clear(){

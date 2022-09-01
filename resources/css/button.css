@@ -13,8 +13,25 @@
     --bs-btn-disabled-bg: var(--main);
     --bs-btn-disabled-border-color: var(--main);
 }
+.main-btn-second {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--main);
+    box-shadow: 3px 3px 10px 3px rgba(4, 4, 4, 0.369);
+    --bs-btn-border-color: var(--main);
+    --bs-btn-hover-color: rgb(255, 244, 244);
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: rgb(255, 254, 254);
+    --bs-btn-active-bg: var(--mainDark);
+    --bs-btn-active-border-color: var(--main);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: var(--main);
+    --bs-btn-disabled-border-color: var(--main);
+}
 
 .main-btn:hover {
+    box-shadow: 3px 3px 10px 3px rgba(4, 4, 4, 0.6);
+}
+.main-btn-second:hover {
     box-shadow: 3px 3px 10px 3px rgba(4, 4, 4, 0.6);
 }
 

@@ -11,7 +11,7 @@
                         <h6 class="text-uppercase fw-bold mb-4">{{__('ui.footer_Work')}}</h6>
                         <p>{{__('ui.footer_Work_Text')}}</p>
                         <p>{{__('ui.footer_Work_Text2')}}</p>
-                        <a href="{{route('becomeRevisor')}}" class="btn main-btn dark-text mb-5 py-1 px-2">{{__('ui.footer_Work_BTN')}}!</a>
+                        <a href="{{route('becomeRevisor')}}" class="btn main-btn-second dark-text mb-5 py-1 px-2">{{__('ui.footer_Work_BTN')}}!</a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 mb-4">
