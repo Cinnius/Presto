@@ -20,10 +20,4 @@ class AnnouncementController extends Controller
         $announcement->delete();
         return redirect()->back();
     }
-
-    public function modifyAnnouncement(Announcement $announcement){
-
-        return view('announcements.editAnnouncement', compact('announcement'));
-    }
-    
 }

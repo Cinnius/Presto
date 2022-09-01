@@ -128,11 +128,6 @@
                                     @method('delete')
                                     <button type="submit" class="btn dark-btn">Cancella annuncio</button>
                                 </form>
-                                {{-- <form method="POST" action="{{ route('modifyAnnouncement', compact('announcement')) }}">
-                                    @csrf
-                                    @method('put')
-                                    <button type="submit" class="btn btn-danger">Modifica annuncio</button>
-                                </form> --}}
                             </div>
                         </div>
                     </div>
