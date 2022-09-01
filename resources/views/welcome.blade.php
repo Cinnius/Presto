@@ -50,6 +50,9 @@
             </div>
     </header>
 
+<p>{{$announcementsCounter}}</p>
+<p>{{$userCounter}}</p>
+<p>{{$categoryCounter}}</p>
     {{-- div per info --}}
     <div class="fixed-bottom d-flex justify-content-end mb-5 me-5">
         <div class="">
