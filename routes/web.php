@@ -22,7 +22,6 @@ Route::controller(AnnouncementController::class)->group(
                 Route::get('/announcement/new','createAnnouncement')->middleware('auth')->name('createAnnouncement');
                 Route::get('/announcement/detail/{announcement}', 'announcementShow')->name('announcementShow');
                 Route::delete('/announcements/delete/{announcement}', 'destroyAnnouncement')->name('destroyAnnouncement');
-                /* Route::put('/announcements/modify/{announcement}', 'modifyAnnouncement')->name('modifyAnnouncement'); */
         }
 );
 

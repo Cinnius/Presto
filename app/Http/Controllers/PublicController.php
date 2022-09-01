@@ -15,7 +15,7 @@ class PublicController extends Controller
     {
 
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
-        $comments = Comment::all();
+        $comments = Comment::latest()->take(8)->get();
 
         $announcementsCounter = Announcement::Where('is_accepted', true)->count();
         $userCounter = User::all()->count();
