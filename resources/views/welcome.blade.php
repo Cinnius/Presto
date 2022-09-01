@@ -51,6 +51,10 @@
         </div>
     </header>
 
+<p>{{$announcementsCounter}}</p>
+<p>{{$userCounter}}</p>
+<p>{{$categoryCounter}}</p>
+
     {{-- div per info --}}
     <span class="fixed-bottom commentPosition mb-5 me-5">
         <div>
