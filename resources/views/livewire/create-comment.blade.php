@@ -3,7 +3,7 @@
         @csrf
         <section class="container">
             <div class="row justify-content-center">
-                <div class="col-12 gradient-custom px-4 py-4 rounded border-end border-white border-4">
+                <div class="col-12 gradient-custom shadow py-4">
                     <h3 class="text-center">Lascia un commento</h3>
                     <div class="mb-3">
                         <label class="form-label">Commento</label>

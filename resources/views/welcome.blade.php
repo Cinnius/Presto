@@ -76,13 +76,15 @@
     
     
     {{-- div per info --}}
-    <span class="fixed-bottom commentPosition mb-5 me-5">
+    <span class="fixed-bottom commentPosition mb-md-5 me-md-5">
         <div>
-            <button type="submit" id="infoButton" class="gradient-custom border-0 rounded main-btn d-none me-0 ">
-                <i class="bi bi-chat-right-dots-fill fs-4"></i>
-                <p class="fw-bold">dicci cosa pensi!</p>
-            </button>
-            <div id="infoSectionAttachement" class="d-none">
+            <div class="d-flex justify-content-end">
+                <button type="submit" id="infoButton" class="gradient-custom border-0 main-btn d-none me-0">
+                    <i class="bi bi-chat-right-dots-fill fs-4"></i>
+                    <p class="fw-bold commentTitle">dicci cosa pensi!</p>
+                </button>
+            </div>
+            <div id="infoSectionAttachement" class="d-none commentShadow">
                 @livewire('create-comment')
             </div>
         </div>
@@ -215,7 +217,7 @@
                             {{-- <p>A well-known quote, contained in a blockquote element.</p> --}}
                         </blockquote>
                         <figcaption class="blockquote-footer mb-0 text-muted">
-                            {{ Auth::user()->name }}
+                            {{ $comment->user->name }}
                             <cite class="position-absolute end-0 me-4"> {{ $comment->created_at->format('d/m/Y H:i') }}</cite>
                         </figcaption>
                         </figure>
