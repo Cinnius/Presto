@@ -17,7 +17,6 @@ class PublicController extends Controller
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
         $comments = Comment::latest()->take(8)->get();
 
-
         $announcementsCounter = Announcement::Where('is_accepted', true)->count();
         $userCounter = User::all()->count();
         $categoryCounter = Category::all()->count();
@@ -28,7 +27,7 @@ class PublicController extends Controller
     public function categoryShow(Category $category)
     {
         $announcements = Announcement::where('category_id', $category->id)->where('is_accepted', true)->get();
-
+        
         return view('categoryShow', compact('announcements', 'category'));
     }
 

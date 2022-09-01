@@ -11,6 +11,22 @@
 
 
     <div class="container-fluid pt-2 py-5">
+        <div class="row visibilityHide justify-content-around">
+            @foreach ($categories as $category)
+                <div class="col-1 my-3  d-flex justify-content-center">
+                    <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
+                        <div class="category-custom text-center @if($announcements->first()->category_id == $category->id) shadow main-bg @endif">
+                            <div class="mt-3">
+                                <img src="/{{ $category->icon }}" alt="">
+                                <p class="fw-bolder">{{ $category->name }}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+
+
+        </div>
         <div class="row justify-content-md-around">
 
             @forelse ($announcements as $announcement)
