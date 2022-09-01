@@ -7,7 +7,8 @@
     visibility: hidden;
 }
 .img-header {
-    width: 50%;
+    width: 57%;
+    margin-top: 3%;
 }
 
 /* Searchbarhome */
@@ -85,6 +86,15 @@
 .commentPosition{
     left: unset;
     right: 0;
+    margin-bottom: 90px;
+}
+
+.commentTitle{
+    display: none;
+}
+
+.commentShadow{
+    box-shadow: 3px 3px 10px 3px rgb(4 4 4 / 37%);
 }
 
 .toast{
@@ -106,7 +116,22 @@
         visibility: visible;
     }
     .h-header-custom {
-        height: 70vh;
+        height: 75vh;
+        padding-top:2%;
+    }
+
+    .margin-counter{
+        margin-left: 6%;
+    }
+
+    .commentPosition{
+        left: unset;
+        right: 0;
+        margin-bottom: unset;
+    }
+
+    .commentTitle{
+        display: block;
     }
     
 }

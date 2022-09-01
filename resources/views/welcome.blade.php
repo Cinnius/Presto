@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="title">Welcome</x-slot>
-
+    
     {{-- Searchbar home da piccoli schermi --}}
     <div class="container-fluid main-bg hideIcon searchbar-little">
         <div class="row">
@@ -10,8 +10,8 @@
             <!-- bottone aggiungi -->
             <div class="col-1 me-3 mt-3 position-absolute end-0">
                 <a href="{{ route('createAnnouncement') }}"
-                    class="fw-semibold text-decoration-none mx-auto fs-3 text-dark d-flex">
-                    <i class="bi bi-plus-square-fill dark-text"></i></a>
+                class="fw-semibold text-decoration-none mx-auto fs-3 text-dark d-flex">
+                <i class="bi bi-plus-square-fill dark-text"></i></a>
             </div>
         </div>
     </div>
@@ -41,24 +41,50 @@
                 <div class="col-11 col-xl-10 d-flex justify-content-center justify-content-lg-end ms-4 ms-xl-5">
                     <img class="logo-custom img-fluid ps-5" src="/image/logo1.png" alt="word Presto">
                 </div>
+                
+                
                 {{-- <div class="col-7 d-flex justify-content-end me-5">
                     <a href="{{route('createAnnouncement')}}" class="btn fw-bold text-dark btn-outline-light border-dark shadow">Scopri di più</a>
                 </div> --}}
             </div>
-            <div class="col-12 col-md-5 col-xxl-6 mb-3 d-flex align-items-center justify-content-center">
+            
+            <div class="col-12 col-md-5 col-xxl-6 mb-md-3 mb-2 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
+            </div>
+
+            <div class="col-12 col-xl-6 d-flex justify-content-center ps-md-5 margin-counter pb-md-3">
+                <div class="text-center px-md-5">
+                    <i class="bi bi-bag-fill fs-3"></i>
+                    <h5 class="py-2">Prodotti in vendita</h5>
+                    <p class="fs-4">{{$announcementsCounter}}</p> 
+                </div>
+                <div class="text-center px-md-5">
+                    <i class="bi bi-people-fill fs-3"></i>
+                    <h5 class="py-2">Utenti registrati</h5>
+                    <p class="fs-4">{{$userCounter}}</p>
+                </div>
+                <div class="text-center ps-md-5">
+                    <i class="bi bi-bookmarks-fill fs-3"></i>
+                    <h5 class="py-2">Categorie prodotti</h5>
+                    <p class="fs-4">{{$categoryCounter}}</p>
+                </div>
             </div>
         </div>
     </header>
-
+    
+    
+    
+    
     {{-- div per info --}}
-    <span class="fixed-bottom commentPosition mb-5 me-5">
+    <span class="fixed-bottom commentPosition mb-md-5 me-md-5">
         <div>
-            <button type="submit" id="infoButton" class="gradient-custom border-0 rounded main-btn d-none me-0 ">
-                <i class="bi bi-chat-right-dots-fill fs-4"></i>
-                <p class="fw-bold">dicci cosa pensi!</p>
-            </button>
-            <div id="infoSectionAttachement" class="d-none">
+            <div class="d-flex justify-content-end">
+                <button type="submit" id="infoButton" class="gradient-custom border-0 main-btn d-none me-0">
+                    <i class="bi bi-chat-right-dots-fill fs-4"></i>
+                    <p class="fw-bold commentTitle">dicci cosa pensi!</p>
+                </button>
+            </div>
+            <div id="infoSectionAttachement" class="d-none commentShadow">
                 @livewire('create-comment')
             </div>
         </div>
@@ -96,7 +122,7 @@
             </div>
         </div>
     </section>
-
+    
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
         <div class="row">
@@ -125,15 +151,15 @@
                                             <p class="card-text"><small class="text-muted">{{ __('ui.last_Update') }}
                                                     {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
                                             <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                                class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
-                                                <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
-                                                <p class="my-auto ms-4">{{ __('ui.detail_Product') }}</p>
-                                            </a>
-                                        </div>
+                                            class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
+                                            <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
+                                            <p class="my-auto ms-4">{{ __('ui.detail_Product') }}</p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                     @endforeach
                 </div>
                 <div class="swiper-button-next"></div>
@@ -142,7 +168,9 @@
             </div>
         </div>
     </section>
-
+    
+    
+    
     {{-- Section countdown --}}
     <section class="container height-countdown mt-5 py-lg-5">
         <div class="row h-100 flex-md-column align-content-md-center">
@@ -189,7 +217,7 @@
                             {{-- <p>A well-known quote, contained in a blockquote element.</p> --}}
                         </blockquote>
                         <figcaption class="blockquote-footer mb-0 text-muted">
-                            {{ Auth::user()->name }}
+                            {{ $comment->user->name }}
                             <cite class="position-absolute end-0 me-4"> {{ $comment->created_at->format('d/m/Y H:i') }}</cite>
                         </figcaption>
                         </figure>
