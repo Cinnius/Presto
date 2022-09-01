@@ -120,6 +120,19 @@
                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
                                     class="text-decoration-none text-dark fw-semibold"><i
                                         class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
+                                    </div>
+                                    
+                                    <div class="d-flex mt-3 justify-content-center">
+                                <form method="POST" action="{{ route('destroyAnnouncement', compact('announcement')) }}">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn dark-btn">Cancella annuncio</button>
+                                </form>
+                                {{-- <form method="POST" action="{{ route('modifyAnnouncement', compact('announcement')) }}">
+                                    @csrf
+                                    @method('put')
+                                    <button type="submit" class="btn btn-danger">Modifica annuncio</button>
+                                </form> --}}
                             </div>
                         </div>
                     </div>
