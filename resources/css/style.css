@@ -80,6 +80,19 @@
     margin-top: 180px;
 }
 
+.commentPosition{
+    left: unset;
+    right: 0;
+}
+
+.toast{
+    z-index: 1030;
+}
+
+.toastLogo{
+    height: 25px;
+}
+
 /* MediaQuerry */
 @media screen and (min-width: 768px) {
 
