@@ -5,7 +5,8 @@
 }
 
 .img-header {
-    width: 50%;
+    width: 57%;
+    margin-top: 3%;
 }
 
 /* Searchbarhome */
@@ -88,7 +89,12 @@
     }
 
     .h-header-custom {
-        height: 70vh;
+        height: 75vh;
+        padding-top:2%;
+    }
+
+    .margin-counter{
+        margin-left: 6%;
     }
     
 }
