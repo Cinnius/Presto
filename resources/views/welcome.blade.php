@@ -179,6 +179,29 @@
         </div>
     </section>
 
+    {{-- Section comments --}}
+    <section class="container-fluid">
+        <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
+        <div class="row">
+            <div class="col-12 col-md-3">
+                @foreach($comments as $comment)
+                <div class="card p-2 p-md-3">
+                    <figure class="py-md-3 mb-0">
+                      <blockquote class="blockquote">
+                        <p>{{ $comment->comment }}</p>
+                        {{-- <p>A well-known quote, contained in a blockquote element.</p> --}}
+                      </blockquote>
+                      <figcaption class="blockquote-footer mb-0 text-muted">
+                        {{ Auth::user()->name }}
+                        <cite class="position-absolute end-0 me-4"> {{ $comment->created_at->format('d/m/Y H:i') }}</cite>
+                      </figcaption>
+                    </figure>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
 
     {{-- Section our team, deliver, ... --}}
     <section class="container-fluid mt-5 pt-5" id="ourteam">

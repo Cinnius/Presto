@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
@@ -12,9 +13,10 @@ class PublicController extends Controller
     public function welcome(){
 
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
+        $comments = Comment::all();
         // $categories = Category::all();
         
-        return view('welcome', compact('announcements'));
+        return view('welcome', compact('announcements','comments'));
     }
 
     public function categoryShow(Category $category){
