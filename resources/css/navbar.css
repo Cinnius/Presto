@@ -176,6 +176,10 @@
 }
 
 @media screen and (min-width:1200px){
+    .margin-navbar{
+        margin-left: 12%;
+    }
+
     .search-custom {
         position: absolute;
         top: 3px;
