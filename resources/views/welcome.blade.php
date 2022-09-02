@@ -93,7 +93,7 @@
     {{-- Section transport and logistics --}}
     <section class="container mt-5">
         <div class="row">
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-truck fs-2"></i>
                 </div>
@@ -102,7 +102,7 @@
                     <h6>{{ __('ui.gratis_Shipment_Text') }}</h6>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
                 </div>
@@ -111,7 +111,7 @@
                     <h6>{{ __('ui.client_Service_Text') }}</h6>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
                 </div>
@@ -125,8 +125,8 @@
     
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
-        <div class="row">
-            <h2 class="mt-5 text-center fw-semibold mb-3">{{ __('ui.last_Added_Announcement') }}</h2>
+        <div class="row mt-md-5">
+            <h2 class="mt-5 mb-5 mb-md-0  text-center fw-semibold">{{ __('ui.last_Added_Announcement') }}</h2>
             <div class="swiper mySwiper3 last-ann-swiper">
                 <div class="swiper-wrapper">
                     @foreach ($announcements as $announcement)
