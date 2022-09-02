@@ -79,6 +79,11 @@
     transform: rotateY(180deg);
 }
 
+.our-image{
+    height: 167.56px;
+    width: 248px;
+}
+
 .margin-top{
     margin-top: 180px;
 }

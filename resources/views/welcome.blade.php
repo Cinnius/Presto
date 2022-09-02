@@ -93,7 +93,7 @@
     {{-- Section transport and logistics --}}
     <section class="container mt-5 mt-md-4 mt-xxl-5">
         <div class="row">
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-truck fs-2"></i>
                 </div>
@@ -102,7 +102,7 @@
                     <h6>{{ __('ui.gratis_Shipment_Text') }}</h6>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-telephone-inbound fs-2"></i>
                 </div>
@@ -111,7 +111,7 @@
                     <h6>{{ __('ui.client_Service_Text') }}</h6>
                 </div>
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex mt-2">
                 <div class="serviceHome d-flex me-3">
                     <i class="mx-auto my-auto bi bi-bag-check fs-2"></i>
                 </div>
@@ -125,8 +125,8 @@
     
     {{-- visualizzazione card per ulitmi annunci --}}
     <section class="container-fluid">
-        <div class="row">
-            <h2 class="mt-5 text-center fw-semibold mb-3">{{ __('ui.last_Added_Announcement') }}</h2>
+        <div class="row mt-md-5">
+            <h2 class="mt-5 mb-5 mb-md-0  text-center fw-semibold">{{ __('ui.last_Added_Announcement') }}</h2>
             <div class="swiper mySwiper3 last-ann-swiper">
                 <div class="swiper-wrapper">
                     @foreach ($announcements as $announcement)
@@ -205,8 +205,8 @@
     </section>
 
     {{-- Section comments --}}
-    <section class="container-fluid bg-white mt-5 mt-md-0">
-        <h3 class="text-center fw-semibold pb-2 pb-lg-4">Cosa dicono di noi...</h3>       
+    <section class="container-fluid">
+        <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
         <div class="row">
             @foreach($comments as $comment)
                 <div class="col-12 col-md-6 col-lg-3 pb-3 pb-md-2 pb-lg-0">
@@ -232,12 +232,12 @@
         <h3 class="text-center fw-semibold">{{ __('ui.our_Teams') }}</h3>
         <p class="text-center">{{ __('ui.our_Teams_Text') }}</p>
         <div class="row justify-content-center">
-            <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
+            <div class="col-12 col-md-2 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/team_01.jpg" class="card-img-top" alt="...">
+                                <img src="/image/Roberta_Montanaro.jpg" class="our-image" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -247,17 +247,17 @@
                         </div>
                     </div>
                     <div class="card-body text-center d-flex flex-column justify-content-end borderFooter">
-                        <h5>David Williams</h5>
-                        <h6>Co-Founder</h6>
+                        <h5>Roberta Montanaro</h5>
+                        <h6>Full-Stack Junior</h6>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
+            <div class="col-12 col-md-2 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/team_02.jpg" class="card-img-top" alt="...">
+                                <img src="/image/team_01.jpg" class="our-image" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -267,17 +267,17 @@
                         </div>
                     </div>
                     <div class="card-body text-center d-flex flex-column justify-content-end borderFooter">
-                        <h5>Kelly Wagon</h5>
-                        <h6>Business manager</h6>
+                        <h5>Carlo Bellantone</h5>
+                        <h6>Full-Stack Junior</h6>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-3 py-4 d-flex justify-content-center">
+            <div class="col-12 col-md-2 py-4 d-flex justify-content-center">
                 <div class="card cardFlipPersonalize">
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/team_03.jpg" class="card-img-top" alt="...">
+                                <img src="/image/Marcello_Melli.jpg" class="our-image" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -287,8 +287,48 @@
                         </div>
                     </div>
                     <div class="card-body text-center d-flex flex-column justify-content-end borderFooter">
-                        <h5>Mike Taylor</h5>
-                        <h6>Account manager</h6>
+                        <h5>Marcello Melli</h5>
+                        <h6>Full-Stack Junior</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-2 py-4 d-flex justify-content-center">
+                <div class="card cardFlipPersonalize">
+                    <div class="flip-card">
+                        <div class="cardInner">
+                            <div class="cardFront">
+                                <img src="/image/Alessio_Saccà.jpg" class="our-image" alt="...">
+                            </div>
+                            <div class="cardBack d-flex justify-content-center align-items-center">
+                                <i class="bi bi-twitter px-2"></i>
+                                <i class="bi bi-facebook px-2"></i>
+                                <i class="bi bi-linkedin px-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column justify-content-end borderFooter">
+                        <h5>Alessio Saccà</h5>
+                        <h6>Full-Stack Junior</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-2 py-4 d-flex justify-content-center">
+                <div class="card cardFlipPersonalize">
+                    <div class="flip-card">
+                        <div class="cardInner">
+                            <div class="cardFront">
+                                <img src="/image/Marco_Barone.jpg" class="our-image img-fluid" alt="...">
+                            </div>
+                            <div class="cardBack d-flex justify-content-center align-items-center">
+                                <i class="bi bi-twitter px-2"></i>
+                                <i class="bi bi-facebook px-2"></i>
+                                <i class="bi bi-linkedin px-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column justify-content-end borderFooter">
+                        <h5>Marco Barone</h5>
+                        <h6>Full-Stack Junior</h6>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,25 @@
+.body-error {
+       /*  background-color: #FFBA08; */
+        height: 100vh;
+        /* width: auto; */
+        background-image: url("/public/image/404.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+
+.left-error{
+        height: 100vh;
+        background-color: #FFC100;
+}
+.left-error>.row{
+        height: 100vh;
+}
+.img-error{
+        height: 100px;
+}
+
+.shadow-error{
+        box-shadow: rgba(0, 0, 0, 0.673) 3px 3px 22px 3px;
+}

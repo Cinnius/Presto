@@ -1,21 +1,12 @@
 <x-layout>
     <x-slot name="title">Annunci inseriti</x-slot>
-    <div class="container">
-        <div class="row mt-5 d-flex justify-content-center align-items-center">
-            <div class="col-md-6">
-                @livewire('live-search')
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container-fluid pt-2 py-5">
+    {{-- category zone --}}
+    <div class="container-fluid pt-2 py-5 mt-5">
         <div class="row visibilityHide justify-content-around">
             @foreach ($categories as $category)
                 <div class="col-1 my-3  d-flex justify-content-center">
                     <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
-                        <div class="category-custom text-center @if($announcements->first()->category_id == $category->id) shadow main-bg @endif">
+                        <div class="category-custom text-center @if ($announcements->first()->category_id == $category->id) shadow main-bg @endif">
                             <div class="mt-3">
                                 <img src="/{{ $category->icon }}" alt="">
                                 <p class="fw-bolder">{{ $category->name }}</p>
@@ -24,11 +15,20 @@
                     </a>
                 </div>
             @endforeach
+        </div>
+        {{-- search zone --}}
+        <div class="container">
+            <div class="row my-3 d-flex justify-content-center align-items-center">
+                <div class="col-md-6">
+                    @livewire('live-search')
+                    {{-- @livewire('search-sort', ['categories' =>$categories]) --}}
 
 
+                </div>
+            </div>
         </div>
         <div class="row justify-content-md-around">
-
+            {{-- card zone --}}
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
@@ -46,10 +46,10 @@
                                 {{ $announcement->price }}
                             </p>
                             <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Seller')}}
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{ __('ui.Announcement_Seller') }}
                                     {{ $announcement->user->name ?? '' }}
                                 </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">{{__('ui.Announcement_Created')}}
+                                <p class="fs-6 fw-normal fst-italic my-auto">{{ __('ui.Announcement_Created') }}
                                     {{ $announcement->created_at->format('d/m/Y') }}
                                 </p>
                             </div>
@@ -65,7 +65,7 @@
             @empty
                 <div class="col-12">
                     <div class="alter alter warning py-3 shadow">
-                        <p class="lead">{{__('ui.index_Empty')}}
+                        <p class="lead">{{ __('ui.index_Empty') }}
                         </p>
                     </div>
                 </div>
@@ -79,4 +79,3 @@
         </div>
     </div>
 </x-layout>
-
