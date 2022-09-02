@@ -48,11 +48,11 @@
                 </div> --}}
             </div>
             
-            <div class="col-12 col-md-5 col-xxl-6 mb-md-3 mb-2 d-flex align-items-center justify-content-center">
+            <div class="col-12 col-md-5 col-xxl-6 mb-2 mb-md-10 mb-xxl-3 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
 
-            <div class="col-12 col-xl-6 d-flex justify-content-center ps-md-5 margin-counter pb-md-3">
+            <div class="col-12 col-md-10 col-xl-6 d-flex justify-content-center ps-xxl-5 margin-counter pb-xxl-3">
                 <div class="text-center px-md-5">
                     <i class="bi bi-bag-fill fs-3"></i>
                     <h5 class="py-2">Prodotti in vendita</h5>
@@ -91,7 +91,7 @@
     </span>
 
     {{-- Section transport and logistics --}}
-    <section class="container mt-5">
+    <section class="container mt-5 mt-md-4 mt-xxl-5">
         <div class="row">
             <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
                 <div class="serviceHome d-flex me-3">
@@ -151,7 +151,7 @@
                                             <p class="card-text"><small class="text-muted">{{ __('ui.last_Update') }}
                                                     {{ $announcement->updated_at->format('d/m/Y') }}</small></p>
                                             <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                            class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1">
+                                            class="text-decoration-none main-bg text-dark fw-semibold rounded d-flex py-1 align-self-end">
                                             <i class="bi bi-info-square-fill text-dark fs-5 my-auto ms-3"></i>
                                             <p class="my-auto ms-4">{{ __('ui.detail_Product') }}</p>
                                         </a>
@@ -205,11 +205,11 @@
     </section>
 
     {{-- Section comments --}}
-    <section class="container-fluid bg-white">
-        <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
+    <section class="container-fluid bg-white mt-5 mt-md-0">
+        <h3 class="text-center fw-semibold pb-2 pb-lg-4">Cosa dicono di noi...</h3>       
         <div class="row">
             @foreach($comments as $comment)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-6 col-lg-3 pb-3 pb-md-2 pb-lg-0">
                     <div class="card p-2 p-md-3">
                         <figure class="py-md-3 mb-0">
                         <blockquote class="blockquote">

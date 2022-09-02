@@ -95,7 +95,7 @@
                                     <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
                                         {{ $announcement->price }}
                                     </p>
-                                    <div class="d-flex justify-content-between">
+                                    <div class="card-text d-flex justify-content-between">
                                         <p class="fs-6 fw-normal fst-italic my-auto">
                                             {{ __('ui.Announcement_Seller') }}
                                             {{ $announcement->user->name ?? '' }}
@@ -105,12 +105,11 @@
                                             {{ $announcement->created_at->format('d/m/Y') }}
                                         </p>
                                     </div>
-                                    <div
-                                        class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                        <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                            class="text-decoration-none text-dark fw-semibold"><i
-                                                class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
-                                    </div>
+                                </div>
+                                <div class="card-footer main-bg text-center mt-3 rounded">
+                                    <a href="{{ route('announcementShow', compact('announcement')) }}"
+                                        class="text-decoration-none text-dark fw-semibold">
+                                        <i class="bi bi-info-square-fill text-dark fs-6"></i> Info</a>
                                 </div>
                             </div>
                         </div>
