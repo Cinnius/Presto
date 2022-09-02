@@ -7,5 +7,62 @@
 .sort-Clear-Position{
     position: absolute;
     top: -63px;
-    left: -305px;
+    right: 152px;
+}
+
+@media screen and (min-width: 768px){
+    .sort-Search-Position{
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+    
+    .sort-Clear-Position{
+        position: absolute;
+        top: -58px;
+        right: 138px;
+    }
+}
+
+@media screen and (min-width:992px){
+    .sort-Search-Position{
+        position: absolute;
+        top: 7px;
+        right: 20px;
+    }
+    
+    .sort-Clear-Position{
+        position: absolute;
+        top: -58px;
+        right: 200px;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .sort-Search-Position{
+        position: absolute;
+        top: 16px;
+        right: 20px;
+    }
+    
+    .sort-Clear-Position{
+        position: absolute;
+        top: -63px;
+        left: -305px;
+    }
+}
+
+
+@media screen and (min-width:1500px){
+    .sort-Search-Position{
+        position: absolute;
+        top: 16px;
+        right: 20px;
+    }
+    
+    .sort-Clear-Position{
+        position: absolute;
+        top: -63px;
+        left: -305px;
+    }
 }

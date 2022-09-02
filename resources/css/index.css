@@ -5,13 +5,21 @@
 
 /* Header */
 .index-Position{
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 /* Sorting Bar */
 .sorting-Bar{
     top: 0px;
     display: none;
+}
+
+.hideSortSmall{
+    display:none;
+}
+
+.hideSortBig{
+    display:block;
 }
 
 /* button - page index */
@@ -62,10 +70,29 @@
     width: 450px;
 }
 
+@media screen and (min-width: 768px){
+    .hideSortBig{
+        display:block;
+        margin-top:100px;
+    }
 
-@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+    .hideSortSmall{
+        display:block;
+    }
+
+    .hideSortBig{
+        display:none;
+    }
+
+    .index-Position{
+        margin-top: 90px;
+    }
+
     .sorting-Bar{
-        top: 65px;
+        top: 62px;
         z-index: 1;
         border: 2px solid black;
         background-color: rgba(165, 165, 165, 0.95);
@@ -73,3 +100,40 @@
     }
 }
 
+@media screen and (min-width: 1400px) {
+    .hideSortSmall{
+        display:block;
+    }
+
+    .hideSortBig{
+        display:none;
+    }
+
+    .index-Position{
+        margin-top: 90px;
+    }
+
+    .sorting-Bar{
+        top: 61px;
+        z-index: 1;
+        border: 2px solid black;
+        background-color: rgba(165, 165, 165, 0.95);
+        display: unset;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .index-Position{
+        margin-top: 98px;
+    }
+
+    .sorting-Bar{
+        top: 60px;
+        z-index: 1;
+        border: 2px solid black;
+        background-color: rgba(165, 165, 165, 0.95);
+        display: unset;
+    }
+
+}

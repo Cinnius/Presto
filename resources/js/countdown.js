@@ -2,7 +2,7 @@ const one_Sec  = 1000
   ,   one_Min  = one_Sec * 60
   ,   one_Hour = one_Min * 60 
   ,   one_Day  = one_Hour * 24
-  ,  countDown = new Date('Sep 01, 2022 23:59:59').getTime()
+  ,  countDown = new Date('Sep 07, 2022 23:59:59').getTime()
   ,  X_count   = { days    : document.getElementById('countdown1')
                  , hours   : document.getElementById('countdown2')
                  , minutes : document.getElementById('countdown3')

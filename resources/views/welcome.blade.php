@@ -205,8 +205,8 @@
     </section>
 
     {{-- Section comments --}}
-    <section class="container-fluid">
-        <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
+    <section class="container-fluid pt-5 mt-5 pt-md-0 mt-md-0">
+        <h3 class="text-center fw-semibold py-3">Cosa dicono di noi...</h3>       
         <div class="row">
             @foreach($comments as $comment)
                 <div class="col-12 col-md-6 col-lg-3 pb-3 pb-md-2 pb-lg-0">
@@ -237,7 +237,7 @@
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/Roberta_Montanaro.jpg" class="our-image" alt="...">
+                                <img src="/image/Roberta_Montanaro.jpg" class="our-image img-fluid" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -257,7 +257,7 @@
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/team_01.jpg" class="our-image" alt="...">
+                                <img src="/image/team_01.jpg" class="our-image img-fluid" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -277,7 +277,7 @@
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/Marcello_Melli.jpg" class="our-image" alt="...">
+                                <img src="/image/Marcello_Melli.jpg" class="our-image img-fluid" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>
@@ -297,7 +297,7 @@
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/Alessio_Saccà.jpg" class="our-image" alt="...">
+                                <img src="/image/Alessio_Saccà.jpg" class="our-image img-fluid" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>

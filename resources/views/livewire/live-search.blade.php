@@ -13,7 +13,7 @@
                 <span class=" pan-customL right-pan"><i class="bi bi-x-square-fill text-dark"></i></span>
             </div>
 
-            <ul class="list-group">
+            <ul class="list-group w-100">
 
                 @forelse ($announcements as $announcement)
                     <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none">
