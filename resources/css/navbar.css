@@ -99,21 +99,35 @@
 }
 
 @media screen and (min-width: 768px) {
+
+    .customIcon{
+        width:90%;
+    }
+
+    .CustomLogo {
+        height: 35px;
+        width: auto;
+    }
+
+    .addSpan{
+        display:none;
+    }
+
     .search-custom {
         position: absolute;
-        top: 5px;
+        top: 1px;
         right: 50px;
     }
 
     .textNav {
-        font-size: 16px;
+        font-size: 14px;
         position: absolute;
         top: 0;
     }
 
     .navhome-bg {
         background-color: #ffc020;
-        height: 7vh;
+        height: 6vh;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
         box-shadow: 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.718);
@@ -157,6 +171,55 @@
     }
 
     .dot {
+        top: 78%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .margin-navbar{
+        margin-left: 12%;
+    }
+
+    .search-custom {
+        position: absolute;
+        top: 3px;
+        right: 50px;
+    }
+
+    .addSpan{
+        display:block;
+    }
+
+    .navhome-bg {
+            height: 8vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .navhome-bg {
+        background-color: #ffc020;
+        height: 7vh;
+        box-shadow: 1.1px 1.1px 1.1px 1.1px rgba(0, 0, 0, 0.718)
+    }
+
+    .margin-navbar{
+        margin-left: 20%;
+    }
+
+    .search-custom {
+        position: absolute;
+        top: 5px;
+        right: 50px;
+    }
+
+    .dot {
         top: 80%;
     }
+
+    .textNav {
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+    }
+
 }

@@ -110,19 +110,27 @@
     height: 25px;
 }
 
+.card-footer{
+    bottom: 0px;
+}
+
 /* MediaQuerry */
 @media screen and (min-width: 768px) {
 
+    .serviceHome {
+        border:none;
+    }
+
     .logo-custom {
-        width: 60%;
+        width: 50%;
         height: auto;
     }
     .visibilityHide{
         visibility: visible;
     }
     .h-header-custom {
-        height: 75vh;
-        padding-top:2%;
+        height: 82vh;
+        padding-top:4%;
     }
 
     .margin-counter{
@@ -139,4 +147,22 @@
         display: block;
     }
     
+}
+
+@media screen and (min-width:992px){
+    .serviceHome {
+        border: 2px dotted var(--light);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;       
+    }
+    
+}
+
+@media screen and (min-width: 1600px) {
+    .h-header-custom {
+        height: 75vh;
+        padding-top:2%;
+    }
+
 }

@@ -6,7 +6,7 @@
             <a class="navbar-brand hideLogo nav-trans ms-3 me-5" href="{{ route('welcome') }}">
                 <img src="/image/gruppo_1_logotipo.png" class="CustomLogo" alt="Logo of site">
             </a>
-            <li class="nav-item px-md-3 order-1 order-md-1 position-relative">
+            <li class="nav-item px-md-3 order-1 order-xxl-1 position-relative margin-navbar">
                 {{-- Home --}}
                 <a class="nav-link nav-btn link-dot d-flex align-items-end justify-content-center nav-trans"
                     aria-current="page" href="{{ route('welcome') }}">
@@ -14,7 +14,7 @@
                 </a>
                 {{-- <div class="dot"></div> --}}
             </li>
-            <li class="nav-item px-md-3 order-2 order-md-2">
+            <li class="nav-item px-md-3 order-2 order-md-1 order-xxl-2">
                 {{-- Index --}}
                 <a class="nav-link nav-btn nav-trans link-dot d-flex  justify-content-center"
                     href="{{ route('index') }}"><i class="bi bi-bag-fill fs-1 hideIcon"></i>
@@ -38,11 +38,11 @@
 
                 @endif 
                 <!-- bottone aggiungi -->
-                <li class="hideSpan w-25">
+                <li class="hideSpan">
                     <a href="{{ route('createAnnouncement') }}"
                         class="fw-semibold text-decoration-none mx-auto text-dark d-flex nav-trans">
                         <i class="bi bi-plus-square-fill dark-text"></i>
-                        <span class="hideSpan my-auto ms-3 dark-text">{{ __('ui.create_Add_Announcements') }}</span></a>
+                        <span class="my-auto ms-3 dark-text addSpan">{{ __('ui.create_Add_Announcements') }}</span></a>
                 </li>
 
 

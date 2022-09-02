@@ -31,7 +31,8 @@ return [
     'my_Announcement_Empty' => 'No ha creado un anuncio',
     'my_Announcement_Empty_Text' => 'Cree su primer anuncio!',
     // Index Page
-    'index_Empty'=>'No hay anuncios para esta búsqueda, pruebe con otras palabras clave.',
+    'index_Empty'=>'No hay anuncios para esta búsqueda,',
+    'index_Empty1'=>'pruebe con otras palabras clave.',
     // Category Page
     'Announcement_Updated'=>'Última modificación:',
     'category_Empty'=>'No hay ningún artículo en esta categoría',

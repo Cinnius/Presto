@@ -33,7 +33,8 @@ return [
         'my_Announcement_Empty'=>'You haven\'t created any announcement yet',
         'my_Announcement_Empty_Text'=>'Create your first announcement!',
         // Index Page
-        'index_Empty'=>'There are no announcements for this search, try with other keywords.',
+        'index_Empty'=>'There are no announcements for this search,',
+        'index_Empty1'=>'try with other keywords.',
         // Category Page
         'Announcement_Updated'=>'Last edit',
         'category_Empty'=>'There is no article in this category',

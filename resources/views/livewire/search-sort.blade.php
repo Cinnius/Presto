@@ -94,19 +94,19 @@
                                     {{ $announcement->created_at->format('d/m/Y') }}
                                 </p>
                             </div>
-                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none text-dark fw-semibold"><i class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
                             </div>
-                        </div>
+                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
+                                <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none text-dark fw-semibold"><i class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info</a>
+                            </div>
                     </div>
                 </div>
                 @empty
-                <div class="col-6 mt-5 justify-content-center d-flex align-iteams-center flex-column h404 rounded">
+                <div class="col-md-6 col-11 mx-auto mt-5 justify-content-center d-flex align-iteams-center flex-column h404 rounded">
                             <p class=" text-center lead fs-4 fw-semibold">{{ __('ui.index_Empty') }}</p>
                             <p class=" text-center lead fs-4 fw-semibold">{{ __('ui.index_Empty1') }}</p>
                 </div>
-                <div class="col-6 align-items-center d-flex mb-3">
-                    <img class="img-logo2 ms-5" src="../image/123.png" alt="">
+                <div class="col-md-6 col-12 align-items-center d-flex mb-3">
+                    <img class="img-logo2 img-fluid ms-md-5 pb-5" src="../image/123.png" alt="">
                 </div>
                 @endforelse
             </div>
