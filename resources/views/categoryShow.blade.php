@@ -4,6 +4,8 @@
         <div class="row mt-5 d-flex justify-content-center align-items-center">
             <div class="col-md-6">
                 @livewire('live-search')
+{{--                 @livewire('search-sort', ['categories' =>$categories]) --}}
+
 
             </div>
         </div>
