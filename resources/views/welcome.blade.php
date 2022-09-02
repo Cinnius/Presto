@@ -205,7 +205,7 @@
     </section>
 
     {{-- Section comments --}}
-    <section class="container-fluid bg-white">
+    <section class="container-fluid">
         <h3 class="text-center fw-semibold">Cosa dicono di noi...</h3>       
         <div class="row">
             @foreach($comments as $comment)
