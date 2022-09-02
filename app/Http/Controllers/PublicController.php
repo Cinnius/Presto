@@ -40,7 +40,8 @@ class PublicController extends Controller
     public function profileView()
     {
         $announcements = Auth::user()->announcements()->where('is_accepted', true)->latest()->get();
-        return view('profileView', compact('announcements'));
+        $announcementsCounter = Auth::user()->announcements()->where('is_accepted', true)->count();
+        return view('profileView', compact('announcements', 'announcementsCounter'));
     }
 
 
