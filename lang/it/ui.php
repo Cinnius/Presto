@@ -32,7 +32,8 @@ return [
     'my_Announcement_Empty'=>'Non hai ancora creato nessun annuncio',
     'my_Announcement_Empty_Text'=>'Crea il tuo primo annuncio!',
     // Index Page
-    'index_Empty'=>'Non sono presenti annunci per questa ricerca, prova con altre parole chiave.',
+    'index_Empty'=>'Non sono presenti annunci per questa ricerca,',
+    'index_Empty1'=>'prova con altre parole chiave.',
     // Category Page
     'Announcement_Updated'=>'ultima modifica:',
     'category_Empty'=>'Non vi è presente alcun articolo in codesta categoria',

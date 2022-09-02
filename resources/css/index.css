@@ -50,6 +50,19 @@
     border-color: var(--dark);
 }
 
+.h404{
+
+    height: 30vh;
+    background-color: #FFC901;
+    box-shadow: rgba(0, 0, 0, 0.673) 3px 3px 10px 3px;
+}
+
+.img-logo2{
+    height: 300px;
+    width: 450px;
+}
+
+
 @media screen and (min-width: 768px) {
     .sorting-Bar{
         top: 65px;
@@ -59,3 +72,4 @@
         display: unset;
     }
 }
+
