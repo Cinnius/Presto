@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Review;
 use App\Models\Comment;
 use App\Models\Announcement;
 use Laravel\Sanctum\HasApiTokens;
@@ -51,5 +52,7 @@ class User extends Authenticatable
     public function comments(){
         return $this -> hasMany(Comment::class);
     }
+    public function reviews(){
+        return $this -> hasMany(Review::class);
+    }
 }
-e;

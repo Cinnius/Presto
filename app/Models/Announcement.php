@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Image;
+use App\Models\Review;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
@@ -51,5 +52,9 @@ class Announcement extends Model
 
     public function images(){
         return $this->hasMany(Image::class);
+    }
+    
+    public function reviews(){
+        return $this->hasMany(Review::class);
     }
 }
