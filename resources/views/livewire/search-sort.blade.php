@@ -163,12 +163,13 @@
                                         </p>
                                     </div>
                                 </div>
+                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
+                                        class="text-decoration-none text-dark fw-semibold">
                                 <div
-                                    class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                    <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                        class="text-decoration-none text-dark fw-semibold"><i
-                                            class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info</a>
-                                </div>
+                                    class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-start">
+                                   <i
+                                            class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info
+                                </div> </a>
                             </div>
                         </div>
                     @empty

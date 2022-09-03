@@ -31,7 +31,7 @@
     @endif
     
     {{-- header --}}
-    <header class="container-fluid main-bg">
+    <header class="container-fluid main-bg shadow">
         <div class="row justify-content-between align-items-center pt-5 pt-md-2 h-header-custom">
             <!-- logo -->
             <div class="col-12 col-md-7 col-xxl-6 d-flex flex-column align-items-md-center">
