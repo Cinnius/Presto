@@ -152,5 +152,12 @@ return [
     // Error 404
     'error_Title'=>'Pagina non trovata!',
     'error_Text'=>'È possibile che il link che hai seguito sia corrotto o che la Pagina sia stata rimossa.',
-    'ui.error_Home'=>'Vuoi tornare alla Home?',
+    'error_Home'=>'Vuoi tornare alla Home?',
+
+    // Flash Message
+    'message_Announcement_Created'=>'Il tuo annuncio è stato inserito correttamente ed è in attesa di approvazione',
+    'message_Comment_Accepted'=>'Il tuo commento è stato inserito correttamente!',
+    'message_Comment_Rejected'=>'Devi accedere per lasciare un commento!',
+    'message_Review_Accepted'=>'La tua recensione è stata creata con successo!',
+    'message_Review_Rejected'=>'Devi accedere per lasciare una recensione!',
 ];

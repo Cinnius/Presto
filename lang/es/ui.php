@@ -153,4 +153,11 @@ return [
     'error_Title'=>'Página no encontrada!',
     'error_Text'=>'Es posible que el enlace que has seguido esté dañado o que la página se haya eliminado.',
     'ui.error_Home'=>'Quieres volver a la Home?',
+
+    // Flash Message
+    'message_Announcement_Created'=>'Su anuncio se ha colocado correctamente y está pendiente de aprobación',
+    'message_Comment_Accepted'=>'Tu comentario ha sido introducido correctamente!',
+    'message_Comment_Rejected'=>'Debes iniciar sesión para dejar un comentario!',
+    'message_Review_Accepted'=>'Tu reseña ha sido creada con éxito!',
+    'message_Review_Rejected'=>'Debe iniciar sesión para dejar una opinión!',
 ];

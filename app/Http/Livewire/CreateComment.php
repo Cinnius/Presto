@@ -25,9 +25,9 @@ class CreateComment extends Component
         
         if (Auth::user()) {
             $this->comment = Auth::user()->comments()->create($this->validate());
-            return redirect()->to('/')->with('message','Il tuo commento è stato inserito correttamente');
+            return redirect()->to('/')->with('message', trans('ui.message_Comment_Accepted'));
         } else {
-            return redirect()->to('/')->with('message','Devi registrati per lasciare un commento');
+            return redirect()->to('/')->with('message', trans('ui.message_Comment_Rejected'));
         }
         
         $this->clear();

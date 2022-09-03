@@ -31,10 +31,10 @@ class ReviewAnnouncement extends Component
             $this->reviewBody = Announcement::find($this->announcement)->reviews()->create($this->validate());
             Auth::user()->reviews()->save($this->reviewBody);
             $this->clear();
-            return redirect()->to('/')->with('message', 'La tua recensione è stata creata con successo!');
+            return redirect()->to('/')->with('message', trans('ui.message_Review_Accepted'));
         } else {
             $this->clear();
-            return redirect()->to('/')->with('message', 'Devi accedere per lascaire un commento!');
+            return redirect()->to('/')->with('message', trans('ui.message_Review_Rejected'));
         }
         
        

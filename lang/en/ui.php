@@ -145,4 +145,11 @@ return [
     'error_Title'=>'Page not found!',
     'error_Text'=>'It\'s possible that the link you followed is corrupted or the page has been removed.',
     'ui.error_Home'=>'Do you want to go back to the Home?',
+
+    // Flash Message
+    'message_Announcement_Created'=>'You announcement has been created correctly and is in pending for approval',
+    'message_Comment_Accepted'=>'Your comment has been created successfully!',
+    'message_Comment_Rejected'=>'You must login to post a comment!',
+    'message_Review_Accepted'=>'Your review has been created successfully!',
+    'message_Review_Rejected'=>'You must login to post a review!',
 ];
