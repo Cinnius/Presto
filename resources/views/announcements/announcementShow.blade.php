@@ -120,17 +120,17 @@
     @livewire('review-announcement', ['announcement' => $announcement->id])
     {{-- Review Section --}}
     <section class="container mt-3">
-        <div class="row">
+        <div class="row flex-column">
             @foreach ($reviews as $review)
                 @if ($review->announcement_id == $announcement->id)
-                    <div class="card col-8 p-2 p-md-3">
+                    <div class="card col-12 col-md-5 p-2 p-md-3 my-2 ms-3">
                         <figure class="py-md-3 mb-0">
                         <blockquote class="blockquote">
                             <p class="fs-4 mb-0">{{ $review->user->name }}</p>
                             <p class="fs-6">
                                 @for ($i = 1; $i <= 5; $i++)
                                     @if ($i <= $review->vote)
-                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill main-text"></i>
                                     @else
                                         <i class="bi bi-star"></i>
                                     @endif
