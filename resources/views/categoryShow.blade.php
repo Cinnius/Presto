@@ -2,7 +2,7 @@
     <x-slot name="title">Annunci inseriti</x-slot>
     {{-- category zone --}}
     <div class="container-fluid pt-2 py-5 mt-5">
-        <div class="row visibilityHide justify-content-around">
+        <div class="row visibilityHide justify-content-around mt-3">
             @foreach ($categories as $category)
                 <div class="col-1 my-3  d-flex justify-content-center">
                     <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
