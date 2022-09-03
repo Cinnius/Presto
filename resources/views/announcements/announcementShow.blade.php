@@ -84,12 +84,26 @@
     @livewire('review-announcement', ['announcement' => $announcement->id])
     @foreach ($reviews as $review)
         @if ($review->announcement_id == $announcement->id)
+            @php
+                $count = $count + 1;
+            @endphp
             <p>{{ $review->review }}</p>
             <p>{{ $review->vote }}</p>
-            {{
-                $avg = ($avg + ( $review->vote)) / @count($review->vote ) 
-            }}
+            @php
+                $sum = $sum + $review->vote;
+            @endphp
         @endif
     @endforeach
-     {{-- @dd($avg) --}}
+    @php
+        $avg = round($sum / $count, 1);
+        $avgRounded = round($sum / $count, 0);
+    @endphp
+    @for ($i = 1; $i <= 5; $i++)
+        @if ($i <= $avgRounded)
+            <i class="bi bi-star-fill"></i>
+        @else
+            <i class="bi bi-star"></i>
+        @endif
+    @endfor
+    {{ $avg }}
 </x-layout>

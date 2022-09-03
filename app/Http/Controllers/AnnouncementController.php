@@ -16,7 +16,9 @@ class AnnouncementController extends Controller
     public function announcementShow(Announcement $announcement){
         $reviews = Review::all();
         $avg = 0;
-        return view('announcements.announcementShow', compact('announcement', 'reviews', 'avg'));
+        $count = 0;
+        $sum = 0;
+        return view('announcements.announcementShow', compact('announcement', 'reviews', 'avg','count', 'sum'));
     }
 
     public function destroyAnnouncement(Announcement $announcement){
