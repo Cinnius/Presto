@@ -30,38 +30,41 @@
         <div class="row justify-content-md-around">
             {{-- card zone --}}
             @forelse ($announcements as $announcement)
-                <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
+                <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
-                            class="card-img-top rounded p-1" alt="...">
+                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}" class="card-img-top rounded p-1" alt="...">
                         <div class="position-absolute end-0 mt-3">
-                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i
-                                    class="bi bi-bookmark-fill"></i> {{ $announcement->category->name }}</a>
+                            <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 ">
+                                <i class="bi bi-bookmark-fill"></i>
+                                {{ $announcement->category->name }}
+                            </a>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
-                            <p class="card-text fst-italic fw-normal text-truncate">{{ $announcement->body }}</p>
+                            <p class="card-text fst-italic fw-normal text-truncate">
+                                {{ $announcement->body }}
+                            </p>
                             <p class="card-text"><i class="bi bi-tags-fill text-dark me-2"></i> €
                                 {{ $announcement->price }}
                             </p>
                             <div class="d-flex justify-content-between">
-                                <p class="fs-6 fw-normal fst-italic my-auto">{{ __('ui.Announcement_Seller') }}
+                                <p class="fs-6 fw-normal fst-italic my-auto">
+                                    {{ __('ui.Announcement_Seller') }}
                                     {{ $announcement->user->name ?? '' }}
                                 </p>
-                                <p class="fs-6 fw-normal fst-italic my-auto">{{ __('ui.Announcement_Created') }}
+                                <p class="fs-6 fw-normal fst-italic my-auto">
+                                    {{ __('ui.Announcement_Created') }}
                                     {{ $announcement->created_at->format('d/m/Y') }}
                                 </p>
                             </div>
-                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-between">
-                                <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                    class="text-decoration-none text-dark fw-semibold"><i
-                                        class="bi bi-info-square-fill text-dark fs-6"></i>Info</a>
-                            </div>
                         </div>
+                        <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none text-dark fw-semibold">
+                            <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-start">
+                                <i class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info
+                            </div>
+                        </a>
                     </div>
                 </div>
-
             @empty
                 <div class="col-12">
                     <div class="alter alter warning py-3 shadow">

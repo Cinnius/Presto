@@ -133,16 +133,14 @@
             <div class="col-12">
                 <div class="row">
                     @forelse ($announcements as $announcement)
-                        <div wire:loading.class="opacity-75"
-                            class="col-12 col-md-4 py-4 d-flex justify-content-center">
+                        <div wire:loading.class="opacity-75" class="col-12 col-md-4 py-4 d-flex justify-content-center">
                             <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                                <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
-                                    class="card-img-top rounded p-1" alt="...">
+                                <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}" class="card-img-top rounded p-1" alt="...">
                                 <div class="position-absolute end-0 mt-3">
-                                    <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
-                                        class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 "><i
-                                            class="bi bi-bookmark-fill"></i>
-                                        {{ $announcement->category->name }}</a>
+                                    <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}" class="text-decoration-none text-dark main-bg py-1 px-2 rounded me-3 ">
+                                        <i class="bi bi-bookmark-fill"></i>
+                                        {{ $announcement->category->name }}
+                                    </a>
                                 </div>
                                 <div class="card-body">
                                     <h5 class="card-title text-uppercase">{{ $announcement->title }}</h5>
@@ -163,13 +161,11 @@
                                         </p>
                                     </div>
                                 </div>
-                                 <a href="{{ route('announcementShow', compact('announcement')) }}"
-                                        class="text-decoration-none text-dark fw-semibold">
-                                <div
-                                    class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-start">
-                                   <i
-                                            class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info
-                                </div> </a>
+                                <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none text-dark fw-semibold">
+                                    <div class="card-footer main-bg text-center mt-3 rounded d-flex justify-content-start">
+                                        <i class=" me-2 bi bi-info-square-fill text-dark fs-6"></i>Info
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     @empty
