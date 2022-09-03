@@ -4,9 +4,7 @@
         <div class="row margin-custom">
             <div class="col-8 mx-auto">
                 <h2 class="text-center mt-5">{{ __('ui.review_Title') }}</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum veniam facere et
-                    autem, alias molestiae eveniet voluptates nobis adipisci excepturi nihil corrupti dolor quas earum
-                    illum dicta aperiam ea aut?!</p>
+                <p class="text-center">{{ __('ui.last_Review1') }}</p>
             </div>
             @if ($announcement)
                 <div class="row mx-auto justify-content-md-evenly mt-5">

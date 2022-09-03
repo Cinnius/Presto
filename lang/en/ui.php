@@ -48,6 +48,7 @@ return [
     'review_Empty_Text'=>'Come back later to check if new announcements has been added, or go on last revised announcements' ,
     'last_Review'=>'Revise last added announcements',
     'Announcement_Description'=>'Description',
+    'last_Review1'=>'In this section you can review the latest accepted or rejected by other reviewers!',
     // Review Announcements
     'last_Review_Title'=>'Last revised announcements',
     'last_Review_Title_Text'=>'Evaluate if this revised announcements are correctly added or reject',
