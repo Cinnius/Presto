@@ -14,9 +14,9 @@ class AnnouncementController extends Controller
     }
 
     public function announcementShow(Announcement $announcement){
-        $reviews = Review::all();
+        $reviews = Review::latest()->get();
         $avg = 0;
-        $count =0;;
+        $count =0;
         $sum = 0;
         return view('announcements.announcementShow', compact('announcement', 'reviews', 'avg','count', 'sum'));
     }
