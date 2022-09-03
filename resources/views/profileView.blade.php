@@ -51,11 +51,11 @@
                                 <hr class="mt-0 mb-4">
                                 <div class="row pt-1">
                                     <div class="col-6 mb-3">
-                                        <h6>Annunci pubblicati</h6>
+                                        <h6>{{ __('ui.published_Ads') }}</h6>
                                         <p class="text-muted">{{ $announcementsCounter }}</p>
                                     </div>
                                     <div class="col-6 mb-3">
-                                        <h6>Data di iscrizione</h6>
+                                        <h6>{{ __('ui.registration_Date') }}</h6>
                                         <p class="text-muted">{{Auth::user()->created_at->format('d/m/Y')}}</p>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@
                                 class="mb-3">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn dark-btn">Cancella annuncio</button>
+                                <button type="submit" class="btn dark-btn">{{ __('ui.my_Announcement_Delete') }}</button>
                             </form>
                         </div>
                     </div>

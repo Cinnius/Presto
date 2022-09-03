@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">Annunci inseriti</x-slot>
+    <x-slot name="title">{{ __('ui.index_Title') }}</x-slot>
     {{-- category zone --}}
     <div class="container-fluid pt-2 py-5 mt-5">
         <div class="row visibilityHide justify-content-around">

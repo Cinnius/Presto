@@ -6,44 +6,44 @@
             <div class="col-12 fixed-top sorting-Bar d-flex align-items-center justify-content-center">
                 <select class="form-select" aria-label="Default select example" wire:model="categorySearch"
                     style="width: 12vw;height:40px">
-                    <option selected>Seleziona la categoria</option>
+                    <option selected>{{ __('ui.category_Selector') }}</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
                 <div class="ms-3 my-3 d-flex align-items-center justify-content-center">
-                    <p class="ms-5 me-2 my-auto">Nome</p>
+                    <p class="ms-5 me-2 my-auto">{{ __('ui.sort_Name') }}</p>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting"
                             id="Name-Asc">
-                        <label class="form-check-label" for="Name-Asc">Crescente</label>
+                        <label class="form-check-label" for="Name-Asc">{{ __('ui.sort_Ascendent') }}</label>
                     </div>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio"
                             name="Sorting" id="Name-Desc">
-                        <label class="form-check-label" for="Name-Desc">Decrescente</label>
+                        <label class="form-check-label" for="Name-Desc">{{ __('ui.sort_Descendant') }}</label>
                     </div>
-                    <p class="ms-5 me-2 my-auto">Prezzo</p>
+                    <p class="ms-5 me-2 my-auto">{{ __('ui.sort_Price') }}</p>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting"
                             id="Price_Asc">
-                        <label class="form-check-label" for="Price_Asc">Crescente</label>
+                        <label class="form-check-label" for="Price_Asc">{{ __('ui.sort_Ascendent') }}</label>
                     </div>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio"
                             name="Sorting" id="Price_Desc">
-                        <label class="form-check-label" for="Price_Desc">Decrescente</label>
+                        <label class="form-check-label" for="Price_Desc">{{ __('ui.sort_Descendant') }}</label>
                     </div>
-                    <p class="ms-5 me-2 my-auto">Data</p>
+                    <p class="ms-5 me-2 my-auto">{{ __('ui.sort_Date') }}</p>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('created_at','asc')" class="form-check-input" type="radio"
                             name="Sorting" id="Date_Asc">
-                        <label class="form-check-label" for="Date_Asc">Crescente</label>
+                        <label class="form-check-label" for="Date_Asc">{{ __('ui.sort_Ascendent') }}</label>
                     </div>
                     <div class="form-check mx-2">
                         <input wire:click="sortBy('created_at','desc')" class="form-check-input" type="radio"
                             name="Sorting" id="Date_Desc">
-                        <label class="form-check-label" for="Date_Desc">Decrescente</label>
+                        <label class="form-check-label" for="Date_Desc">{{ __('ui.sort_Descendant') }}</label>
                     </div>
                 </div>
             </div>
@@ -56,49 +56,49 @@
             <div class="col-12 sorting-Bar d-flex justify-content-center align-items-center">
                 <select class="form-select w-75" aria-label="Default select example" wire:model="categorySearch"
                     style="width: 12vw;height:40px">
-                    <option selected>Seleziona la categoria</option>
+                    <option selected>{{ __('ui.category_Selector') }}</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
             </div>
             <div class="my-3 d-flex align-items-center justify-content-center">
-                <p class="ms-2 me-2 my-auto">Nome</p>
+                <p class="ms-2 me-2 my-auto">{{ __('ui.sort_Name') }}</p>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('title','asc')" class="form-check-input" type="radio" name="Sorting"
                         id="Name-Asc">
-                    <label class="form-check-label" for="Name-Asc">Crescente</label>
+                    <label class="form-check-label" for="Name-Asc">{{ __('ui.sort_Ascendent') }}</label>
                 </div>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('title','desc')" class="form-check-input" type="radio" name="Sorting"
                         id="Name-Desc">
-                    <label class="form-check-label" for="Name-Desc">Decrescente</label>
+                    <label class="form-check-label" for="Name-Desc">{{ __('ui.sort_Descendant') }}</label>
                 </div>
             </div>
             <div class="my-3 d-flex align-items-center justify-content-center">
-                <p class="ms-2 me-1 my-auto">Prezzo</p>
+                <p class="ms-2 me-1 my-auto">{{ __('ui.sort_Price') }}</p>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('price','asc')" class="form-check-input" type="radio" name="Sorting"
                         id="Price_Asc">
-                    <label class="form-check-label" for="Price_Asc">Crescente</label>
+                    <label class="form-check-label" for="Price_Asc">{{ __('ui.sort_Ascendent') }}</label>
                 </div>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('price','desc')" class="form-check-input" type="radio" name="Sorting"
                         id="Price_Desc">
-                    <label class="form-check-label" for="Price_Desc">Decrescente</label>
+                    <label class="form-check-label" for="Price_Desc">{{ __('ui.sort_Descendant') }}</label>
                 </div>
             </div>
             <div class="my-3 d-flex align-items-center justify-content-center">
-                <p class="ms-2 me-3 my-auto">Data</p>
+                <p class="ms-2 me-3 my-auto">{{ __('ui.sort_Date') }}</p>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('created_at','asc')" class="form-check-input" type="radio"
                         name="Sorting" id="Date_Asc">
-                    <label class="form-check-label" for="Date_Asc">Crescente</label>
+                    <label class="form-check-label" for="Date_Asc">{{ __('ui.sort_Ascendent') }}</label>
                 </div>
                 <div class="form-check mx-2">
                     <input wire:click="sortBy('created_at','desc')" class="form-check-input" type="radio"
                         name="Sorting" id="Date_Desc">
-                    <label class="form-check-label" for="Date_Desc">Decrescente</label>
+                    <label class="form-check-label" for="Date_Desc">{{ __('ui.sort_Descendant') }}</label>
                 </div>
             </div>
         </div>

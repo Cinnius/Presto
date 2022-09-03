@@ -19,28 +19,38 @@ return [
     'time_Deals_Text_M'=>'Minutes',
     'time_Deals_Text_S'=>'Seconds',
     'our_Teams'=>'Our team',
-    'our_Teams_Text'=>'our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
+    'our_Teams_Text'=>'Our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
+    'statistic_Announcement'=>'Prodotti in vendita',
+    'statistic_User'=>'Utenti registrati',
+    'statistic_Category'=>'Categorie prodotti',
+    'comment_Title'=>'Tell us what you think!',
 
-        // Profile Page
-        'role'=>'Role:',
-        'role_Revisor'=>'Revisor',
-        'role_User'=>'User',
-        'revisor_Article'=>'Revise announcements',
-        'information'=>'Info',
-        'my_Announcement'=>'My announcements',
-        'Announcement_Seller'=>'Sell by:',
-        'Announcement_Created'=>'Created at:',
-        'my_Announcement_Empty'=>'You haven\'t created any announcement yet',
-        'my_Announcement_Empty_Text'=>'Create your first announcement!',
-        // Index Page
-        'index_Empty'=>'There are no announcements for this search,',
-        'index_Empty1'=>'try with other keywords.',
-        // Category Page
-        'Announcement_Updated'=>'Last edit',
-        'category_Empty'=>'There is no article in this category',
-        'category_Empty_Text'=>'Add new announcements',
+    // Profile Page
+    'role'=>'Role:',
+    'role_Revisor'=>'Revisor',
+    'role_User'=>'User',
+    'revisor_Article'=>'Revise announcements',
+    'information'=>'Info',
+    'my_Announcement'=>'My announcements',
+    'Announcement_Seller'=>'Sell by:',
+    'Announcement_Created'=>'Created at:',
+    'my_Announcement_Empty'=>'You haven\'t created any announcement yet',
+    'my_Announcement_Empty_Text'=>'Create your first announcement!',
+    'published_Ads'=>'Published Announcements',
+    'registration_Date'=>'Registration Date',
+    'my_Announcement_Delete'=>'Delete Announcement',
 
-        // Index Revisor
+    // Index Page
+    'index_Title'=>'Inserted announcement',
+    'index_Empty'=>'There are no announcements for this search,',
+    'index_Empty1'=>'try with other keywords.',
+
+    // Category Page
+    'Announcement_Updated'=>'Last edit',
+    'category_Empty'=>'There is no article in this category',
+    'category_Empty_Text'=>'Add new announcements',
+
+    // Index Revisor
     'review_Title'=>'Revise last added announcements',
     'review'=>'Revise',
     'review_Text'=>'evaluate if this announcement meets our standards',
@@ -49,6 +59,12 @@ return [
     'last_Review'=>'Revise last added announcements',
     'Announcement_Description'=>'Description',
     'last_Review1'=>'In this section you can review the latest accepted or rejected by other reviewers!',
+    'revisor_Adult'=>'Adult',
+    'revisor_Spoof'=>'Spoof',
+    'revisor_Medical'=>'Medical',
+    'revisor_Violence'=>'Violence',
+    'revisor_Racy'=>'Racy',
+
     // Review Announcements
     'last_Review_Title'=>'Last revised announcements',
     'last_Review_Title_Text'=>'Evaluate if this revised announcements are correctly added or reject',
@@ -69,6 +85,8 @@ return [
     'create_Add_Announcements'=>'Add announcement',
     'create_Image_Delete'=>'Delete',
     'create_Image_Empty'=>'Add images to the announcement',
+    'category_Selector'=>'Select a Category',
+
     // Footer
     'footer_BackToTop'=>'Back To Top',
     'footer_Work'=>'Do you want to work with us?',
@@ -88,8 +106,10 @@ return [
     'nav_Index'=>'Announcements',
     'nav_Review'=>'Revise Announcements',
     'nav_Categories'=>'Category',
+
     // Search Bar
     'search_Placeholder'=>'Search for announcement or category...',
+
     // Login Page
     'login'=>'Login',
     'login_Text'=>'Insert yours email and password!',
@@ -97,9 +117,32 @@ return [
     'login_Error'=>'Don\'t have an account?',
     'login_Error_Register'=>'Sign Up!',
 
-       // Announcement Show Page
-       'announcements_Delivery'=>'This product can be shipped onlu in Italy and Vatican City. Do you want an international shippment? Learn more!',
-       // Create Announcements Page
-       'add_Announcement'=>'Create your announcement',
-       'announcements_Info'=>'More info',
+    // Announcement Show Page
+    'announcements_Delivery'=>'This product can be shipped onlu in Italy and Vatican City. Do you want an international shippment? Learn more!',
+
+    // Create Announcements Page
+    'add_Announcement'=>'Create your announcement',
+    'announcements_Info'=>'More info',
+    'back_Home'=>'Back to Home',
+
+    // Create Comment Livewire
+    'comment_Title'=>'Create a comment',
+    'comment_Text'=>'Comment',
+    'comment_BTN'=>'Comment!',
+
+    // Create Review Livewire
+    'review_Title'=>'Add a review!',
+    'review_BTN'=>'Post!',
+
+    // Search Sort Livewire
+    'sort_Name'=>'Name',
+    'sort_Price'=>'Price',
+    'sort_Date'=>'Date',
+    'sort_Ascendent'=>'Ascendent',
+    'sort_Descendant'=>'Descendant',
+
+    // Error 404
+    'error_Title'=>'Page not found!',
+    'error_Text'=>'It\'s possible that the link you followed is corrupted or the page has been removed.',
+    'ui.error_Home'=>'Do you want to go back to the Home?',
 ];

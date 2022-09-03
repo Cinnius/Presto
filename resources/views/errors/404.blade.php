@@ -15,9 +15,9 @@
                 <div class="row align-items-center justify-content-center justify-content-md-end me-md-3">
                     <div class="col-8  text-center white-bg border border-dark border-2 shadow-error rounded-2 px-3 py-5">
                         <img class="img-fluid img-error mb-3" src="../image/logo1.png" alt="logo">
-                        <h2 class="fw-bolder">Pagina non trovata!</h2><hr>
-                        <p class="my-4 mx-3">È possibile che il link che hai seguito sia corrotto o che la Pagina sia stata rimossa.</p>
-                        <p class="my-4">Vuoi tornare alla Home?</p>
+                        <h2 class="fw-bolder">{{ __('ui.error_Title') }}</h2><hr>
+                        <p class="my-4 mx-3">{{ __('ui.error_Text') }}</p>
+                        <p class="my-4">{{ __('ui.error_Home') }}</p>
                         <a href="{{route('welcome')}}" class="btn main-btn">Homepage</a>
                     </div>
                 </div>
