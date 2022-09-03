@@ -14,8 +14,9 @@ class AnnouncementController extends Controller
     }
 
     public function announcementShow(Announcement $announcement){
-        $reviews = Review::where('announcement_id' == $announcement->id);
-        return view('announcements.announcementShow', compact('announcement', 'reviews'));
+        $reviews = Review::all();
+        $avg = 0;
+        return view('announcements.announcementShow', compact('announcement', 'reviews', 'avg'));
     }
 
     public function destroyAnnouncement(Announcement $announcement){

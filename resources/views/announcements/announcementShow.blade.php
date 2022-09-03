@@ -1,6 +1,6 @@
 <x-layout>
-        {{-- Message --}}
-        @if (session()->has('message'))
+    {{-- Message --}}
+    @if (session()->has('message'))
         <div class="toast show position-fixed bottom-0 m-3" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header main-bg">
                 <img src="/image/gruppo_1_logotipo.png" class="toastLogo rounded me-2" alt="...">
@@ -21,9 +21,9 @@
                         @if ($announcement->images->isNotEmpty())
                             @foreach ($announcement->images as $image)
                                 <div class="swiper-slide">
-                                    <img src="{{ Storage::url($image->path)}}" alt="...">
+                                    <img src="{{ Storage::url($image->path) }}" alt="...">
                                 </div>
-                            @endforeach 
+                            @endforeach
                         @else
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -39,9 +39,9 @@
                         @if ($announcement->images->isNotEmpty())
                             @foreach ($announcement->images as $image)
                                 <div class="swiper-slide">
-                                    <img src="{{ Storage::url($image->path)}}" alt="...">
+                                    <img src="{{ Storage::url($image->path) }}" alt="...">
                                 </div>
-                            @endforeach 
+                            @endforeach
                         @else
                             <div class="swiper-slide">
                                 <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -55,32 +55,41 @@
             {{-- Description --}}
             <div class="col-5">
                 <div class="gradient-custom border border-dark shadow p-3 rounded">
-                    <h2>{{$announcement->title}}</h2>
+                    <h2>{{ $announcement->title }}</h2>
                     <h6 class="ms-4 my-2">
-                        <span class="text-decoration-none text-dark shadow white-bg px-2 rounded me-3">{{$announcement->category->name}}</span>
+                        <span
+                            class="text-decoration-none text-dark shadow white-bg px-2 rounded me-3">{{ $announcement->category->name }}</span>
                     </h6>
                     <hr class="mt-0 mb-3">
-                    <h3>€ {{$announcement->price}}</h3>
-                    <p>{{$announcement->body}}</p>
+                    <h3>€ {{ $announcement->price }}</h3>
+                    <p>{{ $announcement->body }}</p>
                     <hr class="mt-0 mb-3">
-            {{-- Other Information --}}
-                    <h4>{{__('ui.announcements_Info')}}</h4>
+                    {{-- Other Information --}}
+                    <h4>{{ __('ui.announcements_Info') }}</h4>
                     <div>
-                        <p class="mt-3 px-2 py-1">{{__('ui.announcements_Delivery')}}</p>
+                        <p class="mt-3 px-2 py-1">{{ __('ui.announcements_Delivery') }}</p>
                     </div>
                     <div>
-                        <p class="my-1">{{__('ui.Announcement_Created')}} {{$announcement->created_at->format('d/m/Y')}}</p>
-                        <p class="my-1">{{__('ui.Announcement_Updated')}} {{$announcement->updated_at->format('d/m/Y')}}</p>
-                        <p class="my-1">{{__('ui.Announcement_Seller')}} {{$announcement->user->name ?? ''}}</p>
+                        <p class="my-1">{{ __('ui.Announcement_Created') }}
+                            {{ $announcement->created_at->format('d/m/Y') }}</p>
+                        <p class="my-1">{{ __('ui.Announcement_Updated') }}
+                            {{ $announcement->updated_at->format('d/m/Y') }}</p>
+                        <p class="my-1">{{ __('ui.Announcement_Seller') }} {{ $announcement->user->name ?? '' }}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-  
-    @livewire('review-announcement',  ['announcement' =>$announcement->id])
-    @foreach($reviews as $review)
-<p>{{$review->vote}}</p>
-@endforeach
+    @livewire('review-announcement', ['announcement' => $announcement->id])
+    @foreach ($reviews as $review)
+        @if ($review->announcement_id == $announcement->id)
+            <p>{{ $review->review }}</p>
+            <p>{{ $review->vote }}</p>
+            {{
+                $avg = ($avg + ( $review->vote)) / @count($review->vote ) 
+            }}
+        @endif
+    @endforeach
+     {{-- @dd($avg) --}}
 </x-layout>
