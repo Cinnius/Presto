@@ -77,7 +77,7 @@
                                         </form>
 
                                     </div>
-                                    <div class="col-4 d-flex justify-content-end me-5">
+                                    <div class="col-4 d-flex justify-content-end me-5 mt-1">
                                         <a href="#!"><i class="bi bi-facebook text-dark px-2"></i></a>
                                         <a href="#!"><i class="bi bi-twitter text-dark px-2"></i></a>
                                         <a href="#!"><i class="bi bi-instagram text-dark px-2"></i></a>

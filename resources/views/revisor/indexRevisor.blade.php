@@ -143,6 +143,8 @@
                     <div class="col-8 mx-auto mt-5 text-center">
                         <h3>{{ __('ui.review_Empty') }}</h3>
                         <p>{{ __('ui.review_Empty_Text') }}</p>
+                        <a class="text-decoration-none text-dark btn main-btn fw-semibold mt-5"
+                                href="{{ route('rewiewAnnouncements') }}">{{ __('ui.last_Review') }}</a>
                     </div>
 
             @endif
