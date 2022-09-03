@@ -3,7 +3,7 @@
 
     <div class="container hideSortSmall">
         <div class="row">
-            <div class="col-12 fixed-top sorting-Bar d-flex align-items-center">
+            <div class="col-12 fixed-top sorting-Bar d-flex align-items-center justify-content-center">
                 <select class="form-select" aria-label="Default select example" wire:model="categorySearch"
                     style="width: 12vw;height:40px">
                     <option selected>Seleziona la categoria</option>
@@ -52,7 +52,7 @@
 
     {{-- Sort-bar from small screen --}}
     <div class="container hideSortBig">
-        <div class="row">
+        <div class="row mt-3">
             <div class="col-12 sorting-Bar d-flex justify-content-center align-items-center">
                 <select class="form-select w-75" aria-label="Default select example" wire:model="categorySearch"
                     style="width: 12vw;height:40px">

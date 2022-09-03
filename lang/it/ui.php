@@ -85,7 +85,7 @@ return [
     'nav_Review'=>'Revisiona Annunci',
     'nav_Categories'=>'Categorie',
     // Search Bar
-    'search_Placeholder'=>'cerca un articolo o una categoria...',
+    'search_Placeholder'=>'cerca articoli o categorie...',
     // Login Page
     'login'=>'Accedi',
     'login_Text'=>'Inserisci la tua email e password!',
