@@ -94,16 +94,22 @@
             @endphp
         @endif
     @endforeach
-    @php
-        $avg = round($sum / $count, 1);
-        $avgRounded = round($sum / $count, 0);
-    @endphp
-    @for ($i = 1; $i <= 5; $i++)
-        @if ($i <= $avgRounded)
-            <i class="bi bi-star-fill"></i>
-        @else
-            <i class="bi bi-star"></i>
-        @endif
-    @endfor
-    {{ $avg }}
+        @php
+        if($count >0 ){
+            $avg = round(($sum / $count), 1);
+            $avgRounded = round(($sum / $count), 0);
+        } else {
+            $avg =0;
+            $avgRounded = 0;
+        }
+
+        @endphp
+        @for ($i = 1; $i <= 5; $i++)
+            @if ($i <= $avgRounded)
+                <i class="bi bi-star-fill"></i>
+            @else
+                <i class="bi bi-star"></i>
+            @endif
+        @endfor
+        {{ $avg }}
 </x-layout>
