@@ -24,6 +24,7 @@ return [
     'statistic_User'=>'Utenti registrati',
     'statistic_Category'=>'Categorie prodotti',
     'comment_Title'=>'Dicci cosa pensi!',
+    'comment_Section'=>'Cosa dicono di noi...',
 
     // Profile Page
     'role'=>'Ruolo:',

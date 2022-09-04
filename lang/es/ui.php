@@ -23,6 +23,7 @@ return [
     'statistic_User'=>'Usuario registrados',
     'statistic_Category'=>'Categorías de productos',
     'comment_Title'=>'Dinos qué piensas!',
+    'comment_Section'=>'Que dicen de nosotros...',
 
     // Profile Page
     'role' => 'Rol:',

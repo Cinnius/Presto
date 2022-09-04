@@ -206,7 +206,7 @@
 
     {{-- Section comments --}}
     <section class="container-fluid pt-5 mt-5 pt-md-0 mt-md-0">
-        <h3 class="text-center fw-semibold py-3">Cosa dicono di noi...</h3>       
+        <h3 class="text-center fw-semibold py-3">{{ __('ui.comment_Section') }}</h3>       
         <div class="row">
             @foreach($comments as $comment)
                 <div class="col-12 col-md-6 col-lg-3 pb-3 pb-md-2 pb-lg-0">

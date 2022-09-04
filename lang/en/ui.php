@@ -20,10 +20,11 @@ return [
     'time_Deals_Text_S'=>'Seconds',
     'our_Teams'=>'Our team',
     'our_Teams_Text'=>'Our team is made up by professionals in the sector, always at your disposal to clarify any doubts you have!',
-    'statistic_Announcement'=>'Prodotti in vendita',
-    'statistic_User'=>'Utenti registrati',
-    'statistic_Category'=>'Categorie prodotti',
+    'statistic_Announcement'=>'Product for Sale',
+    'statistic_User'=>'Registered User',
+    'statistic_Category'=>'Product Category',
     'comment_Title'=>'Tell us what you think!',
+    'comment_Section'=>'What they say about us...',
 
     // Profile Page
     'role'=>'Role:',
