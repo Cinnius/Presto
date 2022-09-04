@@ -53,7 +53,7 @@
                 @foreach ($categories as $category)
                 <div class="col-1 mt-5">
                     <a class="link-costum"href="{{ route('categoryShow', compact('category')) }}">
-                        <div class="category-custom text-center">
+                        <div class="category-custom text-center @if($announcements->first()->category_id == $category->id) shadow main-bg @endif">
                             <div class="mt-3">
                                 <img src="/{{ $category->icon }}" alt="">
                                 <p class="fw-bolder">{{ $category->name }}</p>

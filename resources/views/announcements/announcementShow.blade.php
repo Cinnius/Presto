@@ -60,7 +60,8 @@
                     <h2>{{ $announcement->title }}</h2>
                     <h6 class="ms-4 my-2">
                         <span
-                        class="text-decoration-none text-dark shadow white-bg px-2 rounded me-3">{{ $announcement->category->name }}</span>
+                        class="text-decoration-none text-dark shadow white-bg px-2 rounded me-3"><a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
+                            class="text-decoration-none text-dark">{{ $announcement->category->name }}</a></span>
                     </h6>
                     {{-- Average Review --}}
                     <div>
