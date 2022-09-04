@@ -30,11 +30,6 @@
                     </div>
                 </li>
                 @else
-             {{--    <li class="nav-item order-4  hideSpan order-md-6">
-                    <div class="col-9 col-xxl-8 w-25">
-                        <img src="/image/logo1.png" alt="" class="img-fluid">
-                    </div>
-                </li> --}}
 
                 @endif 
                 <!-- bottone aggiungi -->
