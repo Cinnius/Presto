@@ -17,13 +17,13 @@
     <div class="container-fluid margin-top">
         <div class="row justify-content-center">
             {{-- Carousel Thumbnail --}}
-            <div class="col-1">
-                <div thumbsSlider="" class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+            <div class="col-12 col-md-1">
+                <div thumbsSlider="" class="swiper mySwiper small_Img_Swiper">
+                    <div class="swiper-wrapper ">
                         @if ($announcement->images->isNotEmpty())
                         @foreach ($announcement->images as $image)
                         <div class="swiper-slide">
-                            <img src="{{ Storage::url($image->path) }}" alt="...">
+                            <img src="{{ $announcement->images()->first()->getUrl(400, 300) }}" alt="...">
                         </div>
                         @endforeach
                         @else
@@ -35,8 +35,8 @@
                 </div>
             </div>
             {{-- Carousel View --}}
-            <div class="col-5">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+            <div class="col-12 col-md-5">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 big_Img_Swiper">
                     <div class="swiper-wrapper">
                         @if ($announcement->images->isNotEmpty())
                         @foreach ($announcement->images as $image)
@@ -55,7 +55,7 @@
                 </div>
             </div>
             {{-- Description --}}
-            <div class="col-5">
+            <div class="col-12 col-md-5 my-3 my-md-0">
                 <div class="gradient-custom border border-dark shadow p-3 rounded">
                     <h2>{{ $announcement->title }}</h2>
                     <h6 class="ms-4 my-2">

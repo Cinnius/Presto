@@ -1,9 +1,16 @@
 let swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
   spaceBetween: 10,
-  slidesPerView: 8,
+  slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      direction: "vertical",
+      slidesPerView: 8,
+      spaceBetween: 10,
+    },
+  }
 });
 let swiper2 = new Swiper(".mySwiper2", {
   spaceBetween: 10,
