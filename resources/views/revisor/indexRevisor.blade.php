@@ -115,7 +115,7 @@
                     </div>
                     <div class="col-12 col-xl-4 my-5 my-xl-auto">
                         <h2 class="text-center">{{ __('ui.review') }}</h2>
-                        <p class="text-center text-xl-start">{{ __('ui.review_Text') }}</p>
+                        <p class="text-center">{{ __('ui.review_Text') }}</p>
                         <div class="my-5 d-flex justify-content-center">
                             <form action="{{ route('acceptAnnouncement', ['announcement' => $announcement]) }}"
                                 method="POST">
