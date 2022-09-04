@@ -51,7 +51,7 @@
                             <span class="hideSpan me-5">Login</span>
                         </a>
                     @else
-                        <a class="nav-link nav-btn d-flex  align-items-end nav-trans  d-flex align-items-end justify-content-md-center link-dot"
+                        <a class="nav-link nav-btn d-flex  align-items-end nav-trans  d-flex align-items-end justify-content-center link-dot"
                             href="{{ route('profileView') }}">
                             {{-- <i class="bi bi-person-fill fs-3 hideIcon2 me-md-2"></i> --}}
                             <i class="bi bi-person-fill fs-1 hideIcon"></i>
