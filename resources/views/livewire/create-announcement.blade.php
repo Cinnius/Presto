@@ -33,7 +33,7 @@
                     <div class="mb-3">
                         <label class="form-label">{{__('ui.create_Info_Category')}}</label>
                         <select wire:model.defer="category" class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                            <option selected>{{ __('ui.category_Selector') }}</option>
                             @foreach ($categories as $category)
                                 <option class="option-form" value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach

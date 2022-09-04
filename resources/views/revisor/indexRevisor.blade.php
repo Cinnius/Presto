@@ -55,12 +55,12 @@
                                                         class="d-block w-100 rounded" alt="...">
                                                 </div>
                                                 <div class="col-12 col-md-4 mt-2 mt-md-0 white-bg">
-                                                    <p>Adulti: <span class="{{ $image->adult }}"></span></p>
-                                                    <p>Satira: <span class="{{ $image->spoof }}"></span></p>
-                                                    <p>Medicina: <span class="{{ $image->medical }}"></span></p>
-                                                    <p>Violenza: <span class="{{ $image->violence }}"></span>
+                                                    <p>{{ __('ui.revisor_Adult') }}: <span class="{{ $image->adult }}"></span></p>
+                                                    <p>{{ __('ui.revisor_Spoof') }}: <span class="{{ $image->spoof }}"></span></p>
+                                                    <p>{{ __('ui.revisor_Medical') }}: <span class="{{ $image->medical }}"></span></p>
+                                                    <p>{{ __('ui.revisor_Violence') }}: <span class="{{ $image->violence }}"></span>
                                                     <p>
-                                                    <p>Nudo: <span class="{{ $image->racy }}"></span></p>
+                                                    <p>{{ __('ui.revisor_Racy') }}: <span class="{{ $image->racy }}"></span></p>
                                                     @if (!empty($image->labels))
                                                         @foreach ($image->labels as $label)
                                                             {{ $label }}

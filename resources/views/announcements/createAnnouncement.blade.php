@@ -8,7 +8,7 @@
             </div>
             <div class="toast-body white-bg">
                 <p>{{ session('message') }}</p>
-                <a href="{{route('welcome')}}" class="btn main-btn">Torna alla Home</a>
+                <a href="{{route('welcome')}}" class="btn main-btn">{{ __('ui.back_Home') }}</a>
             </div>
         </div>
     @endif

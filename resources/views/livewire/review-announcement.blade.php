@@ -4,7 +4,7 @@
 
             <div class="col-8">
                 <div class="comment-box ml-2">
-                    <h5>Aggiungi una recensione!</h5>
+                    <h5>{{ __('ui.review_Title') }}</h5>
                     <form class="rating" wire:submit.prevent="store">
 
                         <div class="ms-1 mb-2">
@@ -55,8 +55,9 @@
 
                                 <div class="col-6">
                                     <div class="pull-right">
-                                        <button class="btn main-btn send btn-sm px-4 py-1 fs-6 my-2">Invia!<i
-                                                class="fa fa-long-arrow-right ml-1"></i></button>
+                                        <button class="btn main-btn send btn-sm px-4 py-1 fs-6 my-2">{{ __('ui.review_BTN') }}<i
+                                            class="fa fa-long-arrow-right ml-1"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

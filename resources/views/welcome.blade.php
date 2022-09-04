@@ -51,21 +51,21 @@
             <div class="col-12 col-md-5 col-xxl-6 mb-2 mb-md-10 mb-xxl-3 d-flex align-items-center justify-content-center">
                 <img class="img-header mx-auto img-fluid" src="image/social1.png" alt="">
             </div>
-
+            {{-- Statistic Section --}}
             <div class="col-12 col-md-10 col-xl-6 d-flex justify-content-center ps-xxl-5 margin-counter pb-xxl-3">
                 <div class="text-center px-md-5">
                     <i class="bi bi-bag-fill fs-3"></i>
-                    <h5 class="py-2">Prodotti in vendita</h5>
+                    <h5 class="py-2">{{ __('ui.statistic_Announcement') }}</h5>
                     <p class="fs-4">{{$announcementsCounter}}</p> 
                 </div>
                 <div class="text-center px-md-5">
                     <i class="bi bi-people-fill fs-3"></i>
-                    <h5 class="py-2">Utenti registrati</h5>
+                    <h5 class="py-2">{{ __('ui.statistic_User') }}</h5>
                     <p class="fs-4">{{$userCounter}}</p>
                 </div>
                 <div class="text-center ps-md-5">
                     <i class="bi bi-bookmarks-fill fs-3"></i>
-                    <h5 class="py-2">Categorie prodotti</h5>
+                    <h5 class="py-2">{{ __('ui.statistic_Category') }}</h5>
                     <p class="fs-4">{{$categoryCounter}}</p>
                 </div>
             </div>
@@ -81,7 +81,7 @@
             <div class="d-flex justify-content-end">
                 <button type="submit" id="infoButton" class="gradient-custom border-0 main-btn d-none me-0">
                     <i class="bi bi-chat-right-dots-fill fs-4"></i>
-                    <p class="fw-bold commentTitle">dicci cosa pensi!</p>
+                    <p class="fw-bold commentTitle">{{ __('ui.comment_Title') }}</p>
                 </button>
             </div>
             <div id="infoSectionAttachement" class="d-none commentShadow">
