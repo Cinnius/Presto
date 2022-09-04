@@ -109,7 +109,7 @@ return [
     'nav_Categories'=>'Category',
 
     // Search Bar
-    'search_Placeholder'=>'Search for announcement or category...',
+    'search_Placeholder'=>'Search for announcement...',
 
     // Login Page
     'login'=>'Login',
