@@ -98,7 +98,6 @@
                     <x-_locale lang="es" nation="es">Español</x-_locale>
                 </li>
             </ul>
-            <a href=""><i class="bi bi-palette-fill fs-2 dark-text mx-3"></i></a>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>

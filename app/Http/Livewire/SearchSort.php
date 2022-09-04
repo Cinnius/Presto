@@ -36,19 +36,19 @@ class SearchSort extends Component
     public function render()
     {
         sleep(0.8);
-        if($this->categorySearch){
-        if ($this->searchValue) {
-            $announcements = Announcement::search($this->searchValue)->where('is_accepted', true)->where('category_id', $this->categorySearch )->orderBy($this->sortField, $this->sortDirection)->get();
+        if ($this->categorySearch) {
+            if ($this->searchValue) {
+                $announcements = Announcement::search($this->searchValue)->where('is_accepted', true)->where('category_id', $this->categorySearch)->orderBy($this->sortField, $this->sortDirection)->get();
+            } else {
+                $announcements = Announcement::where('is_accepted', true)->where('category_id', $this->categorySearch)->orderBy($this->sortField, $this->sortDirection)->get();
+            }
         } else {
-            $announcements = Announcement::where('is_accepted', true)->where('category_id', $this->categorySearch )->orderBy($this->sortField, $this->sortDirection)->get();
-        }} else{
             if ($this->searchValue) {
                 $announcements = Announcement::search($this->searchValue)->where('is_accepted', true)->orderBy($this->sortField, $this->sortDirection)->get();
             } else {
                 $announcements = Announcement::where('is_accepted', true)->orderBy($this->sortField, $this->sortDirection)->get();
+            }
         }
-    }
         return view('livewire.search-sort', compact('announcements'));
+    }
 }
-}
-/* where('title',  'like', '%'.$this->searchValue.'%')-> */

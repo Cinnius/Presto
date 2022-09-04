@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Comment;
 use App\Models\Category;
 use App\Models\Announcement;
-use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
@@ -49,6 +50,7 @@ class PublicController extends Controller
     {
 
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(6);
+       
         return view('index', compact('announcements'));
     }
 
