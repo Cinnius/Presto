@@ -257,7 +257,7 @@
                     <div class="flip-card">
                         <div class="cardInner">
                             <div class="cardFront">
-                                <img src="/image/team_01.jpg" class="our-image img-fluid" alt="...">
+                                <img src="/image/Carlo_Bellantone.png" class="our-image img-fluid" alt="...">
                             </div>
                             <div class="cardBack d-flex justify-content-center align-items-center">
                                 <i class="bi bi-twitter px-2"></i>

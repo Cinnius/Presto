@@ -98,7 +98,7 @@
             @forelse ($announcements as $announcement)
                 <div class="col-12 col-12 col-md-3 py-4 d-flex justify-content-center">
                     <div class="card card-shadow rounded position-relative" style="width: 18rem;">
-                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/200': Storage::url($announcement->images()->first()->path) }}"
+                        <img src="{{ $announcement->images()->get()->isEmpty()? 'https://via.placeholder.com/400x300': $announcement->images()->first()->getUrl(400, 300) }}"
                             class="card-img-top rounded p-1" alt="...">
                         <div class="position-absolute end-0 mt-3">
                             <a href="{{ route('categoryShow', ['category' => $announcement->category]) }}"
