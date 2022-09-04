@@ -153,7 +153,7 @@ return [
     // Error 404
     'error_Title'=>'Página no encontrada!',
     'error_Text'=>'Es posible que el enlace que has seguido esté dañado o que la página se haya eliminado.',
-    'ui.error_Home'=>'Quieres volver a la Home?',
+    'error_Home'=>'Quieres volver a la Home?',
 
     // Flash Message
     'message_Announcement_Created'=>'Su anuncio se ha colocado correctamente y está pendiente de aprobación',

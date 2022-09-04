@@ -145,7 +145,7 @@ return [
     // Error 404
     'error_Title'=>'Page not found!',
     'error_Text'=>'It\'s possible that the link you followed is corrupted or the page has been removed.',
-    'ui.error_Home'=>'Do you want to go back to the Home?',
+    'error_Home'=>'Do you want to go back to the Home?',
 
     // Flash Message
     'message_Announcement_Created'=>'You announcement has been created correctly and is in pending for approval',
