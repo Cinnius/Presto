@@ -39,8 +39,8 @@
                 <p style="font-weight:bolder;">presto.it</p>
                 <p style="font-size:8px;line-height:10px;font-style:italic;font-family:Arial;padding-top:10px;">
                     Strada S. Giorgio Martire, 2D • 70124 Bari (BA)
-                    T. +39 392 602 46 21 | aulab.it
-                    The information transmitted through this e-mail and its attachments is directed exclusively at the recipient and must be considered confidential with the prohibition of dissemination and use in judgments unless expressly authorized, according to the terms of d. L.vo n. 196/03 on privacy and E. R. EU 679/2016 - GDPR . The dissemination and communication by a subject different from the recipient is prohibited by art. 616 and ss. c.p.. If this e-mail and its attachments were received by mistake from a different person from the recipient, please destroy all that received and inform the sender with the same mean.
+                    <br> T. +39 392 602 46 21 | aulab.it
+                    <br> The information transmitted through this e-mail and its attachments is directed exclusively at the recipient and must <br> considered confidential with the prohibition of dissemination and use in judgments unless expressly authorized, <br>according to the terms of d. L.vo n. 196/03 on privacy and E. R. EU 679/2016 - GDPR . The dissemination and <br>communication by a subject different from the recipient is prohibited by art. 616 and ss. c.p.. If this e-mail <br>and its attachments were received by mistake from a different person from the recipient, please destroy all that <br>received and inform the sender with the same mean.
                 </p>
             </div>
         </div>
