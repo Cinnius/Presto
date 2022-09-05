@@ -118,6 +118,14 @@ return [
     'login_Error'=>'Don\'t have an account?',
     'login_Error_Register'=>'Sign Up!',
 
+    // Register Page
+    'register'=>'Register',
+    'register_Text'=>'Insert your mail, username e password!',
+    'register_Pass'=>'Re-enter your password',
+    'register_BTN'=>'Register!',
+    'register_Error'=>'Already have an account?',
+    'register_Error_Login'=>'Login!',
+
     // Announcement Show Page
     'announcements_Delivery'=>'This product can be shipped only in Italy and Vatican City. Do you want an international shippment? Learn more!',
 
