@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Announcement;
+use App\Models\Category;
 
 class LiveSearch extends Component
 {
@@ -24,8 +25,9 @@ class LiveSearch extends Component
    
     public function render()
     {
+       $categories =  Category::all();
         $this->announcements = Announcement::where('title',  'like', '%'.$this->searchValue.'%')->get();
         
-        return view('livewire.live-search');
+        return view('livewire.live-search', compact('categories'));
     }
 }

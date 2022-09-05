@@ -101,7 +101,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn">
+                    <a href="{{ route('createAnnouncement') }}" class="btn position-relative main-btn mb-3">
                         <p class="my-auto">{{ __('ui.create_Add_Announcements') }}</p>
                     </a>
                 </div>

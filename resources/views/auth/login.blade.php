@@ -1,6 +1,6 @@
 <x-layout>
 
-    <section class="vh-100">
+    <section class="vh-100 mt-md-5">
         <div class="container py-5 pb-lg-5 h-100">
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">

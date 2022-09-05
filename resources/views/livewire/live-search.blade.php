@@ -17,7 +17,7 @@
 
                 @forelse ($announcements as $announcement)
                     <a href="{{ route('announcementShow', compact('announcement')) }}" class="text-decoration-none">
-                        <li class="list-group-item main-bg bg-white rounded">{{ $announcement->title }}</li>
+                        <li class="list-group-item main-bg bg-white rounded d-flex">{{ $announcement->title }} @foreach($categories as $category)@if(($announcement->category_id ) == $category->id)<p class="fw-bolder opacity-50">- in {{ $category->name }}</p>@endif @endforeach </li>
                     </a>
                 @empty
                     

@@ -119,7 +119,7 @@ return [
     'login_Error_Register'=>'Sign Up!',
 
     // Announcement Show Page
-    'announcements_Delivery'=>'This product can be shipped onlu in Italy and Vatican City. Do you want an international shippment? Learn more!',
+    'announcements_Delivery'=>'This product can be shipped only in Italy and Vatican City. Do you want an international shippment? Learn more!',
 
     // Create Announcements Page
     'add_Announcement'=>'Create your announcement',

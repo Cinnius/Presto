@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller
 {
-    public function welcome()
+    public function welcome(Category $category)
     {
 
         $announcements = Announcement::where('is_accepted', true)->latest()->take(6)->get();
@@ -22,7 +22,7 @@ class PublicController extends Controller
         $userCounter = User::all()->count();
         $categoryCounter = Category::all()->count();
         
-        return view('welcome', compact('announcements', 'comments', 'announcementsCounter', 'userCounter', 'categoryCounter'));
+        return view('welcome', compact('announcements', 'category', 'comments', 'announcementsCounter', 'userCounter', 'categoryCounter'));
     }
 
     public function categoryShow(Category $category)
